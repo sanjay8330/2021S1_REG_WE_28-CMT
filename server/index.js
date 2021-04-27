@@ -8,10 +8,6 @@ const app = express();
 //Getting the output as a JSON fro the app
 app.use(express.json());
 
-/***The worshop Operations */
-/***The research Operations */
-/***The admin Operations */
-
 //Connection to mongoose
 mongoose.connect("mongodb+srv://sanjay-8330:sanjay-8330@conferencemanagementtoo.cxqzv.mongodb.net/test", {
     useNewUrlParser: true,
