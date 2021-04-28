@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
   */
 
 const WorkshopSchema = new mongoose.Schema({
-    conductorID: {
+    userID: {
         type: Number,
         required: true,
     },
@@ -13,7 +13,7 @@ const WorkshopSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    workshopObjectives: {
+    workshopDescription: {
         type: String,
         required: true,
     },
@@ -29,11 +29,11 @@ const WorkshopSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    workshopOutcome: {
+    approvalStatus: {
         type: String,
-        required: true,
+        required: false,
     },
 });
 
-const Workshop = mongoose.model("workshop",WorkshopSchema);
+const Workshop = mongoose.model("workshops",WorkshopSchema);
 module.exports = Workshop;

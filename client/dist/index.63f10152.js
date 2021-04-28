@@ -26472,15 +26472,24 @@ try {
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   var _axios = require('axios');
   var _axiosDefault = _parcelHelpers.interopDefault(_axios);
+  require('../css/App.css');
   var _jsxFileName = "C:\\Users\\HP\\Desktop\\Assignments\\AF Project\\client\\components\\App.js", _s = $RefreshSig$();
   function App() {
     _s();
+    /*The attributes to add a new user*/
     const [userID, setuserID] = _react.useState(0);
     const [userType, setuserType] = _react.useState("");
     const [userName, setuserName] = _react.useState("");
     const [userContact, setuserContact] = _react.useState("");
     const [userEmail, setuserEmail] = _react.useState("");
     const [userPassword, setuserPassword] = _react.useState("");
+    /*The attributes to add a workshop*/
+    const [workshopTitle, setworkshopTitle] = _react.useState("");
+    const [workshopDescription, setworkshopDescription] = _react.useState("");
+    const [workshopSpeakers, setworkshopSpeakers] = _react.useState("");
+    const [workshopDate, setworkshopDate] = _react.useState("");
+    const [workshopTime, setworkshopTime] = _react.useState("");
+    const approvalStatus = 'PendingApproval';
     // Add Method - USER
     const addToList = () => {
       console.log(userID + userName);
@@ -26490,37 +26499,45 @@ try {
         userName: userName,
         userContact: userContact,
         userEmail: userEmail,
-        userPassword: userPassword
+        userPassword: userPassword,
+        workshopTitle: workshopTitle,
+        workshopDescription: workshopDescription,
+        workshopSpeakers: workshopSpeakers,
+        workshopDate: workshopDate,
+        workshopTime: workshopTime,
+        approvalStatus: approvalStatus
       });
       window.location.reload(false);
+      console.log("Data inserted successfully!!!");
     };
     return (
       /*#__PURE__*/_reactDefault.default.createElement("div", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27,
+          lineNumber: 44,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "AddForm",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28,
+          lineNumber: 45,
           columnNumber: 13
         }
-      }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+      }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29,
+          lineNumber: 46,
           columnNumber: 17
         }
-      }, "The Conference Management Tool - Add Operation"), /*#__PURE__*/_reactDefault.default.createElement("label", {
+      }, "User Information - CMT"), /*#__PURE__*/_reactDefault.default.createElement("label", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31,
+          lineNumber: 48,
           columnNumber: 17
         }
       }, "User ID"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -26531,14 +26548,14 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32,
+          lineNumber: 49,
           columnNumber: 17
         }
       }), /*#__PURE__*/_reactDefault.default.createElement("label", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36,
+          lineNumber: 53,
           columnNumber: 17
         }
       }, "User Type"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -26549,14 +26566,14 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37,
+          lineNumber: 54,
           columnNumber: 17
         }
       }), /*#__PURE__*/_reactDefault.default.createElement("label", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41,
+          lineNumber: 58,
           columnNumber: 17
         }
       }, "User Full Name"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -26567,14 +26584,14 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42,
+          lineNumber: 59,
           columnNumber: 17
         }
       }), /*#__PURE__*/_reactDefault.default.createElement("label", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46,
+          lineNumber: 63,
           columnNumber: 17
         }
       }, "User Contact Number"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -26585,14 +26602,14 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47,
+          lineNumber: 64,
           columnNumber: 17
         }
       }), /*#__PURE__*/_reactDefault.default.createElement("label", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51,
+          lineNumber: 68,
           columnNumber: 17
         }
       }, "User Email Address"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -26603,14 +26620,14 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52,
+          lineNumber: 69,
           columnNumber: 17
         }
       }), /*#__PURE__*/_reactDefault.default.createElement("label", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56,
+          lineNumber: 73,
           columnNumber: 17
         }
       }, "User Password"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -26621,7 +26638,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57,
+          lineNumber: 74,
           columnNumber: 17
         }
       }), /*#__PURE__*/_reactDefault.default.createElement("button", {
@@ -26629,13 +26646,118 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61,
+          lineNumber: 78,
           columnNumber: 17
         }
-      }, "Add User Details")))
+      }, "Add User Details")), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        class: "AddForm2",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 80,
+          columnNumber: 13
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 81,
+          columnNumber: 17
+        }
+      }, "Workshop Information - CMT"), /*#__PURE__*/_reactDefault.default.createElement("label", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 83,
+          columnNumber: 17
+        }
+      }, "Workshop Title"), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "text",
+        onChange: event => {
+          setworkshopTitle(event.target.value);
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 84,
+          columnNumber: 17
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("label", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 88,
+          columnNumber: 17
+        }
+      }, "Workshop Description"), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "text",
+        onChange: event => {
+          setworkshopDescription(event.target.value);
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 89,
+          columnNumber: 17
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("label", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 93,
+          columnNumber: 17
+        }
+      }, "Workshop Speakers"), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "text",
+        onChange: event => {
+          setworkshopSpeakers(event.target.value);
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 94,
+          columnNumber: 17
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("label", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 98,
+          columnNumber: 17
+        }
+      }, "Workshop Date"), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "text",
+        onChange: event => {
+          setworkshopDate(event.target.value);
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 99,
+          columnNumber: 17
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("label", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 103,
+          columnNumber: 17
+        }
+      }, "Workshop Time"), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "text",
+        onChange: event => {
+          setworkshopTime(event.target.value);
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 104,
+          columnNumber: 17
+        }
+      })))
     );
   }
-  _s(App, "5DQ6tvED6oq5V7uEBZUo2/VMyFo=");
+  _s(App, "hXCItCjpw12qzv7XYliS2c0fqhA=");
   _c = App;
   exports.default = App;
   var _c;
@@ -26646,7 +26768,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","axios":"7rA65"}],"7rA65":[function(require,module,exports) {
+},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","axios":"7rA65","../css/App.css":"6baYm"}],"7rA65":[function(require,module,exports) {
 module.exports = require('./lib/axios');
 },{"./lib/axios":"4qfhW"}],"4qfhW":[function(require,module,exports) {
 'use strict';
@@ -28391,6 +28513,6 @@ module.exports = function isAxiosError(payload) {
   return (typeof payload === 'object') && (payload.isAxiosError === true);
 };
 
-},{}]},["1j6wU","3L2qK","5Qvcc"], "5Qvcc", "parcelRequiref125")
+},{}],"6baYm":[function() {},{}]},["1j6wU","3L2qK","5Qvcc"], "5Qvcc", "parcelRequiref125")
 
 //# sourceMappingURL=index.63f10152.js.map

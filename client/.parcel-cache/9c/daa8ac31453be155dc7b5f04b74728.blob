@@ -1,0 +1,8 @@
+.AddForm {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/*# sourceMappingURL=index.HASH_REF_02aafe436d042c0bcdfc8b324a9bdfdc.css.map */

@@ -11,6 +11,7 @@ app.use(express.json());
 app.use(cors());
 
 const UserModel = require("./models/user");
+const WorkshopModel = require("./models/workshop");
 
 //The add method
 app.post("/insert", async (req, res) => {
@@ -21,10 +22,36 @@ app.post("/insert", async (req, res) => {
     const userEmail = req.body.userEmail;
     const userPassword = req.body.userPassword;
 
-    const user = new UserModel({userID: userID,userType: userType,userName: userName,userContact: userContact,userEmail: userEmail,userPassword: userPassword});
+    const workshopTitle = req.body.workshopTitle;
+    const workshopDescription = req.body.workshopDescription;
+    const workshopSpeakers = req.body.workshopSpeakers;
+    const workshopDate = req.body.workshopDate;
+    const workshopTime = req.body.workshopTime;
+    const approvalStatus = req.body.approvalStatus;
+
+
+    const user = new UserModel({
+        userID: userID,
+        userType: userType,
+        userName: userName,
+        userContact: userContact,
+        userEmail: userEmail,
+        userPassword: userPassword
+    });
+
+    const workshop = new WorkshopModel({
+        userID: userID,
+        workshopTitle: workshopTitle,
+        workshopDescription: workshopDescription,
+        workshopSpeakers: workshopSpeakers,
+        workshopDate: workshopDate,
+        workshopTime: workshopTime,
+        approvalStatus: approvalStatus  
+    });
 
     try{
         await user.save();
+        await workshop.save();
         res.send("Inserted Data!!");
     }catch(err){
         console.log(err);
@@ -32,8 +59,9 @@ app.post("/insert", async (req, res) => {
 });
 
 //Connection to mongoose
-mongoose.connect("mongodb+srv://sanjay-8330:sanjay-8330@conferencemanagementtoo.cxqzv.mongodb.net/test", {
+mongoose.connect("mongodb+srv://AF:sanjay-8330@cmt.g1xsc.mongodb.net/CMTDatabase?retryWrites=true&w=majority", {
     useNewUrlParser: true,
+    useUnifiedTopology: true,
 })
 
 //Running on the server
