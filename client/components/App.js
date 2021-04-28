@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import '../css/App.css';
 
+//import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
+
 function App() {
     /*The attributes to add a new user */
     const [userID, setuserID] = useState(0);
@@ -104,8 +106,7 @@ function App() {
                 <input type="text" onChange={(event) => {
                 setworkshopTime(event.target.value)
                 }} />
-            </div>
-
+            </div>    
 
         </div>
     );

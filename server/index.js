@@ -13,7 +13,7 @@ app.use(cors());
 const UserModel = require("./models/user");
 const WorkshopModel = require("./models/workshop");
 
-//The add method
+//The add method - USER + WORKSHOP
 app.post("/insert", async (req, res) => {
     const userID = req.body.userID;
     const userType = req.body.userType;
@@ -51,6 +51,34 @@ app.post("/insert", async (req, res) => {
 
     try{
         await user.save();
+        await workshop.save();
+        res.send("Inserted Data!!");
+    }catch(err){
+        console.log(err);
+    }
+});
+
+//The add method - WORKSHOP
+app.post("/insertWorkshop", async (req, res) => {
+    const userID = req.body.userID;
+    const workshopTitle = req.body.workshopTitle;
+    const workshopDescription = req.body.workshopDescription;
+    const workshopSpeakers = req.body.workshopSpeakers;
+    const workshopDate = req.body.workshopDate;
+    const workshopTime = req.body.workshopTime;
+    const approvalStatus = req.body.approvalStatus;
+
+    const workshop = new WorkshopModel({
+        userID: userID,
+        workshopTitle: workshopTitle,
+        workshopDescription: workshopDescription,
+        workshopSpeakers: workshopSpeakers,
+        workshopDate: workshopDate,
+        workshopTime: workshopTime,
+        approvalStatus: approvalStatus  
+    });
+
+    try{
         await workshop.save();
         res.send("Inserted Data!!");
     }catch(err){

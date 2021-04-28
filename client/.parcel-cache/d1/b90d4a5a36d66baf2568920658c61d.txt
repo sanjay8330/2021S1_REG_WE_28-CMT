@@ -1,4 +1,4 @@
-20973
+20974
 91C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\core-js\stable\array\join.js121436361000000000 0
 109C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\source-map-resolve\lib\decode-uri-component.js121436361000000000 0
 100C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\@babel\plugin-syntax-class-properties132639599192195666 1
@@ -29,10 +29,10 @@
 93C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\@parcel\utils\src\sourcemap.js121436361000000000 0
 126C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\postcss-minify-font-values\node_modules\supports-color\index.js121436361000000000 0
 73C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\iconv-lite132639599236522110 1
-54C:\Users\HP\Desktop\Assignments\AF Project\client\dist132640643059115555 1
+54C:\Users\HP\Desktop\Assignments\AF Project\client\dist132640670211309254 1
 100C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\purgecss\node_modules\chalk\readme.md121436361000000000 0
 85C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\concat-map\test\map.js129985727760000000 0
-60C:\Users\HP\Desktop\Assignments\AF Project\client\components132639605438168897 1
+60C:\Users\HP\Desktop\Assignments\AF Project\client\components132640672010113481 1
 72C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\ansi-html132639599294753095 1
 108C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\core-js\modules\esnext.async-iterator.some.js121436361000000000 0
 131C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\postcss-modules-local-by-default\node_modules\postcss\lib\comment.js121436361000000000 0
@@ -90,7 +90,7 @@
 121C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\postcss-ordered-values\node_modules\color-convert\index.js121436361000000000 0
 77C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\uuid\README.md121436361000000000 0
 120C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\regenerate-unicode-properties\Script_Extensions\Thaana.js121436361000000000 0
-62C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules132640631127719281 1
+62C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules132640679934224083 1
 107C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\css-modules-loader-core\node_modules\postcss132639599277418963 1
 99C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\string.prototype.trimstart\README.md121436361000000000 0
 128C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\postcss-reduce-transforms\node_modules\color-convert\CHANGELOG.md121436361000000000 0
@@ -2612,7 +2612,7 @@
 117C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\postcss-ordered-values\node_modules\chalk\package.json132639599245523990 0
 103C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\cssstyle\lib\properties\lightingColor.js121436361000000000 0
 87C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\svgo\lib\svgo\plugins.js121436361000000000 0
-72C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\react-dom132639599978714604 1
+72C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\react-dom132640679934144129 1
 121C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\css-modules-loader-core\node_modules\has-flag\package.json132639599284818119 0
 78C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\acorn\bin\acorn121436361000000000 0
 86C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\postcss\lib\postcss.mjs121436361000000000 0
@@ -4315,7 +4315,7 @@
 103C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\core-js\features\string\code-point-at.js121436361000000000 0
 102C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\uncss\node_modules\color-name\README.md131339336430000000 0
 107C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\purgecss\node_modules\postcss\docs\syntax.md121436361000000000 0
-76C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\react-dom\cjs132639599977655257 1
+76C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\react-dom\cjs132640679932744993 1
 91C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\css-select-base-adapter\test132639598997980745 1
 77C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\lodash\rest.js121436361000000000 0
 86C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\lodash\fp\isFunction.js121436361000000000 0
@@ -7385,7 +7385,7 @@
 122C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\cssnano-util-raw-cache\node_modules\color-name\package.json132639599284538277 0
 81C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\react-dom\index.js121436361000000000 0
 132C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\postcss-normalize-whitespace\node_modules\postcss\docs\source-maps.md121436361000000000 0
-85C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\react-dom\package.json132639599978534719 0
+85C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\react-dom\package.json132640679934044193 0
 92C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\decode-uri-component\index.js131431469560000000 0
 101C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\@nodelib\fs.walk\out\readers\reader.js121436361000000000 0
 85C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\react-dom\profiling.js121436361000000000 0
@@ -7399,7 +7399,7 @@
 86C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\react-dom\test-utils.js121436361000000000 0
 95C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\es-abstract\2020\IsExtensible.js121436361000000000 0
 70C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\qs\test132639598898522372 1
-76C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\react-dom\umd132639599977695228 1
+76C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\react-dom\umd132640679932844937 1
 71C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\pn\vm.js131594838820000000 0
 91C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\fast-deep-equal\es6\react.js121436361000000000 0
 119C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\react-dom\umd\react-dom-server.browser.production.min.js121436361000000000 0
@@ -15973,7 +15973,7 @@
 99C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\elliptic\lib\elliptic\curve\short.js121436361000000000 0
 96C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\electron-to-chromium\CHANGELOG.md121436361000000000 0
 104C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\electron-to-chromium\chromium-versions.js121436361000000000 0
-65C:\Users\HP\Desktop\Assignments\AF Project\client\dist\index.html132640643057637537 0
+65C:\Users\HP\Desktop\Assignments\AF Project\client\dist\index.html132640670210539740 0
 95C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\electron-to-chromium\versions.js121436361000000000 0
 77C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\ejs\ejs.min.js132186645850000000 0
 93C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\decode-uri-component\readme.md131403579590000000 0
@@ -20966,9 +20966,10 @@
 72C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\.bin\uuid132639599319123000 0
 73C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\.bin\which132639599319282893 0
 77C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\.bin\which.cmd132639599319282893 0
-73C:\Users\HP\Desktop\Assignments\AF Project\client\dist\index.4a9bdfdc.css132640643057667526 0
-77C:\Users\HP\Desktop\Assignments\AF Project\client\dist\index.4a9bdfdc.css.map132640643057927308 0
-72C:\Users\HP\Desktop\Assignments\AF Project\client\dist\index.63f10152.js132640643058086210 0
-76C:\Users\HP\Desktop\Assignments\AF Project\client\dist\index.63f10152.js.map132640643058276093 0
+73C:\Users\HP\Desktop\Assignments\AF Project\client\dist\index.4a9bdfdc.css132640670210479787 0
+77C:\Users\HP\Desktop\Assignments\AF Project\client\dist\index.4a9bdfdc.css.map132640670210699645 0
+72C:\Users\HP\Desktop\Assignments\AF Project\client\dist\index.63f10152.js132640670210909515 0
+76C:\Users\HP\Desktop\Assignments\AF Project\client\dist\index.63f10152.js.map132640670211279304 0
 61C:\Users\HP\Desktop\Assignments\AF Project\client\css\App.css132640475224974970 0
-67C:\Users\HP\Desktop\Assignments\AF Project\client\components\App.js132640643055775125 0
+67C:\Users\HP\Desktop\Assignments\AF Project\client\components\App.js132640681284745499 0
+68C:\Users\HP\Desktop\Assignments\AF Project\client\components\App2.js132640677641070716 0

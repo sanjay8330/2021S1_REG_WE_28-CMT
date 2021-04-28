@@ -26474,6 +26474,7 @@ try {
   var _axiosDefault = _parcelHelpers.interopDefault(_axios);
   require('../css/App.css');
   var _jsxFileName = "C:\\Users\\HP\\Desktop\\Assignments\\AF Project\\client\\components\\App.js", _s = $RefreshSig$();
+  // import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
   function App() {
     _s();
     /*The attributes to add a new user*/
@@ -26515,7 +26516,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44,
+          lineNumber: 46,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -26523,21 +26524,21 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45,
+          lineNumber: 47,
           columnNumber: 13
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46,
+          lineNumber: 48,
           columnNumber: 17
         }
       }, "User Information - CMT"), /*#__PURE__*/_reactDefault.default.createElement("label", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48,
+          lineNumber: 50,
           columnNumber: 17
         }
       }, "User ID"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -26548,14 +26549,14 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49,
+          lineNumber: 51,
           columnNumber: 17
         }
       }), /*#__PURE__*/_reactDefault.default.createElement("label", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53,
+          lineNumber: 55,
           columnNumber: 17
         }
       }, "User Type"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -26566,14 +26567,14 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54,
+          lineNumber: 56,
           columnNumber: 17
         }
       }), /*#__PURE__*/_reactDefault.default.createElement("label", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58,
+          lineNumber: 60,
           columnNumber: 17
         }
       }, "User Full Name"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -26584,14 +26585,14 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 59,
+          lineNumber: 61,
           columnNumber: 17
         }
       }), /*#__PURE__*/_reactDefault.default.createElement("label", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63,
+          lineNumber: 65,
           columnNumber: 17
         }
       }, "User Contact Number"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -26602,14 +26603,14 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64,
+          lineNumber: 66,
           columnNumber: 17
         }
       }), /*#__PURE__*/_reactDefault.default.createElement("label", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68,
+          lineNumber: 70,
           columnNumber: 17
         }
       }, "User Email Address"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -26620,14 +26621,14 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69,
+          lineNumber: 71,
           columnNumber: 17
         }
       }), /*#__PURE__*/_reactDefault.default.createElement("label", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73,
+          lineNumber: 75,
           columnNumber: 17
         }
       }, "User Password"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -26638,7 +26639,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74,
+          lineNumber: 76,
           columnNumber: 17
         }
       }), /*#__PURE__*/_reactDefault.default.createElement("button", {
@@ -26646,7 +26647,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78,
+          lineNumber: 80,
           columnNumber: 17
         }
       }, "Add User Details")), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -26654,21 +26655,21 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80,
+          lineNumber: 82,
           columnNumber: 13
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81,
+          lineNumber: 83,
           columnNumber: 17
         }
       }, "Workshop Information - CMT"), /*#__PURE__*/_reactDefault.default.createElement("label", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83,
+          lineNumber: 85,
           columnNumber: 17
         }
       }, "Workshop Title"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -26679,14 +26680,14 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 84,
+          lineNumber: 86,
           columnNumber: 17
         }
       }), /*#__PURE__*/_reactDefault.default.createElement("label", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88,
+          lineNumber: 90,
           columnNumber: 17
         }
       }, "Workshop Description"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -26697,14 +26698,14 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89,
+          lineNumber: 91,
           columnNumber: 17
         }
       }), /*#__PURE__*/_reactDefault.default.createElement("label", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 93,
+          lineNumber: 95,
           columnNumber: 17
         }
       }, "Workshop Speakers"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -26715,14 +26716,14 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94,
+          lineNumber: 96,
           columnNumber: 17
         }
       }), /*#__PURE__*/_reactDefault.default.createElement("label", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98,
+          lineNumber: 100,
           columnNumber: 17
         }
       }, "Workshop Date"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -26733,14 +26734,14 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 99,
+          lineNumber: 101,
           columnNumber: 17
         }
       }), /*#__PURE__*/_reactDefault.default.createElement("label", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103,
+          lineNumber: 105,
           columnNumber: 17
         }
       }, "Workshop Time"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -26751,7 +26752,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104,
+          lineNumber: 106,
           columnNumber: 17
         }
       })))
