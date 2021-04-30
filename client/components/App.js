@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import '../css/App.css';
+import App2 from './App2';
 
-//import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 
 function App() {
     /*The attributes to add a new user */
@@ -106,7 +107,18 @@ function App() {
                 <input type="text" onChange={(event) => {
                 setworkshopTime(event.target.value)
                 }} />
-            </div>    
+            </div> 
+
+            <div>
+            <Router>
+                <Link to="/workshop/add">Add</Link>
+                <Switch>
+                    <Route exact path='/workshop/add'>
+                        <App2 />
+                    </Route>
+                </Switch>
+            </Router>
+            </div>   
 
         </div>
     );
