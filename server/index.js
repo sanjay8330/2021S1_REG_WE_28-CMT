@@ -86,6 +86,53 @@ app.post("/insertWorkshop", async (req, res) => {
     }
 });
 
+//Read all workshop details
+app.get("/readAllWorkshops", async (req, res) => {
+    WorkshopModel.find({}, (error,result) => {
+        if(error){
+            res.send(error);
+        }
+
+        res.send(result)
+    })
+});
+
+//Read workshop details by ID
+app.get("/readById/:id", async (req, res) => {
+    const id = req.params.id;
+
+    WorkshopModel.find({_id:id}, (error,result) => {
+        if(error){
+            res.send(error);
+        }
+
+        res.send(result)
+    })
+});
+
+//Update the workshop details
+app.put("/update", async (req, res) => {
+    const workshopDescription = req.body.newworkshopDescription;
+    const workshopSpeakers = req.body.newworkshopSpeakers;
+    const workshopDate = req.body.newworkshopDate;
+    const workshopTime = req.body.newworkshopTime;
+    const approvalStatus = req.body.newapprovalStatus;
+    const id = req.body.id;
+
+    try{
+        await WorkshopModel.findById(id, (err, updatedWorkshopObject) => {
+            updatedWorkshopObject.workshopDescription = workshopDescription;
+            updatedWorkshopObject.workshopSpeakers = workshopSpeakers;
+            updatedWorkshopObject.workshopDate = workshopDate;
+            updatedWorkshopObject.workshopTime = workshopTime;
+            updatedWorkshopObject.approvalStatus = approvalStatus;
+            updatedWorkshopObject.save();
+            res.send("Updated Successfully");
+        });
+    }catch(err){
+        console.log(err);
+    }
+});
 //Connection to mongoose
 mongoose.connect("mongodb+srv://AF:sanjay-8330@cmt.g1xsc.mongodb.net/CMTDatabase?retryWrites=true&w=majority", {
     useNewUrlParser: true,

@@ -113,7 +113,8 @@ function App() {
             <Router>
                 <Link to="/workshop/add">Add</Link>
                 <Switch>
-                    <Route exact path='/workshop/add'>
+                    <Route exact path='/'></Route>
+                    <Route path='/workshop/add'>
                         <App2 />
                     </Route>
                 </Switch>
