@@ -140,26 +140,25 @@ function App2() {
                 <h1>Edit Details Window</h1>
                 {newworkshoplist.map((val, key) => {
                 return <div key={key}>
-                    <label>Workshop Title</label>
-                    <input type="text" value={val.workshopTitle} readOnly="true"/>
+                    <label>Workshop Title - {val.workshopTitle} </label>
 
-                    <label>Workshop Description</label>
-                    <input type="text" value={val.workshopDescription} onChange={(event) => {
+                    <label>Workshop Description - {val.workshopDescription} </label>
+                    <input type="text" onChange={(event) => {
                     setnewworkshopDescription(event.target.value)
                     }}/>
 
-                    <label>Workshop Speakers</label>
-                    <input type="text" value={val.workshopSpeakers} onChange={(event) => {
+                    <label>Workshop Speakers - {val.workshopSpeakers}</label>
+                    <input type="text" onChange={(event) => {
                     setnewworkshopSpeakers(event.target.value)
                     }}/>
 
-                    <label>Workshop Date</label>
-                    <input type="text" value={val.workshopDate} onChange={(event) => {
+                    <label>Workshop Date - {val.workshopDate} </label>
+                    <input type="text" onChange={(event) => {
                     setnewworkshopDate(event.target.value)
                     }}/>
 
-                    <label>Workshop Time</label>
-                    <input type="text" value={val.workshopTime} onChange={(event) => {
+                    <label>Workshop Time - {val.workshopTime}</label>
+                    <input type="text" onChange={(event) => {
                     setnewworkshopTime(event.target.value)
                     }}/>
 
