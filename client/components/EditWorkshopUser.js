@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import '../css/App.css';
 
-function App2() { 
+function EditWorkshopUser() { 
     /*The attributes to add a workshop */
     const [userID, setuserID] = useState(0);
     const [workshopTitle, setworkshopTitle] = useState("");
@@ -173,4 +173,4 @@ function App2() {
     );
 }
 
-export default App2;
+export default EditWorkshopUser;

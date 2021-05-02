@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import '../css/App.css';
-import App2 from './App2';
+import EditWorkshopUser from './EditWorkshopUser';
 
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 
-function App() {
+function AddWorkShopUser() {
     /*The attributes to add a new user */
     const [userID, setuserID] = useState(0);
     const [userType, setuserType] = useState("");
@@ -115,7 +115,7 @@ function App() {
                 <Switch>
                     <Route exact path='/'></Route>
                     <Route path='/workshop/add'>
-                        <App2 />
+                        <EditWorkshopUser />
                     </Route>
                 </Switch>
             </Router>
@@ -125,4 +125,4 @@ function App() {
     );
 }
 
-export default App;
+export default AddWorkShopUser;

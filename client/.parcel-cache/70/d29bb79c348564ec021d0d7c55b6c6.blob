@@ -26474,8 +26474,8 @@ try {
   var _axios = require('axios');
   var _axiosDefault = _parcelHelpers.interopDefault(_axios);
   require('../css/App.css');
-  var _EditWorkshopUser = require('./EditWorkshopUser');
-  var _EditWorkshopUserDefault = _parcelHelpers.interopDefault(_EditWorkshopUser);
+  var _App = require('./App2');
+  var _AppDefault = _parcelHelpers.interopDefault(_App);
   var _reactRouterDom = require('react-router-dom');
   var _jsxFileName = "C:\\Users\\HP\\Desktop\\Assignments\\AF Project\\client\\components\\AddWorkShopUser.js", _s = $RefreshSig$();
   function AddWorkShopUser() {
@@ -26804,7 +26804,7 @@ try {
           lineNumber: 117,
           columnNumber: 21
         }
-      }, /*#__PURE__*/_reactDefault.default.createElement(_EditWorkshopUserDefault.default, {
+      }, /*#__PURE__*/_reactDefault.default.createElement(_AppDefault.default, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
@@ -26825,7 +26825,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","axios":"7rA65","../css/App.css":"6baYm","react-router-dom":"1PMSK","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./EditWorkshopUser":"7BmGM"}],"7rA65":[function(require,module,exports) {
+},{"react":"3b2NM","axios":"7rA65","../css/App.css":"6baYm","./App2":"6aCRV","react-router-dom":"1PMSK","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"7rA65":[function(require,module,exports) {
 module.exports = require('./lib/axios');
 },{"./lib/axios":"4qfhW"}],"4qfhW":[function(require,module,exports) {
 'use strict';
@@ -28570,7 +28570,528 @@ module.exports = function isAxiosError(payload) {
   return (typeof payload === 'object') && (payload.isAxiosError === true);
 };
 
-},{}],"6baYm":[function() {},{}],"1PMSK":[function(require,module,exports) {
+},{}],"6baYm":[function() {},{}],"6aCRV":[function(require,module,exports) {
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _axios = require('axios');
+  var _axiosDefault = _parcelHelpers.interopDefault(_axios);
+  require('../css/App.css');
+  var _jsxFileName = "C:\\Users\\HP\\Desktop\\Assignments\\AF Project\\client\\components\\App2.js", _s = $RefreshSig$();
+  function App2() {
+    _s();
+    /*The attributes to add a workshop*/
+    const [userID, setuserID] = _react.useState(0);
+    const [workshopTitle, setworkshopTitle] = _react.useState("");
+    const [workshopDescription, setworkshopDescription] = _react.useState("");
+    const [workshopSpeakers, setworkshopSpeakers] = _react.useState("");
+    const [workshopDate, setworkshopDate] = _react.useState("");
+    const [workshopTime, setworkshopTime] = _react.useState("");
+    const approvalStatus = 'PendingApproval';
+    /*The attributes to update a workshop*/
+    const [newworkshopDescription, setnewworkshopDescription] = _react.useState("");
+    const [newworkshopSpeakers, setnewworkshopSpeakers] = _react.useState("");
+    const [newworkshopDate, setnewworkshopDate] = _react.useState("");
+    const [newworkshopTime, setnewworkshopTime] = _react.useState("");
+    const newapprovalStatus = 'PendingApproval';
+    /*Attributes to get all the wokshop details**/
+    const [workshoplist, setworkshoplist] = _react.useState([]);
+    /*Attributes to get the wokshop details by ID**/
+    const [newworkshoplist, setnewworkshoplist] = _react.useState([]);
+    // Get all workshop details method
+    _react.useEffect(() => {
+      _axiosDefault.default.get("http://localhost:3001/readAllWorkshops").then(response => {
+        setworkshoplist(response.data);
+      });
+    }, []);
+    // Get the workshop details by ID
+    const getList = id => {
+      _axiosDefault.default.get(`http://localhost:3001/readById/${id}`).then(response => {
+        setnewworkshoplist(response.data);
+      });
+    };
+    // Add Method - USER
+    const addToWorkshopList = () => {
+      _axiosDefault.default.post("http://localhost:3001/insertWorkshop", {
+        userID: userID,
+        workshopTitle: workshopTitle,
+        workshopDescription: workshopDescription,
+        workshopSpeakers: workshopSpeakers,
+        workshopDate: workshopDate,
+        workshopTime: workshopTime,
+        approvalStatus: approvalStatus
+      });
+      window.location.reload(false);
+      console.log("Data inserted successfully!!!");
+    };
+    // Update workshop details
+    const updateWorkshop = id => {
+      _axiosDefault.default.put("http://localhost:3001/update", {
+        id: id,
+        newworkshopDescription: newworkshopDescription,
+        newworkshopSpeakers: newworkshopSpeakers,
+        newworkshopTime: newworkshopTime,
+        newworkshopDate: newworkshopDate,
+        newapprovalStatus: newapprovalStatus
+      });
+      window.location.reload(false);
+    };
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 73,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "AddForm",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 74,
+          columnNumber: 13
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 75,
+          columnNumber: 17
+        }
+      }, "Workshop Information - CMT"), /*#__PURE__*/_reactDefault.default.createElement("label", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 77,
+          columnNumber: 17
+        }
+      }, "USER ID "), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "text",
+        onChange: event => {
+          setuserID(event.target.value);
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 78,
+          columnNumber: 17
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("label", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 82,
+          columnNumber: 17
+        }
+      }, "Workshop Title"), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "text",
+        onChange: event => {
+          setworkshopTitle(event.target.value);
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 83,
+          columnNumber: 17
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("label", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 87,
+          columnNumber: 17
+        }
+      }, "Workshop Description"), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "text",
+        onChange: event => {
+          setworkshopDescription(event.target.value);
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 88,
+          columnNumber: 17
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("label", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 92,
+          columnNumber: 17
+        }
+      }, "Workshop Speakers"), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "text",
+        onChange: event => {
+          setworkshopSpeakers(event.target.value);
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 93,
+          columnNumber: 17
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("label", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 97,
+          columnNumber: 17
+        }
+      }, "Workshop Date"), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "text",
+        onChange: event => {
+          setworkshopDate(event.target.value);
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 98,
+          columnNumber: 17
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("label", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 102,
+          columnNumber: 17
+        }
+      }, "Workshop Time"), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "text",
+        onChange: event => {
+          setworkshopTime(event.target.value);
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 103,
+          columnNumber: 17
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("button", {
+        onClick: addToWorkshopList,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 107,
+          columnNumber: 17
+        }
+      }, "Add User Details")), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        class: "viewTable",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 110,
+          columnNumber: 13
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 111,
+          columnNumber: 17
+        }
+      }, "Workshop List"), /*#__PURE__*/_reactDefault.default.createElement("table", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 113,
+          columnNumber: 17
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("tr", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 114,
+          columnNumber: 21
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("th", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 115,
+          columnNumber: 25
+        }
+      }, "User ID"), /*#__PURE__*/_reactDefault.default.createElement("th", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 116,
+          columnNumber: 25
+        }
+      }, "Workshop Title"), /*#__PURE__*/_reactDefault.default.createElement("th", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 117,
+          columnNumber: 25
+        }
+      }, "Workshop Description"), /*#__PURE__*/_reactDefault.default.createElement("th", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 118,
+          columnNumber: 25
+        }
+      }, "Workshop Speakers"), /*#__PURE__*/_reactDefault.default.createElement("th", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 119,
+          columnNumber: 25
+        }
+      }, "Workshop Date"), /*#__PURE__*/_reactDefault.default.createElement("th", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 120,
+          columnNumber: 25
+        }
+      }, "Workshop Time"), /*#__PURE__*/_reactDefault.default.createElement("th", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 121,
+          columnNumber: 25
+        }
+      }, "Workshop Approval Status"), /*#__PURE__*/_reactDefault.default.createElement("th", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 122,
+          columnNumber: 25
+        }
+      }, "Edit")), workshoplist.map((val, key) => {
+        return (
+          /*#__PURE__*/_reactDefault.default.createElement("tr", {
+            key: key,
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 125,
+              columnNumber: 32
+            }
+          }, /*#__PURE__*/_reactDefault.default.createElement("td", {
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 126,
+              columnNumber: 25
+            }
+          }, " ", val.userID, " "), /*#__PURE__*/_reactDefault.default.createElement("td", {
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 127,
+              columnNumber: 25
+            }
+          }, " ", val.workshopTitle, " "), /*#__PURE__*/_reactDefault.default.createElement("td", {
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 128,
+              columnNumber: 25
+            }
+          }, " ", val.workshopDescription, " "), /*#__PURE__*/_reactDefault.default.createElement("td", {
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 129,
+              columnNumber: 25
+            }
+          }, " ", val.workshopSpeakers, " "), /*#__PURE__*/_reactDefault.default.createElement("td", {
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 130,
+              columnNumber: 25
+            }
+          }, " ", val.workshopDate, " "), /*#__PURE__*/_reactDefault.default.createElement("td", {
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 131,
+              columnNumber: 25
+            }
+          }, " ", val.workshopTime, " "), /*#__PURE__*/_reactDefault.default.createElement("td", {
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 132,
+              columnNumber: 25
+            }
+          }, " ", val.approvalStatus, " "), /*#__PURE__*/_reactDefault.default.createElement("td", {
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 133,
+              columnNumber: 25
+            }
+          }, " ", /*#__PURE__*/_reactDefault.default.createElement("button", {
+            onClick: () => getList(val._id),
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 133,
+              columnNumber: 30
+            }
+          }, "Edit"), " "))
+        );
+      }))), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        class: "updateForm",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 139,
+          columnNumber: 13
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 140,
+          columnNumber: 17
+        }
+      }, "Edit Details Window"), newworkshoplist.map((val, key) => {
+        return (
+          /*#__PURE__*/_reactDefault.default.createElement("div", {
+            key: key,
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 142,
+              columnNumber: 24
+            }
+          }, /*#__PURE__*/_reactDefault.default.createElement("label", {
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 143,
+              columnNumber: 21
+            }
+          }, "Workshop Title - ", val.workshopTitle, " "), /*#__PURE__*/_reactDefault.default.createElement("label", {
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 145,
+              columnNumber: 21
+            }
+          }, "Workshop Description - ", val.workshopDescription, " "), /*#__PURE__*/_reactDefault.default.createElement("input", {
+            type: "text",
+            onChange: event => {
+              setnewworkshopDescription(event.target.value);
+            },
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 146,
+              columnNumber: 21
+            }
+          }), /*#__PURE__*/_reactDefault.default.createElement("label", {
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 150,
+              columnNumber: 21
+            }
+          }, "Workshop Speakers - ", val.workshopSpeakers), /*#__PURE__*/_reactDefault.default.createElement("input", {
+            type: "text",
+            onChange: event => {
+              setnewworkshopSpeakers(event.target.value);
+            },
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 151,
+              columnNumber: 21
+            }
+          }), /*#__PURE__*/_reactDefault.default.createElement("label", {
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 155,
+              columnNumber: 21
+            }
+          }, "Workshop Date - ", val.workshopDate, " "), /*#__PURE__*/_reactDefault.default.createElement("input", {
+            type: "text",
+            onChange: event => {
+              setnewworkshopDate(event.target.value);
+            },
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 156,
+              columnNumber: 21
+            }
+          }), /*#__PURE__*/_reactDefault.default.createElement("label", {
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 160,
+              columnNumber: 21
+            }
+          }, "Workshop Time - ", val.workshopTime), /*#__PURE__*/_reactDefault.default.createElement("input", {
+            type: "text",
+            onChange: event => {
+              setnewworkshopTime(event.target.value);
+            },
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 161,
+              columnNumber: 21
+            }
+          }), /*#__PURE__*/_reactDefault.default.createElement("td", {
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 165,
+              columnNumber: 21
+            }
+          }, " ", /*#__PURE__*/_reactDefault.default.createElement("button", {
+            onClick: () => updateWorkshop(val._id),
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 165,
+              columnNumber: 26
+            }
+          }, "UPDATE"), " "), /*#__PURE__*/_reactDefault.default.createElement("td", {
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 166,
+              columnNumber: 21
+            }
+          }, " ", /*#__PURE__*/_reactDefault.default.createElement("button", {
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 166,
+              columnNumber: 26
+            }
+          }, "DELETE"), " "))
+        );
+      })))
+    );
+  }
+  _s(App2, "oU7fUTi2i+dnKqm/wTYjjhCmlf0=");
+  _c = App2;
+  exports.default = App2;
+  var _c;
+  $RefreshReg$(_c, "App2");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","axios":"7rA65","../css/App.css":"6baYm","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6baYm":[function() {},{}],"1PMSK":[function(require,module,exports) {
 "use strict";
 if ("development" === "production") {
   module.exports = require("./cjs/react-router-dom.min.js");
@@ -32506,527 +33027,6 @@ function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
 
 module.exports = hoistNonReactStatics;
 
-},{"react-is":"68QIU"}],"7BmGM":[function(require,module,exports) {
-var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-try {
-  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-  _parcelHelpers.defineInteropFlag(exports);
-  var _react = require('react');
-  var _reactDefault = _parcelHelpers.interopDefault(_react);
-  var _axios = require('axios');
-  var _axiosDefault = _parcelHelpers.interopDefault(_axios);
-  require('../css/App.css');
-  var _jsxFileName = "C:\\Users\\HP\\Desktop\\Assignments\\AF Project\\client\\components\\EditWorkshopUser.js", _s = $RefreshSig$();
-  function EditWorkshopUser() {
-    _s();
-    /*The attributes to add a workshop*/
-    const [userID, setuserID] = _react.useState(0);
-    const [workshopTitle, setworkshopTitle] = _react.useState("");
-    const [workshopDescription, setworkshopDescription] = _react.useState("");
-    const [workshopSpeakers, setworkshopSpeakers] = _react.useState("");
-    const [workshopDate, setworkshopDate] = _react.useState("");
-    const [workshopTime, setworkshopTime] = _react.useState("");
-    const approvalStatus = 'PendingApproval';
-    /*The attributes to update a workshop*/
-    const [newworkshopDescription, setnewworkshopDescription] = _react.useState("");
-    const [newworkshopSpeakers, setnewworkshopSpeakers] = _react.useState("");
-    const [newworkshopDate, setnewworkshopDate] = _react.useState("");
-    const [newworkshopTime, setnewworkshopTime] = _react.useState("");
-    const newapprovalStatus = 'PendingApproval';
-    /*Attributes to get all the wokshop details**/
-    const [workshoplist, setworkshoplist] = _react.useState([]);
-    /*Attributes to get the wokshop details by ID**/
-    const [newworkshoplist, setnewworkshoplist] = _react.useState([]);
-    // Get all workshop details method
-    _react.useEffect(() => {
-      _axiosDefault.default.get("http://localhost:3001/readAllWorkshops").then(response => {
-        setworkshoplist(response.data);
-      });
-    }, []);
-    // Get the workshop details by ID
-    const getList = id => {
-      _axiosDefault.default.get(`http://localhost:3001/readById/${id}`).then(response => {
-        setnewworkshoplist(response.data);
-      });
-    };
-    // Add Method - USER
-    const addToWorkshopList = () => {
-      _axiosDefault.default.post("http://localhost:3001/insertWorkshop", {
-        userID: userID,
-        workshopTitle: workshopTitle,
-        workshopDescription: workshopDescription,
-        workshopSpeakers: workshopSpeakers,
-        workshopDate: workshopDate,
-        workshopTime: workshopTime,
-        approvalStatus: approvalStatus
-      });
-      window.location.reload(false);
-      console.log("Data inserted successfully!!!");
-    };
-    // Update workshop details
-    const updateWorkshop = id => {
-      _axiosDefault.default.put("http://localhost:3001/update", {
-        id: id,
-        newworkshopDescription: newworkshopDescription,
-        newworkshopSpeakers: newworkshopSpeakers,
-        newworkshopTime: newworkshopTime,
-        newworkshopDate: newworkshopDate,
-        newapprovalStatus: newapprovalStatus
-      });
-      window.location.reload(false);
-    };
-    return (
-      /*#__PURE__*/_reactDefault.default.createElement("div", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 73,
-          columnNumber: 9
-        }
-      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: "AddForm",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 74,
-          columnNumber: 13
-        }
-      }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 75,
-          columnNumber: 17
-        }
-      }, "Workshop Information - CMT"), /*#__PURE__*/_reactDefault.default.createElement("label", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 77,
-          columnNumber: 17
-        }
-      }, "USER ID "), /*#__PURE__*/_reactDefault.default.createElement("input", {
-        type: "text",
-        onChange: event => {
-          setuserID(event.target.value);
-        },
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 78,
-          columnNumber: 17
-        }
-      }), /*#__PURE__*/_reactDefault.default.createElement("label", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 82,
-          columnNumber: 17
-        }
-      }, "Workshop Title"), /*#__PURE__*/_reactDefault.default.createElement("input", {
-        type: "text",
-        onChange: event => {
-          setworkshopTitle(event.target.value);
-        },
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 83,
-          columnNumber: 17
-        }
-      }), /*#__PURE__*/_reactDefault.default.createElement("label", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 87,
-          columnNumber: 17
-        }
-      }, "Workshop Description"), /*#__PURE__*/_reactDefault.default.createElement("input", {
-        type: "text",
-        onChange: event => {
-          setworkshopDescription(event.target.value);
-        },
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 88,
-          columnNumber: 17
-        }
-      }), /*#__PURE__*/_reactDefault.default.createElement("label", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 92,
-          columnNumber: 17
-        }
-      }, "Workshop Speakers"), /*#__PURE__*/_reactDefault.default.createElement("input", {
-        type: "text",
-        onChange: event => {
-          setworkshopSpeakers(event.target.value);
-        },
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 93,
-          columnNumber: 17
-        }
-      }), /*#__PURE__*/_reactDefault.default.createElement("label", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 97,
-          columnNumber: 17
-        }
-      }, "Workshop Date"), /*#__PURE__*/_reactDefault.default.createElement("input", {
-        type: "text",
-        onChange: event => {
-          setworkshopDate(event.target.value);
-        },
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 98,
-          columnNumber: 17
-        }
-      }), /*#__PURE__*/_reactDefault.default.createElement("label", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 102,
-          columnNumber: 17
-        }
-      }, "Workshop Time"), /*#__PURE__*/_reactDefault.default.createElement("input", {
-        type: "text",
-        onChange: event => {
-          setworkshopTime(event.target.value);
-        },
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 103,
-          columnNumber: 17
-        }
-      }), /*#__PURE__*/_reactDefault.default.createElement("button", {
-        onClick: addToWorkshopList,
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 107,
-          columnNumber: 17
-        }
-      }, "Add User Details")), /*#__PURE__*/_reactDefault.default.createElement("div", {
-        class: "viewTable",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 110,
-          columnNumber: 13
-        }
-      }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 111,
-          columnNumber: 17
-        }
-      }, "Workshop List"), /*#__PURE__*/_reactDefault.default.createElement("table", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 113,
-          columnNumber: 17
-        }
-      }, /*#__PURE__*/_reactDefault.default.createElement("tr", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 114,
-          columnNumber: 21
-        }
-      }, /*#__PURE__*/_reactDefault.default.createElement("th", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 115,
-          columnNumber: 25
-        }
-      }, "User ID"), /*#__PURE__*/_reactDefault.default.createElement("th", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 116,
-          columnNumber: 25
-        }
-      }, "Workshop Title"), /*#__PURE__*/_reactDefault.default.createElement("th", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 117,
-          columnNumber: 25
-        }
-      }, "Workshop Description"), /*#__PURE__*/_reactDefault.default.createElement("th", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 118,
-          columnNumber: 25
-        }
-      }, "Workshop Speakers"), /*#__PURE__*/_reactDefault.default.createElement("th", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 119,
-          columnNumber: 25
-        }
-      }, "Workshop Date"), /*#__PURE__*/_reactDefault.default.createElement("th", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 120,
-          columnNumber: 25
-        }
-      }, "Workshop Time"), /*#__PURE__*/_reactDefault.default.createElement("th", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 121,
-          columnNumber: 25
-        }
-      }, "Workshop Approval Status"), /*#__PURE__*/_reactDefault.default.createElement("th", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 122,
-          columnNumber: 25
-        }
-      }, "Edit")), workshoplist.map((val, key) => {
-        return (
-          /*#__PURE__*/_reactDefault.default.createElement("tr", {
-            key: key,
-            __self: this,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 125,
-              columnNumber: 32
-            }
-          }, /*#__PURE__*/_reactDefault.default.createElement("td", {
-            __self: this,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 126,
-              columnNumber: 25
-            }
-          }, " ", val.userID, " "), /*#__PURE__*/_reactDefault.default.createElement("td", {
-            __self: this,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 127,
-              columnNumber: 25
-            }
-          }, " ", val.workshopTitle, " "), /*#__PURE__*/_reactDefault.default.createElement("td", {
-            __self: this,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 128,
-              columnNumber: 25
-            }
-          }, " ", val.workshopDescription, " "), /*#__PURE__*/_reactDefault.default.createElement("td", {
-            __self: this,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 129,
-              columnNumber: 25
-            }
-          }, " ", val.workshopSpeakers, " "), /*#__PURE__*/_reactDefault.default.createElement("td", {
-            __self: this,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 130,
-              columnNumber: 25
-            }
-          }, " ", val.workshopDate, " "), /*#__PURE__*/_reactDefault.default.createElement("td", {
-            __self: this,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 131,
-              columnNumber: 25
-            }
-          }, " ", val.workshopTime, " "), /*#__PURE__*/_reactDefault.default.createElement("td", {
-            __self: this,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 132,
-              columnNumber: 25
-            }
-          }, " ", val.approvalStatus, " "), /*#__PURE__*/_reactDefault.default.createElement("td", {
-            __self: this,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 133,
-              columnNumber: 25
-            }
-          }, " ", /*#__PURE__*/_reactDefault.default.createElement("button", {
-            onClick: () => getList(val._id),
-            __self: this,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 133,
-              columnNumber: 30
-            }
-          }, "Edit"), " "))
-        );
-      }))), /*#__PURE__*/_reactDefault.default.createElement("div", {
-        class: "updateForm",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 139,
-          columnNumber: 13
-        }
-      }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 140,
-          columnNumber: 17
-        }
-      }, "Edit Details Window"), newworkshoplist.map((val, key) => {
-        return (
-          /*#__PURE__*/_reactDefault.default.createElement("div", {
-            key: key,
-            __self: this,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 142,
-              columnNumber: 24
-            }
-          }, /*#__PURE__*/_reactDefault.default.createElement("label", {
-            __self: this,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 143,
-              columnNumber: 21
-            }
-          }, "Workshop Title - ", val.workshopTitle, " "), /*#__PURE__*/_reactDefault.default.createElement("label", {
-            __self: this,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 145,
-              columnNumber: 21
-            }
-          }, "Workshop Description - ", val.workshopDescription, " "), /*#__PURE__*/_reactDefault.default.createElement("input", {
-            type: "text",
-            onChange: event => {
-              setnewworkshopDescription(event.target.value);
-            },
-            __self: this,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 146,
-              columnNumber: 21
-            }
-          }), /*#__PURE__*/_reactDefault.default.createElement("label", {
-            __self: this,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 150,
-              columnNumber: 21
-            }
-          }, "Workshop Speakers - ", val.workshopSpeakers), /*#__PURE__*/_reactDefault.default.createElement("input", {
-            type: "text",
-            onChange: event => {
-              setnewworkshopSpeakers(event.target.value);
-            },
-            __self: this,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 151,
-              columnNumber: 21
-            }
-          }), /*#__PURE__*/_reactDefault.default.createElement("label", {
-            __self: this,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 155,
-              columnNumber: 21
-            }
-          }, "Workshop Date - ", val.workshopDate, " "), /*#__PURE__*/_reactDefault.default.createElement("input", {
-            type: "text",
-            onChange: event => {
-              setnewworkshopDate(event.target.value);
-            },
-            __self: this,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 156,
-              columnNumber: 21
-            }
-          }), /*#__PURE__*/_reactDefault.default.createElement("label", {
-            __self: this,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 160,
-              columnNumber: 21
-            }
-          }, "Workshop Time - ", val.workshopTime), /*#__PURE__*/_reactDefault.default.createElement("input", {
-            type: "text",
-            onChange: event => {
-              setnewworkshopTime(event.target.value);
-            },
-            __self: this,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 161,
-              columnNumber: 21
-            }
-          }), /*#__PURE__*/_reactDefault.default.createElement("td", {
-            __self: this,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 165,
-              columnNumber: 21
-            }
-          }, " ", /*#__PURE__*/_reactDefault.default.createElement("button", {
-            onClick: () => updateWorkshop(val._id),
-            __self: this,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 165,
-              columnNumber: 26
-            }
-          }, "UPDATE"), " "), /*#__PURE__*/_reactDefault.default.createElement("td", {
-            __self: this,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 166,
-              columnNumber: 21
-            }
-          }, " ", /*#__PURE__*/_reactDefault.default.createElement("button", {
-            __self: this,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 166,
-              columnNumber: 26
-            }
-          }, "DELETE"), " "))
-        );
-      })))
-    );
-  }
-  _s(EditWorkshopUser, "oU7fUTi2i+dnKqm/wTYjjhCmlf0=");
-  _c = EditWorkshopUser;
-  exports.default = EditWorkshopUser;
-  var _c;
-  $RefreshReg$(_c, "EditWorkshopUser");
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
+},{"react-is":"68QIU"}]},["1j6wU","3L2qK","5Qvcc"], "5Qvcc", "parcelRequiref125")
 
-},{"react":"3b2NM","axios":"7rA65","../css/App.css":"6baYm","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6baYm":[function() {},{}]},["1j6wU","3L2qK","5Qvcc"], "5Qvcc", "parcelRequiref125")
-
-//# sourceMappingURL=index.63f10152.js.map
+//# sourceMappingURL=index.HASH_REF_ca6253830bf612b84ef417e863f10152.js.map
