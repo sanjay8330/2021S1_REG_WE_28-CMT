@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
-import '../css/App.css';
+//import '../css/App.css';
+import '../css/AddWorkShopUserCss';
 import EditWorkshopUser from './EditWorkshopUser';
 
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
@@ -45,68 +46,71 @@ function AddWorkShopUser() {
     
     return (
         <div>
-            <div className="AddForm">
-                <h3>User Information - CMT</h3>
+            <div className="Form1">
+                <center><h2>User Information - CMT</h2></center>
+                <hr />
 
-                <label>User ID</label>
+                <label>User ID</label><br />
                 <input type="text" onChange={(event) => {
                 setuserID(event.target.value)
-                }} />
+                }} /><br />
 
-                <label>User Type</label>
+                <label>User Type</label><br />
                 <input type="text" onChange={(event) => {
                 setuserType(event.target.value)
-                }} />
+                }} /><br />
 
-                <label>User Full Name</label>
+                <label>User Full Name</label><br />
                 <input type="text" onChange={(event) => {
                 setuserName(event.target.value)
-                }} />
+                }} /><br />
 
-                <label>User Contact Number</label>
+                <label>User Contact Number</label><br />
                 <input type="text" onChange={(event) => {
                 setuserContact(event.target.value)
-                }} />
+                }} /><br />
 
-                <label>User Email Address</label>
+                <label>User Email Address</label><br />
                 <input type="text" onChange={(event) => {
                 setuserEmail(event.target.value)
-                }} />
+                }} /><br />
 
-                <label>User Password</label>
+                <label>User Password</label><br />
                 <input type="text" onChange={(event) => {
                 setuserPassword(event.target.value)
-                }} />
-
-                <button onClick={addToList}>Add User Details</button>
+                }} /><br />
             </div>
-            <div class="AddForm2">
-                <h3>Workshop Information - CMT</h3>
+            <div class="Form2">
+                <center><h2>Workshop Information - CMT</h2></center>
 
-                <label>Workshop Title</label>
+                <hr />
+
+                <label>Workshop Title</label><br />
                 <input type="text" onChange={(event) => {
                 setworkshopTitle(event.target.value)
-                }} />
+                }} /><br />
 
-                <label>Workshop Description</label>
+                <label>Workshop Description</label><br />
                 <input type="text" onChange={(event) => {
                 setworkshopDescription(event.target.value)
-                }} />
+                }} /><br />
 
-                <label>Workshop Speakers</label>
+                <label>Workshop Speakers</label><br />
                 <input type="text" onChange={(event) => {
                 setworkshopSpeakers(event.target.value)
-                }} />
+                }} /><br />
 
-                <label>Workshop Date</label>
+                <label>Workshop Date</label><br />
                 <input type="text" onChange={(event) => {
                 setworkshopDate(event.target.value)
-                }} />
+                }} /><br />
 
-                <label>Workshop Time</label>
+                <label>Workshop Time</label><br />
                 <input type="text" onChange={(event) => {
                 setworkshopTime(event.target.value)
-                }} />
+                }} /><br />
+
+                <center><button class="registerbtn" onClick={addToList}>Add User Details</button></center>
             </div> 
 
             <div>

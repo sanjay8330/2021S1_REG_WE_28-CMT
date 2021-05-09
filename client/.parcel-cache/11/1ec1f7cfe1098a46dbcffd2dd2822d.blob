@@ -1,0 +1,537 @@
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _axios = require('axios');
+  var _axiosDefault = _parcelHelpers.interopDefault(_axios);
+  require('../css/AddWorkShopUserCss');
+  var _EditWorkshopUser = require('./EditWorkshopUser');
+  var _EditWorkshopUserDefault = _parcelHelpers.interopDefault(_EditWorkshopUser);
+  var _reactRouterDom = require('react-router-dom');
+  var _jsxFileName = "C:\\Users\\HP\\Desktop\\Assignments\\AF Project\\client\\components\\AddWorkShopUser.js", _s = $RefreshSig$();
+  function AddWorkShopUser() {
+    _s();
+    /*The attributes to add a new user*/
+    const [userID, setuserID] = _react.useState(0);
+    const [userType, setuserType] = _react.useState("");
+    const [userName, setuserName] = _react.useState("");
+    const [userContact, setuserContact] = _react.useState("");
+    const [userEmail, setuserEmail] = _react.useState("");
+    const [userPassword, setuserPassword] = _react.useState("");
+    /*The attributes to add a workshop*/
+    const [workshopTitle, setworkshopTitle] = _react.useState("");
+    const [workshopDescription, setworkshopDescription] = _react.useState("");
+    const [workshopSpeakers, setworkshopSpeakers] = _react.useState("");
+    const [workshopDate, setworkshopDate] = _react.useState("");
+    const [workshopTime, setworkshopTime] = _react.useState("");
+    const approvalStatus = 'PendingApproval';
+    // Add Method - USER
+    const addToList = () => {
+      console.log(userID + userName);
+      _axiosDefault.default.post("http://localhost:3001/insert", {
+        userID: userID,
+        userType: userType,
+        userName: userName,
+        userContact: userContact,
+        userEmail: userEmail,
+        userPassword: userPassword,
+        workshopTitle: workshopTitle,
+        workshopDescription: workshopDescription,
+        workshopSpeakers: workshopSpeakers,
+        workshopDate: workshopDate,
+        workshopTime: workshopTime,
+        approvalStatus: approvalStatus
+      });
+      window.location.reload(false);
+      console.log("Data inserted successfully!!!");
+    };
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 48,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "Form1",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 49,
+          columnNumber: 13
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("center", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 50,
+          columnNumber: 17
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 50,
+          columnNumber: 25
+        }
+      }, "User Information - CMT")), /*#__PURE__*/_reactDefault.default.createElement("hr", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 51,
+          columnNumber: 17
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("label", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 53,
+          columnNumber: 17
+        }
+      }, "User ID"), /*#__PURE__*/_reactDefault.default.createElement("br", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 53,
+          columnNumber: 39
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "text",
+        onChange: event => {
+          setuserID(event.target.value);
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 54,
+          columnNumber: 17
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("br", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 56,
+          columnNumber: 22
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("label", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 58,
+          columnNumber: 17
+        }
+      }, "User Type"), /*#__PURE__*/_reactDefault.default.createElement("br", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 58,
+          columnNumber: 41
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "text",
+        onChange: event => {
+          setuserType(event.target.value);
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 59,
+          columnNumber: 17
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("br", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 61,
+          columnNumber: 22
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("label", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 63,
+          columnNumber: 17
+        }
+      }, "User Full Name"), /*#__PURE__*/_reactDefault.default.createElement("br", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 63,
+          columnNumber: 46
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "text",
+        onChange: event => {
+          setuserName(event.target.value);
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 64,
+          columnNumber: 17
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("br", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 66,
+          columnNumber: 22
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("label", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 68,
+          columnNumber: 17
+        }
+      }, "User Contact Number"), /*#__PURE__*/_reactDefault.default.createElement("br", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 68,
+          columnNumber: 51
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "text",
+        onChange: event => {
+          setuserContact(event.target.value);
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 69,
+          columnNumber: 17
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("br", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 71,
+          columnNumber: 22
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("label", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 73,
+          columnNumber: 17
+        }
+      }, "User Email Address"), /*#__PURE__*/_reactDefault.default.createElement("br", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 73,
+          columnNumber: 50
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "text",
+        onChange: event => {
+          setuserEmail(event.target.value);
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 74,
+          columnNumber: 17
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("br", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 76,
+          columnNumber: 22
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("label", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 78,
+          columnNumber: 17
+        }
+      }, "User Password"), /*#__PURE__*/_reactDefault.default.createElement("br", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 78,
+          columnNumber: 45
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "text",
+        onChange: event => {
+          setuserPassword(event.target.value);
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 79,
+          columnNumber: 17
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("br", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 81,
+          columnNumber: 22
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("button", {
+        onClick: addToList,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 83,
+          columnNumber: 17
+        }
+      }, "Add User Details")), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        class: "Form2",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 85,
+          columnNumber: 13
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 86,
+          columnNumber: 17
+        }
+      }, "Workshop Information - CMT"), /*#__PURE__*/_reactDefault.default.createElement("hr", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 88,
+          columnNumber: 17
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("label", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 90,
+          columnNumber: 17
+        }
+      }, "Workshop Title"), /*#__PURE__*/_reactDefault.default.createElement("br", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 90,
+          columnNumber: 46
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "text",
+        onChange: event => {
+          setworkshopTitle(event.target.value);
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 91,
+          columnNumber: 17
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("br", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 93,
+          columnNumber: 22
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("label", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 95,
+          columnNumber: 17
+        }
+      }, "Workshop Description"), /*#__PURE__*/_reactDefault.default.createElement("br", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 95,
+          columnNumber: 52
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "text",
+        onChange: event => {
+          setworkshopDescription(event.target.value);
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 96,
+          columnNumber: 17
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("br", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 98,
+          columnNumber: 22
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("label", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 100,
+          columnNumber: 17
+        }
+      }, "Workshop Speakers"), /*#__PURE__*/_reactDefault.default.createElement("br", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 100,
+          columnNumber: 49
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "text",
+        onChange: event => {
+          setworkshopSpeakers(event.target.value);
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 101,
+          columnNumber: 17
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("br", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 103,
+          columnNumber: 22
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("label", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 105,
+          columnNumber: 17
+        }
+      }, "Workshop Date"), /*#__PURE__*/_reactDefault.default.createElement("br", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 105,
+          columnNumber: 45
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "text",
+        onChange: event => {
+          setworkshopDate(event.target.value);
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 106,
+          columnNumber: 17
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("br", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 108,
+          columnNumber: 22
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("label", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 110,
+          columnNumber: 17
+        }
+      }, "Workshop Time"), /*#__PURE__*/_reactDefault.default.createElement("br", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 110,
+          columnNumber: 45
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "text",
+        onChange: event => {
+          setworkshopTime(event.target.value);
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 111,
+          columnNumber: 17
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("br", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 113,
+          columnNumber: 22
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 116,
+          columnNumber: 13
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 117,
+          columnNumber: 13
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
+        to: "/workshop/add",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 118,
+          columnNumber: 17
+        }
+      }, "Add"), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Switch, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 119,
+          columnNumber: 17
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+        exact: true,
+        path: "/",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 120,
+          columnNumber: 21
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+        path: "/workshop/add",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 121,
+          columnNumber: 21
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_EditWorkshopUserDefault.default, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 122,
+          columnNumber: 25
+        }
+      }))))))
+    );
+  }
+  _s(AddWorkShopUser, "hXCItCjpw12qzv7XYliS2c0fqhA=");
+  _c = AddWorkShopUser;
+  exports.default = AddWorkShopUser;
+  var _c;
+  $RefreshReg$(_c, "AddWorkShopUser");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
