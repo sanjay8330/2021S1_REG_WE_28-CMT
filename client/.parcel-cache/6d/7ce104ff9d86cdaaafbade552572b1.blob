@@ -26523,7 +26523,7 @@ try {
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-        class: "Form1",
+        className: "Form1",
         __self: this,
         __source: {
           fileName: _jsxFileName,
@@ -32732,19 +32732,19 @@ try {
     const [newworkshoplist, setnewworkshoplist] = _react.useState([]);
     // Get all workshop details method
     _react.useEffect(() => {
-      _axiosDefault.default.get("http://localhost:3001/workshop/readAllWorkshops").then(response => {
+      _axiosDefault.default.get("http://localhost:3001/readAllWorkshops").then(response => {
         setworkshoplist(response.data);
       });
     }, []);
     // Get the workshop details by ID
     const getList = id => {
-      _axiosDefault.default.get(`http://localhost:3001/workshop/readById/${id}`).then(response => {
+      _axiosDefault.default.get(`http://localhost:3001/readById/${id}`).then(response => {
         setnewworkshoplist(response.data);
       });
     };
     // Add Method - USER
     const addToWorkshopList = () => {
-      _axiosDefault.default.post("http://localhost:3001/workshop/insertWorkshop", {
+      _axiosDefault.default.post("http://localhost:3001/insertWorkshop", {
         userID: userID,
         workshopTitle: workshopTitle,
         workshopDescription: workshopDescription,
@@ -32758,7 +32758,7 @@ try {
     };
     // Update workshop details
     const updateWorkshop = id => {
-      _axiosDefault.default.put("http://localhost:3001/workshop/update", {
+      _axiosDefault.default.put("http://localhost:3001/update", {
         id: id,
         newworkshopDescription: newworkshopDescription,
         newworkshopSpeakers: newworkshopSpeakers,
@@ -32777,7 +32777,7 @@ try {
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-        class: "AddForm",
+        className: "AddForm",
         __self: this,
         __source: {
           fileName: _jsxFileName,
@@ -33100,21 +33100,7 @@ try {
               lineNumber: 143,
               columnNumber: 21
             }
-          }, "Workshop Title - ", val.workshopTitle, " "), /*#__PURE__*/_reactDefault.default.createElement("br", {
-            __self: this,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 143,
-              columnNumber: 73
-            }
-          }), /*#__PURE__*/_reactDefault.default.createElement("br", {
-            __self: this,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 143,
-              columnNumber: 79
-            }
-          }), /*#__PURE__*/_reactDefault.default.createElement("label", {
+          }, "Workshop Title - ", val.workshopTitle, " "), /*#__PURE__*/_reactDefault.default.createElement("label", {
             __self: this,
             __source: {
               fileName: _jsxFileName,
@@ -33233,4 +33219,4 @@ try {
 
 },{"react":"3b2NM","axios":"7rA65","../css/App.css":"6baYm","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6baYm":[function() {},{}],"4kmOD":[function() {},{}]},["1j6wU","3L2qK","5Qvcc"], "5Qvcc", "parcelRequiref125")
 
-//# sourceMappingURL=index.63f10152.js.map
+//# sourceMappingURL=index.HASH_REF_ca6253830bf612b84ef417e863f10152.js.map

@@ -27,7 +27,7 @@
 93C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\@parcel\utils\src\sourcemap.js121436361000000000 0
 126C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\postcss-minify-font-values\node_modules\supports-color\index.js121436361000000000 0
 73C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\iconv-lite132639599236522110 1
-54C:\Users\HP\Desktop\Assignments\AF Project\client\dist132649984469237818 1
+54C:\Users\HP\Desktop\Assignments\AF Project\client\dist132651714234754756 1
 100C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\purgecss\node_modules\chalk\readme.md121436361000000000 0
 85C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\concat-map\test\map.js129985727760000000 0
 60C:\Users\HP\Desktop\Assignments\AF Project\client\components132644057922421090 1
@@ -16231,7 +16231,7 @@
 99C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\elliptic\lib\elliptic\curve\short.js121436361000000000 0
 96C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\electron-to-chromium\CHANGELOG.md121436361000000000 0
 104C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\electron-to-chromium\chromium-versions.js121436361000000000 0
-65C:\Users\HP\Desktop\Assignments\AF Project\client\dist\index.html132649984468308411 0
+65C:\Users\HP\Desktop\Assignments\AF Project\client\dist\index.html132651714233455579 0
 95C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\electron-to-chromium\versions.js121436361000000000 0
 77C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\ejs\ejs.min.js132186645850000000 0
 93C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\decode-uri-component\readme.md131403579590000000 0
@@ -21229,10 +21229,10 @@
 72C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\.bin\uuid132639599319123000 0
 73C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\.bin\which132639599319282893 0
 77C:\Users\HP\Desktop\Assignments\AF Project\client\node_modules\.bin\which.cmd132639599319282893 0
-73C:\Users\HP\Desktop\Assignments\AF Project\client\dist\index.4a9bdfdc.css132649984468348386 0
-77C:\Users\HP\Desktop\Assignments\AF Project\client\dist\index.4a9bdfdc.css.map132649984468618212 0
-72C:\Users\HP\Desktop\Assignments\AF Project\client\dist\index.63f10152.js132649984468718146 0
-76C:\Users\HP\Desktop\Assignments\AF Project\client\dist\index.63f10152.js.map132649984468898054 0
+73C:\Users\HP\Desktop\Assignments\AF Project\client\dist\index.4a9bdfdc.css132651714233585500 0
+77C:\Users\HP\Desktop\Assignments\AF Project\client\dist\index.4a9bdfdc.css.map132651714233805358 0
+72C:\Users\HP\Desktop\Assignments\AF Project\client\dist\index.63f10152.js132651714234025229 0
+76C:\Users\HP\Desktop\Assignments\AF Project\client\dist\index.63f10152.js.map132651714234724789 0
 61C:\Users\HP\Desktop\Assignments\AF Project\client\css\App.css132640475224974970 0
-79C:\Users\HP\Desktop\Assignments\AF Project\client\components\AddWorkShopUser.js132649981100541697 0
-80C:\Users\HP\Desktop\Assignments\AF Project\client\components\EditWorkshopUser.js132644059027263019 0
+79C:\Users\HP\Desktop\Assignments\AF Project\client\components\AddWorkShopUser.js132651711403736894 0
+80C:\Users\HP\Desktop\Assignments\AF Project\client\components\EditWorkshopUser.js132651714224890875 0

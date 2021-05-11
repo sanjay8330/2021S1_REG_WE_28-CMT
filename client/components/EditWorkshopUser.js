@@ -28,14 +28,14 @@ function EditWorkshopUser() {
 
     //Get all workshop details method
     useEffect(() => {
-        Axios.get("http://localhost:3001/readAllWorkshops").then((response) => {
+        Axios.get("http://localhost:3001/workshop/readAllWorkshops").then((response) => {
             setworkshoplist(response.data);
         });
     }, []);
 
     //Get the workshop details by ID
     const getList = (id) => {
-        Axios.get(`http://localhost:3001/readById/${id}`).then((response) => {
+        Axios.get(`http://localhost:3001/workshop/readById/${id}`).then((response) => {
           setnewworkshoplist(response.data);
         });
       }
@@ -43,7 +43,7 @@ function EditWorkshopUser() {
 
     //Add Method - USER
     const addToWorkshopList = () => {
-        Axios.post("http://localhost:3001/insertWorkshop", {
+        Axios.post("http://localhost:3001/workshop/insertWorkshop", {
           userID: userID, 
           workshopTitle: workshopTitle,
           workshopDescription: workshopDescription,
@@ -58,7 +58,7 @@ function EditWorkshopUser() {
 
     //Update workshop details
     const updateWorkshop = (id) => {
-        Axios.put("http://localhost:3001/update", {
+        Axios.put("http://localhost:3001/workshop/update", {
           id: id,
           newworkshopDescription: newworkshopDescription,
           newworkshopSpeakers: newworkshopSpeakers,
@@ -71,7 +71,7 @@ function EditWorkshopUser() {
     
     return (
         <div>
-            <div className="AddForm">
+            <div class="AddForm">
                 <h3>Workshop Information - CMT</h3>
 
                 <label>USER ID </label>
@@ -140,7 +140,7 @@ function EditWorkshopUser() {
                 <h1>Edit Details Window</h1>
                 {newworkshoplist.map((val, key) => {
                 return <div key={key}>
-                    <label>Workshop Title - {val.workshopTitle} </label>
+                    <label>Workshop Title - {val.workshopTitle} </label><br /><br />
 
                     <label>Workshop Description - {val.workshopDescription} </label>
                     <input type="text" onChange={(event) => {

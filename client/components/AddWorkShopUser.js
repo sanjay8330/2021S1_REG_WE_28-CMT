@@ -26,7 +26,7 @@ function AddWorkShopUser() {
     //Add Method - USER
     const addToList = () => {
         console.log(userID + userName);
-        Axios.post("http://localhost:3001/insert", {
+        Axios.post("http://localhost:3001/workshopUser/insert", {
           userID: userID,
           userType: userType,
           userName: userName,
@@ -46,7 +46,7 @@ function AddWorkShopUser() {
     
     return (
         <div>
-            <div className="Form1">
+            <div class="Form1">
                 <center><h2>User Information - CMT</h2></center>
                 <hr />
 
