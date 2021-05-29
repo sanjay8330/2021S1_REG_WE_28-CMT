@@ -13,8 +13,10 @@ app.use(bodyparser.json());
 app.use(cors());
 
 const workshopRouter = require('./routes/Workshop');
+const attendeeRouter = require('./routes/Attendee');
 
 app.use("/workshop", workshopRouter);
+app.use("/attendee",attendeeRouter);
 
 //Connection to mongoose
 mongoose.connect("mongodb+srv://AF:sanjay-8330@cmt.g1xsc.mongodb.net/CMTDatabase?retryWrites=true&w=majority", {
