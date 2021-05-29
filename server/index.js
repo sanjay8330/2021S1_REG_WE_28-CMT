@@ -12,10 +12,8 @@ const app = express();
 app.use(bodyparser.json());
 app.use(cors());
 
-const workshopUserRouter = require('./routes/WorkshopUser');
 const workshopRouter = require('./routes/Workshop');
 
-app.use("/workshopUser", workshopUserRouter);
 app.use("/workshop", workshopRouter);
 
 //Connection to mongoose

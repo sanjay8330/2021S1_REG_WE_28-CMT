@@ -4,34 +4,42 @@ const mongoose = require('mongoose');
  * date , time and outcome
   */
 
+/**The Workshopflyer ulpoad should be included */
 const WorkshopSchema = new mongoose.Schema({
-    userID: {
-        type: Number,
+    workshopConductorName: {
+        type: String,
         required: true,
+        trim: true,
+    },
+    workshopConductorEmail: {
+        type: String,
+        required: true,
+        trim: true,
+    },
+    workshopConductorPhone: {
+        type: String,
+        required: true,
+        trim: true,
     },
     workshopTitle: {
         type: String,
         required: true,
+        trim: true,
     },
     workshopDescription: {
         type: String,
         required: true,
+        trim: true,
     },
     workshopSpeakers: {
         type: String,
         required: true,
-    },
-    workshopDate: {
-        type: String,
-        required: true,
-    },
-    workshopTime: {
-        type: String,
-        required: true,
+        trim: true,
     },
     approvalStatus: {
         type: String,
         required: false,
+        trim: true,
     },
 });
 
