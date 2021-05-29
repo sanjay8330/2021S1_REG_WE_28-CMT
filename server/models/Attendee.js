@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 
-/**The user details (researcher, workshop conductor, reviewer and editor with the admin)
- * basic information and type (important)
+/**The attendee details - Section 01
+ * The conference details - Section 2
+ * The payment details - Section 3
   */
 
 const AttendeeSchema = new mongoose.Schema({
@@ -15,6 +16,19 @@ const AttendeeSchema = new mongoose.Schema({
     },
     attendeeContact: {
         type: String,
+        required: true,
+    },
+    paymentDate: {
+        type:Date,
+        required: true,
+        trim: true,
+    },
+    paymentAmount: {
+        type: Number,
+        required: true,
+    },
+    paymentAccountNo: {
+        type: Number,
         required: true,
     },
 });

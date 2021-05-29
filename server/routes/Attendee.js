@@ -6,11 +6,19 @@ router.route("/insertAttendee").post(async (req, res) => {
     const attendeeName = req.body.attendeeName;
     const attendeeEmail = req.body.attendeeEmail;
     const attendeeContact = req.body.attendeeContact;
+    const paymentDate = req.body.paymentDate;
+    const paymentAmount = req.body.paymentAmount;
+    const paymentAccountNo = req.body.paymentAccountNo;
+
+
 
     const attendee = new AttendeeModel({
         attendeeName: attendeeName,
         attendeeEmail: attendeeEmail,
         attendeeContact: attendeeContact,
+        paymentDate: paymentDate,
+        paymentAmount: paymentAmount,
+        paymentAccountNo: paymentAccountNo,
     });
 
     try{
@@ -51,6 +59,9 @@ router.route("/update").put(async (req, res) => {
     const attendeeName = req.body.attendeeName;
     const attendeeEmail = req.body.attendeeEmail;
     const attendeeContact = req.body.attendeeContact;
+    const paymentDate = req.body.paymentDate;
+    const paymentAmount = req.body.paymentAmount;
+    const paymentAccountNo = req.body.paymentAccountNo;
     const id = req.body.id;
 
     try{
@@ -58,6 +69,9 @@ router.route("/update").put(async (req, res) => {
             updatedAttendeeObject.attendeeName = attendeeName;
             updatedAttendeeObject.attendeeEmail = attendeeEmail;
             updatedAttendeeObject.attendeeContact = attendeeContact;
+            updatedAttendeeObject.paymentDate = paymentDate;
+            updatedAttendeeObject.paymentAmount = paymentAmount;
+            updatedAttendeeObject.paymentAccountNo = paymentAccountNo;
             updatedAttendeeObject.save();
             console.log("Updated Successfully!!!");
             res.send("Updated Successfully");
