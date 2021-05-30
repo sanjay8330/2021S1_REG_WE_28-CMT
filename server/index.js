@@ -14,9 +14,13 @@ app.use(cors());
 
 const workshopRouter = require('./routes/Workshop');
 const attendeeRouter = require('./routes/Attendee');
+const researchRouter = require('./routes/Research');
+const conferenceRouter = require('./routes/Conference');
 
 app.use("/workshop", workshopRouter);
-app.use("/attendee",attendeeRouter);
+app.use("/attendee", attendeeRouter);
+app.use("/research", researchRouter);
+app.use("/conference", conferenceRouter);
 
 //Connection to mongoose
 mongoose.connect("mongodb+srv://AF:sanjay-8330@cmt.g1xsc.mongodb.net/CMTDatabase?retryWrites=true&w=majority", {
