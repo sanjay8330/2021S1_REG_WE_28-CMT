@@ -9,8 +9,7 @@ router.route("/insertAttendee").post(async (req, res) => {
     const paymentDate = req.body.paymentDate;
     const paymentAmount = req.body.paymentAmount;
     const paymentAccountNo = req.body.paymentAccountNo;
-
-
+    const conferenceID = req.body.conferenceID;
 
     const attendee = new AttendeeModel({
         attendeeName: attendeeName,
@@ -19,6 +18,7 @@ router.route("/insertAttendee").post(async (req, res) => {
         paymentDate: paymentDate,
         paymentAmount: paymentAmount,
         paymentAccountNo: paymentAccountNo,
+        conferenceID: conferenceID,
     });
 
     try{
@@ -54,6 +54,33 @@ router.route("/readById/:id").get(async (req, res) => {
     })
 });
 
+//Read Attendee for a conference
+router.route("/readByconferenceId/:id").get(async (req, res) => {
+    const id = req.params.id;
+
+    AttendeeModel.find({conferenceID:id}, (error,result) => {
+        if(error){
+            res.send(error);
+        }
+
+        res.send(result)
+    })
+});
+
+//Read Attendee by ID
+router.route("/deleteById/:id").get(async (req, res) => {
+    const id = req.params.id;
+
+    AttendeeModel.findByIdAndRemove({_id: id}, (error,result) => {
+        if(error){
+            res.send(error);
+        }
+
+        res.send(result)
+    })
+});
+
+//----------------OPTIONAL-----------------------------
 //Update the attendee details
 router.route("/update").put(async (req, res) => {
     const attendeeName = req.body.attendeeName;

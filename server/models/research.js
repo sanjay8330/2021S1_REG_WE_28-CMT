@@ -1,0 +1,41 @@
+const mongoose = require('mongoose');
+
+/**The research author details - Section 01
+ * The research paper details - Section 2
+  */
+
+const ResearchSchema = new mongoose.Schema({
+    authorName: {
+        type: String,
+        required: true,
+        trim: true,
+    },
+    authorEmail: {
+        type: String,
+        required: true,
+        trim: true,
+    },
+    authorContact: {
+        type: String,
+        required: true,
+        trim: true,
+    },
+    researchTitle: {
+        type: String,
+        required: true,
+        trim: true,
+    },
+    researchDescription: {
+        type: String,
+        required: true,
+        trim: true,
+    },
+    approvalStatus: {
+        type: String,
+        required: true,
+        trim: true,
+    },
+});
+
+const Research = mongoose.model("research", ResearchSchema);
+module.exports = Research;
