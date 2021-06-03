@@ -1,0 +1,274 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _axios = require('axios');
+  var _axiosDefault = _parcelHelpers.interopDefault(_axios);
+  var _jsxFileName = "C:\\Users\\HP\\Desktop\\Assignments\\AF Project\\client\\components\\Workshops\\createWorkshop.js";
+  const initialStates = {
+    "conductorName": '',
+    "conductorEmail": '',
+    "conductorPhone": '',
+    "workshopTitle": '',
+    "workshopDescription": '',
+    "workshopSpeakers": ''
+  };
+  class AddWorkshop extends _react.Component {
+    constructor(props) {
+      super(props);
+      this.onChange = this.onChange.bind(this);
+      this.onSubmit = this.onSubmit.bind(this);
+      this.state = initialStates;
+    }
+    onChange(e) {
+      this.setState({
+        [e.target.name]: e.target.value
+      });
+    }
+    onSubmit(e) {
+      e.preventDefault();
+      let workshop = {
+        "workshopConductorName": this.state.conductorName,
+        "workshopConductorEmail": this.state.conductorEmail,
+        "workshopConductorPhone": this.state.conductorPhone,
+        "workshopTitle": this.state.workshopTitle,
+        "workshopDescription": this.state.workshopDescription,
+        "workshopSpeakers": this.state.workshopSpeakers,
+        "approvalStatus": 'Approval Rending'
+      };
+      _axiosDefault.default.post('http://localhost:3001/workshop/insertWorkshop', workshop).then(response => {
+        alert('Workshop Details Added Successfully');
+      }).catch(error => {
+        alert('Error ', error.message);
+      });
+    }
+    render() {
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "container",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 46,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 47,
+            columnNumber: 17
+          }
+        }, "Add Workshop Details"), /*#__PURE__*/_reactDefault.default.createElement("form", {
+          onSubmit: this.onSubmit,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 48,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "mb-3",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 49,
+            columnNumber: 21
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("label", {
+          htmlFor: "conductorName",
+          className: "form-label",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 50,
+            columnNumber: 25
+          }
+        }, "Workshop Conductor Name"), /*#__PURE__*/_reactDefault.default.createElement("input", {
+          type: "text",
+          className: "form-control",
+          id: "conductorName",
+          name: "conductorName",
+          value: this.state.conductorName,
+          onChange: this.onChange,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 51,
+            columnNumber: 25
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "mb-3",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 60,
+            columnNumber: 21
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("label", {
+          htmlFor: "conductorEmail",
+          className: "form-label",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 61,
+            columnNumber: 25
+          }
+        }, "Workshop Conductor Email"), /*#__PURE__*/_reactDefault.default.createElement("input", {
+          type: "email",
+          className: "form-control",
+          id: "conductorEmail",
+          name: "conductorEmail",
+          value: this.state.conductorEmail,
+          onChange: this.onChange,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 62,
+            columnNumber: 25
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "mb-3",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 71,
+            columnNumber: 21
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("label", {
+          htmlFor: "conductorPhone",
+          className: "form-label",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 72,
+            columnNumber: 25
+          }
+        }, "Workshop Conductor Phone"), /*#__PURE__*/_reactDefault.default.createElement("input", {
+          type: "tel",
+          pattern: "[0-9]{10}",
+          className: "form-control",
+          id: "conductorPhone",
+          name: "conductorPhone",
+          value: this.state.conductorPhone,
+          onChange: this.onChange,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 73,
+            columnNumber: 25
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "mb-3",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 83,
+            columnNumber: 21
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("label", {
+          htmlFor: "workshopTitle",
+          className: "form-label",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 84,
+            columnNumber: 25
+          }
+        }, "Workshop Title"), /*#__PURE__*/_reactDefault.default.createElement("input", {
+          type: "text",
+          className: "form-control",
+          id: "workshopTitle",
+          name: "workshopTitle",
+          value: this.state.workshopTitle,
+          onChange: this.onChange,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 85,
+            columnNumber: 25
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          class: "mb-3",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 94,
+            columnNumber: 21
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("label", {
+          htmlFor: "workshopdescrip",
+          class: "form-label",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 95,
+            columnNumber: 25
+          }
+        }, "Workshop Description"), /*#__PURE__*/_reactDefault.default.createElement("textarea", {
+          className: "form-control",
+          id: "exampleFormControlTextarea1",
+          rows: "3",
+          name: "workshopDescription",
+          value: this.state.workshopDescription,
+          onChange: this.onChange,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 96,
+            columnNumber: 25
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          class: "mb-3",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 105,
+            columnNumber: 21
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("label", {
+          htmlFor: "workshopspeakers",
+          class: "form-label",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 106,
+            columnNumber: 25
+          }
+        }, "Workshop Speakers"), /*#__PURE__*/_reactDefault.default.createElement("textarea", {
+          className: "form-control",
+          id: "workshopSpeakers",
+          rows: "3",
+          name: "workshopSpeakers",
+          value: this.state.workshopSpeakers,
+          onChange: this.onChange,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 107,
+            columnNumber: 25
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("button", {
+          type: "submit",
+          className: "btn btn-primary",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 117,
+            columnNumber: 21
+          }
+        }, "Submit")))
+      );
+    }
+  }
+  exports.default = AddWorkshop;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

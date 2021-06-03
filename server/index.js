@@ -28,6 +28,10 @@ mongoose.connect("mongodb+srv://AF:sanjay-8330@cmt.g1xsc.mongodb.net/CMTDatabase
     useUnifiedTopology: true,
 })
 
+mongoose.connection.once('open', () => {
+    console.log('Database Synched!!');
+})
+
 //Running on the server
 app.listen(3001,() => {
     console.log("Server is started and running on 3001");

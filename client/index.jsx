@@ -1,5 +1,5 @@
 import React from 'react'; 
 import {render} from 'react-dom'; ;
-import AddWorkShopUser from './components/AddWorkShopUser';
+import App from './App';
 
-render(<AddWorkShopUser />, document.getElementById('app'));
+render(<App />, document.getElementById('root'));
