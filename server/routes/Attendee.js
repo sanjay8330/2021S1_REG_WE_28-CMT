@@ -7,9 +7,10 @@ router.route("/insertAttendee").post(async (req, res) => {
     const attendeeEmail = req.body.attendeeEmail;
     const attendeeContact = req.body.attendeeContact;
     const paymentDate = req.body.paymentDate;
-    const paymentAmount = req.body.paymentAmount;
+    const paymentAmount = req.body.paymentAmount; 
     const paymentAccountNo = req.body.paymentAccountNo;
-    const conferenceID = req.body.conferenceID;
+    //Events to be added
+    //const events = req.body.events;
 
     const attendee = new AttendeeModel({
         attendeeName: attendeeName,
@@ -18,7 +19,6 @@ router.route("/insertAttendee").post(async (req, res) => {
         paymentDate: paymentDate,
         paymentAmount: paymentAmount,
         paymentAccountNo: paymentAccountNo,
-        conferenceID: conferenceID,
     });
 
     try{

@@ -1,0 +1,85 @@
+var helpers = require("./node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _reactRouterDom = require('react-router-dom');
+  var _componentsNavBarNavBar = require('./components/NavBar/navBar');
+  var _componentsNavBarNavBarDefault = _parcelHelpers.interopDefault(_componentsNavBarNavBar);
+  var _componentsWorkshopsCreateWorkshop = require('./components/Workshops/createWorkshop');
+  var _componentsWorkshopsCreateWorkshopDefault = _parcelHelpers.interopDefault(_componentsWorkshopsCreateWorkshop);
+  var _componentsAttendeesCreateAttendees = require('./components/Attendees/createAttendees');
+  var _componentsAttendeesCreateAttendeesDefault = _parcelHelpers.interopDefault(_componentsAttendeesCreateAttendees);
+  var _jsxFileName = "C:\\Users\\HP\\Desktop\\Assignments\\AF Project\\client\\App.jsx";
+  function App() {
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 9,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 10,
+          columnNumber: 13
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_componentsNavBarNavBarDefault.default, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 11,
+          columnNumber: 17
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("section", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13,
+          columnNumber: 17
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Switch, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14,
+          columnNumber: 21
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+        path: "/addWorkshop",
+        component: _componentsWorkshopsCreateWorkshopDefault.default,
+        exact: true,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 15,
+          columnNumber: 25
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+        path: "/addAttendee",
+        component: _componentsAttendeesCreateAttendeesDefault.default,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16,
+          columnNumber: 25
+        }
+      })))))
+    );
+  }
+  _c = App;
+  exports.default = App;
+  var _c;
+  $RefreshReg$(_c, "App");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

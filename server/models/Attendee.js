@@ -31,10 +31,11 @@ const AttendeeSchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
-    conferenceID: {
-        type: Number,
-        required: true,
-    }
+    events: [{
+        type: mongoose.Schema.Types.ObjectId,
+        required: false,
+        ref: 'conference'
+    }]
 });
 
 const Attendee = mongoose.model("attendees",AttendeeSchema);
