@@ -41,6 +41,11 @@ const WorkshopSchema = new mongoose.Schema({
         required: false,
         trim: true,
     },
+    downloadURL: {
+        type: String,
+        required:true,
+        trim: true
+    }
 });
 
 const Workshop = mongoose.model("workshops",WorkshopSchema);

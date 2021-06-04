@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
+import firebase from '../../Firebase/firebase';
 
 const initialStates = {
     "conductorName": '',
@@ -7,18 +8,32 @@ const initialStates = {
     "conductorPhone": '',
     "workshopTitle": '',
     "workshopDescription": '',
-    "workshopSpeakers": ''
+    "workshopSpeakers": '',
+    "fileURL": ''
 }
 class AddWorkshop extends Component {
     constructor(props) {
         super(props);
         this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
+        this.onFileChange = this.onFileChange.bind(this);
         this.state = initialStates;
     }
 
     onChange(e){
         this.setState({ [e.target.name]: e.target.value });
+    }
+
+    async onFileChange (e){
+        const file = e.target.files[0];
+        const storageRef = firebase.storage().ref();
+        const fileRef = storageRef.child(file.name);
+        await fileRef.put(file).then(() => {
+            alert('File Uploaded Successfully!!', file.name);
+        })
+        const downloadURL = await fileRef.getDownloadURL();
+        console.log('Download URL', downloadURL);
+        this.setState({ fileURL: downloadURL});
     }
 
     onSubmit(e){
@@ -30,7 +45,8 @@ class AddWorkshop extends Component {
             "workshopTitle": this.state.workshopTitle,
             "workshopDescription": this.state.workshopDescription,
             "workshopSpeakers": this.state.workshopSpeakers,
-            "approvalStatus": 'Approval Pending'
+            "approvalStatus": 'Approval Pending',
+            "downloadURL": this.state.fileURL
         }
         Axios.post('http://localhost:3001/workshop/insertWorkshop', workshop)
         .then(response => {
@@ -112,6 +128,16 @@ class AddWorkshop extends Component {
                             value={this.state.workshopSpeakers}
                             onChange={this.onChange}>
                         </textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label htmlFor="upload file" class="form-label">Upload Workshop Flyer</label>
+                        <input
+                            type="file"
+                            className="form-control"
+                            id="file"
+                            name="file"
+                            onChange={this.onFileChange}
+                        />
                     </div>
 
                     <button type="submit" className="btn btn-primary">Submit</button>

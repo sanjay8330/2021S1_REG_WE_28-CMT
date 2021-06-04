@@ -10,6 +10,7 @@ router.route("/insertWorkshop").post(async (req, res) => {
     const workshopDescription = req.body.workshopDescription;
     const workshopSpeakers = req.body.workshopSpeakers;
     const approvalStatus = req.body.approvalStatus;
+    const downloadURL = req.body.downloadURL;
 
     const workshop = new WorkshopModel({
         workshopConductorName: workshopConductorName,
@@ -18,7 +19,8 @@ router.route("/insertWorkshop").post(async (req, res) => {
         workshopTitle: workshopTitle,
         workshopDescription: workshopDescription,
         workshopSpeakers: workshopSpeakers,
-        approvalStatus: approvalStatus  
+        approvalStatus: approvalStatus,
+        downloadURL: downloadURL  
     });
 
     try{
