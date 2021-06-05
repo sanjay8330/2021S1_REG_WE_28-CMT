@@ -9,6 +9,7 @@ router.route("/insertResearch").post(async (req, res) => {
     const researchTitle = req.body.researchTitle;
     const researchDescription = req.body.researchDescription;
     const approvalStatus = req.body.approvalStatus;
+    const downloadURL = req.body.downloadURL;
 
     const research = new ResearchModel({
         authorName: authorName,
@@ -17,6 +18,7 @@ router.route("/insertResearch").post(async (req, res) => {
         researchTitle: researchTitle,
         researchDescription: researchDescription,
         approvalStatus: approvalStatus,
+        downloadURL: downloadURL
     });
 
     try{
