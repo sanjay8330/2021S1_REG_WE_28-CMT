@@ -35,6 +35,11 @@ const ResearchSchema = new mongoose.Schema({
         required: true,
         trim: true,
     },
+    downloadURL: {
+        type: String,
+        required:true,
+        trim: true
+    } 
 });
 
 const Research = mongoose.model("research", ResearchSchema);

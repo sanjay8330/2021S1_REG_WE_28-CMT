@@ -26478,6 +26478,8 @@ try {
   var _componentsWorkshopsCreateWorkshopDefault = _parcelHelpers.interopDefault(_componentsWorkshopsCreateWorkshop);
   var _componentsAttendeesCreateAttendees = require('./components/Attendees/createAttendees');
   var _componentsAttendeesCreateAttendeesDefault = _parcelHelpers.interopDefault(_componentsAttendeesCreateAttendees);
+  var _componentsResearchCreateResearch = require('./components/Research/createResearch');
+  var _componentsResearchCreateResearchDefault = _parcelHelpers.interopDefault(_componentsResearchCreateResearch);
   var _jsxFileName = "C:\\Users\\HP\\Desktop\\Assignments\\AF Project\\client\\App.jsx";
   function App() {
     return (
@@ -26485,35 +26487,35 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 9,
+          lineNumber: 10,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 10,
+          lineNumber: 11,
           columnNumber: 13
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_componentsNavBarNavBarDefault.default, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11,
+          lineNumber: 12,
           columnNumber: 17
         }
       }), /*#__PURE__*/_reactDefault.default.createElement("section", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 13,
+          lineNumber: 14,
           columnNumber: 17
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Switch, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 14,
+          lineNumber: 15,
           columnNumber: 21
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -26523,7 +26525,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 15,
+          lineNumber: 16,
           columnNumber: 25
         }
       }), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -26532,7 +26534,16 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 16,
+          lineNumber: 17,
+          columnNumber: 25
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+        path: "/addResearch",
+        component: _componentsResearchCreateResearchDefault.default,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18,
           columnNumber: 25
         }
       })))))
@@ -26548,7 +26559,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","react-router-dom":"1PMSK","./components/NavBar/navBar":"Xisrz","./components/Workshops/createWorkshop":"5p1L9","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","./node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./components/Attendees/createAttendees":"Cit10"}],"1PMSK":[function(require,module,exports) {
+},{"react":"3b2NM","react-router-dom":"1PMSK","./components/NavBar/navBar":"Xisrz","./components/Workshops/createWorkshop":"5p1L9","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","./node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./components/Attendees/createAttendees":"Cit10","./components/Research/createResearch":"InyNK"}],"1PMSK":[function(require,module,exports) {
 "use strict";
 if ("development" === "production") {
   module.exports = require("./cjs/react-router-dom.min.js");
@@ -30607,7 +30618,24 @@ try {
             lineNumber: 23,
             columnNumber: 37
           }
-        }, "Attendees")))))))
+        }, "Attendees")), /*#__PURE__*/_reactDefault.default.createElement("li", {
+          className: "nav-item",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 25,
+            columnNumber: 33
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("a", {
+          className: "nav-link",
+          href: "/addResearch",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 26,
+            columnNumber: 37
+          }
+        }, "Research Paper")))))))
       );
     }
   }
@@ -93557,6 +93585,304 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","axios":"7rA65","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}]},["1j6wU","3L2qK","5Qvcc"], "5Qvcc", "parcelRequiref125")
+},{"react":"3b2NM","axios":"7rA65","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"InyNK":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _axios = require('axios');
+  var _axiosDefault = _parcelHelpers.interopDefault(_axios);
+  var _FirebaseFirebase = require('../../Firebase/firebase');
+  var _FirebaseFirebaseDefault = _parcelHelpers.interopDefault(_FirebaseFirebase);
+  var _jsxFileName = "C:\\Users\\HP\\Desktop\\Assignments\\AF Project\\client\\components\\Research\\createResearch.js";
+  const initialStates = {
+    "authorName": '',
+    "authorEmail": '',
+    "authorPhone": '',
+    "title": '',
+    "description": '',
+    "approvalStatus": 'Pending Approval',
+    "fileURL": ''
+  };
+  class AddResearch extends _react.Component {
+    constructor(props) {
+      super(props);
+      this.onChange = this.onChange.bind(this);
+      this.onSubmit = this.onSubmit.bind(this);
+      this.onFileChange = this.onFileChange.bind(this);
+      this.state = initialStates;
+    }
+    onChange(e) {
+      this.setState({
+        [e.target.name]: e.target.value
+      });
+    }
+    async onFileChange(e) {
+      const file = e.target.files[0];
+      const storageRef = _FirebaseFirebaseDefault.default.storage().ref();
+      const fileRef = storageRef.child(file.name);
+      await fileRef.put(file).then(() => {
+        alert('File Uploaded Successfully!!', file.name);
+      });
+      const downloadURL = await fileRef.getDownloadURL();
+      console.log('Download URL', downloadURL);
+      this.setState({
+        fileURL: downloadURL
+      });
+    }
+    onSubmit(e) {
+      e.preventDefault();
+      let research = {
+        "authorName": this.state.authorName,
+        "authorEmail": this.state.authorEmail,
+        "authorContact": this.state.authorPhone,
+        "researchTitle": this.state.title,
+        "researchDescription": this.state.description,
+        "approvalStatus": this.state.approvalStatus,
+        "downloadURL": this.state.fileURL
+      };
+      _axiosDefault.default.post('http://localhost:3001/research/insertResearch', research).then(response => {
+        alert('Data Added Successfully');
+      }).catch(error => {
+        alert('Error :', error.message);
+      });
+    }
+    render() {
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "container",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 60,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 61,
+            columnNumber: 17
+          }
+        }, "Add Research Paper Details"), /*#__PURE__*/_reactDefault.default.createElement("form", {
+          onSubmit: this.onSubmit,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 62,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "mb-3",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 63,
+            columnNumber: 21
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("label", {
+          htmlFor: "authorName",
+          className: "form-label",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 64,
+            columnNumber: 25
+          }
+        }, "Research Paper Author Name"), /*#__PURE__*/_reactDefault.default.createElement("input", {
+          type: "text",
+          className: "form-control",
+          id: "authorName",
+          name: "authorName",
+          value: this.state.authorName,
+          onChange: this.onChange,
+          required: "true",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 65,
+            columnNumber: 25
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "mb-3",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 75,
+            columnNumber: 21
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("label", {
+          htmlFor: "authorEmail",
+          className: "form-label",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 76,
+            columnNumber: 25
+          }
+        }, "Research Paper Author Email"), /*#__PURE__*/_reactDefault.default.createElement("input", {
+          type: "email",
+          className: "form-control",
+          id: "authorEmail",
+          name: "authorEmail",
+          value: this.state.authorEmail,
+          onChange: this.onChange,
+          required: "true",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 77,
+            columnNumber: 25
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "mb-3",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 87,
+            columnNumber: 21
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("label", {
+          htmlFor: "authorPhone",
+          className: "form-label",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 88,
+            columnNumber: 25
+          }
+        }, "Research Paper Author Phone"), /*#__PURE__*/_reactDefault.default.createElement("input", {
+          type: "tel",
+          pattern: "[0-9]{10}",
+          className: "form-control",
+          id: "authorPhone",
+          name: "authorPhone",
+          value: this.state.authorPhone,
+          onChange: this.onChange,
+          required: "true",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 89,
+            columnNumber: 25
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "mb-3",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 100,
+            columnNumber: 21
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("label", {
+          htmlFor: "researchTitle",
+          className: "form-label",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 101,
+            columnNumber: 25
+          }
+        }, "Research Paper Title"), /*#__PURE__*/_reactDefault.default.createElement("input", {
+          type: "text",
+          className: "form-control",
+          id: "title",
+          name: "title",
+          value: this.state.title,
+          onChange: this.onChange,
+          required: "true",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 102,
+            columnNumber: 25
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          class: "mb-3",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 112,
+            columnNumber: 21
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("label", {
+          htmlFor: "researchdescrip",
+          class: "form-label",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 113,
+            columnNumber: 25
+          }
+        }, "Research Paper Description"), /*#__PURE__*/_reactDefault.default.createElement("textarea", {
+          className: "form-control",
+          id: "description",
+          rows: "3",
+          name: "description",
+          value: this.state.description,
+          onChange: this.onChange,
+          required: "true",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 114,
+            columnNumber: 25
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          class: "mb-3",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 124,
+            columnNumber: 21
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("label", {
+          htmlFor: "upload file",
+          class: "form-label",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 125,
+            columnNumber: 25
+          }
+        }, "Upload Research Paper"), /*#__PURE__*/_reactDefault.default.createElement("input", {
+          type: "file",
+          className: "form-control",
+          id: "file",
+          name: "file",
+          onChange: this.onFileChange,
+          required: "true",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 126,
+            columnNumber: 25
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("button", {
+          type: "submit",
+          className: "btn btn-primary",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 136,
+            columnNumber: 21
+          }
+        }, "Submit")))
+      );
+    }
+  }
+  exports.default = AddResearch;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","axios":"7rA65","../../Firebase/firebase":"14N7Y","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}]},["1j6wU","3L2qK","5Qvcc"], "5Qvcc", "parcelRequiref125")
 
 //# sourceMappingURL=index.63f10152.js.map
