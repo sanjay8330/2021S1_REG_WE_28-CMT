@@ -61,21 +61,4 @@ router.route("/deleteById/:id").get(async (req, res) => {
     })
 });
 
-//Update the conference details - used by Admin - Approve/decline the events
-/*router.route("/approveOrDecline").put(async (req, res) => {
-    const adminapprovalStatus = req.body.adminapprovalStatus;
-    //Research paper or workshop ID
-    const id = req.body.id;
-
-    try{
-        await ConferenceModel.findById(id, (err, updatedConferenceObject) => {
-            updatedConferenceObject.adminapprovalStatus = adminapprovalStatus;
-            updatedConferenceObject.save();
-            res.send("Updated Successfully");
-        });
-    }catch(err){
-        console.log(err);
-    }
-});*/
-
 module.exports = router; 
