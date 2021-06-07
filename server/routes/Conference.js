@@ -2,23 +2,17 @@ const router = require('express').Router();
 const ConferenceModel = require('../models/Conference');
 
 //The add method - Conference - Event (Workshop/Research) - Editor
-router.route("/insertEventToConference").post(async (req, res) => {
+router.route("/insertConference").post(async (req, res) => {
     const conferenceID = req.body.conferenceID;
     const conferenceTitle = req.body.conferenceTitle;
     const conferenceDate = req.body.conferenceDate;
     const conferenceTime = req.body.conferenceTime;
-    const workshop = req.body.workshop;
-    const research = req.body.research;
-    const adminapprovalStatus = req.body.adminapprovalStatus;
 
     const conference = new ConferenceModel({
         conferenceID: conferenceID,
         conferenceTitle: conferenceTitle,
         conferenceDate: conferenceDate,
         conferenceTime: conferenceTime,
-        workshop: workshop,
-        research: research,
-        adminapprovalStatus: adminapprovalStatus,
     });
 
     try{
@@ -68,7 +62,7 @@ router.route("/deleteById/:id").get(async (req, res) => {
 });
 
 //Update the conference details - used by Admin - Approve/decline the events
-router.route("/approveOrDecline").put(async (req, res) => {
+/*router.route("/approveOrDecline").put(async (req, res) => {
     const adminapprovalStatus = req.body.adminapprovalStatus;
     //Research paper or workshop ID
     const id = req.body.id;
@@ -82,6 +76,6 @@ router.route("/approveOrDecline").put(async (req, res) => {
     }catch(err){
         console.log(err);
     }
-});
+});*/
 
 module.exports = router; 

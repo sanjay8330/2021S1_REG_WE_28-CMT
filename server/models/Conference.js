@@ -24,22 +24,7 @@ const ConferenceSchema = new mongoose.Schema({
         type: String,
         required: true,
         trim: true,
-    },
-    workshop: [{
-        type: mongoose.Schema.Types.ObjectId,
-        required: false,
-        ref: 'workshops',
-    }],
-    research: [{
-        type: mongoose.Schema.Types.ObjectId,
-        required: false,
-        ref: 'research',
-    }],
-    adminapprovalStatus: {
-        type: String,
-        required: true,
-        trim: true,
-    },
+    }
 });
 
 const Conference = mongoose.model("conference", ConferenceSchema);
