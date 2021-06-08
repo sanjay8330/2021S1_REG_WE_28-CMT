@@ -59,6 +59,6 @@ router.route("/deleteById/:id").get(async (req, res) => {
 
         res.send(result)
     })
-});
+}); 
 
 module.exports = router; 
