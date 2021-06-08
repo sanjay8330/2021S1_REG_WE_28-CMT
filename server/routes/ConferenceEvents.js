@@ -41,7 +41,7 @@ router.route("/readAllConferenceEvents").get(async (req, res) => {
 router.route("/readConferenceEvents/:id").get(async (req, res) => {
     const id = req.params.id;
 
-    await ConferenceEventModel.find({ conferenceID:id })
+    await ConferenceEventModel.find({ conferenceID:id, adminApprovalStatus: 'Approved' })
     .populate('workshop', 'workshopTitle workshopDescription')
     .populate('research', 'researchTitle researchDescription')
     .then(response => {
@@ -50,6 +50,33 @@ router.route("/readConferenceEvents/:id").get(async (req, res) => {
         res.status(500).send({error: error.message});
     })
 });
+
+//Read a particular conference Workshop detail - All workshops - For Attendees
+/*router.route("/readConferenceWorkshops/:id").get(async (req, res) => {
+    const id = req.params.id;
+
+    await ConferenceEventModel.find({ conferenceID:id, adminApprovalStatus: 'Approved'})
+    .populate('workshop', 'workshopTitle workshopDescription')
+    .then(data => {
+        res.status(200).send({workshop: data.workshop});
+        console.log('Workshop', data);
+    }).catch(error => {
+        res.status(500).send({error: error.message});
+    })
+});*/
+
+//Read a particular conference detail - All workshops - For Attendees
+/*router.route("/readConferenceResearch/:id").get(async (req, res) => {
+    const id = req.params.id;
+
+    await ConferenceEventModel.find({ conferenceID:id })
+    .populate('research', 'researchTitle researchDescription')
+    .then(response => {
+        res.status(200).send({research: response.research});
+    }).catch(error => {
+        res.status(500).send({error: error.message});
+    })
+});*/
 
 //OPTIONAL - SEEMS UNUSED - REVIEW BY SANJAY
 //Read conference by ID - used by the Admin - view all events in a particular conference

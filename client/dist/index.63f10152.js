@@ -26481,41 +26481,42 @@ try {
   var _componentsResearchCreateResearch = require('./components/Research/createResearch');
   var _componentsResearchCreateResearchDefault = _parcelHelpers.interopDefault(_componentsResearchCreateResearch);
   var _jsxFileName = "C:\\Users\\HP\\Desktop\\Assignments\\AF Project\\client\\App.jsx";
+  // The main file for App render
   function App() {
     return (
       /*#__PURE__*/_reactDefault.default.createElement("div", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 10,
+          lineNumber: 11,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11,
+          lineNumber: 12,
           columnNumber: 13
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_componentsNavBarNavBarDefault.default, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 12,
+          lineNumber: 13,
           columnNumber: 17
         }
       }), /*#__PURE__*/_reactDefault.default.createElement("section", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 14,
+          lineNumber: 15,
           columnNumber: 17
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Switch, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 15,
+          lineNumber: 16,
           columnNumber: 21
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -26525,7 +26526,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 16,
+          lineNumber: 17,
           columnNumber: 25
         }
       }), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -26534,7 +26535,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17,
+          lineNumber: 18,
           columnNumber: 25
         }
       }), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -26543,7 +26544,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18,
+          lineNumber: 19,
           columnNumber: 25
         }
       })))))
@@ -93330,7 +93331,7 @@ try {
     "payDate": '',
     "payAmount": '',
     "accountNo": '',
-    "availEvents": []
+    "workshops": []
   };
   class AddAttendees extends _react.Component {
     constructor(props) {
@@ -93341,11 +93342,13 @@ try {
     }
     componentDidMount() {
       // For Demo purpose
+      // Need to check on this
       const id = "60bf1ae16c22fe2780516c66";
       _axiosDefault.default.get(`http://localhost:3001/conferenceEvent/readConferenceEvents/${id}`).then(response => {
         this.setState({
-          availEvents: response.data
+          workshops: response.data.response
         });
+        console.log('RESPONSE', this.state.workshops);
       }).catch(error => {
         alert('Cannot Fetch Data');
       });
@@ -93378,14 +93381,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 58,
+            lineNumber: 60,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 59,
+            lineNumber: 61,
             columnNumber: 17
           }
         }, "Add Attendee Details"), /*#__PURE__*/_reactDefault.default.createElement("form", {
@@ -93393,7 +93396,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 60,
+            lineNumber: 62,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -93401,7 +93404,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 61,
+            lineNumber: 63,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -93410,7 +93413,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 62,
+            lineNumber: 64,
             columnNumber: 25
           }
         }, "Full Name"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -93423,7 +93426,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 63,
+            lineNumber: 65,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -93431,7 +93434,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 72,
+            lineNumber: 74,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -93440,7 +93443,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 73,
+            lineNumber: 75,
             columnNumber: 25
           }
         }, "Email Address"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -93453,7 +93456,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 74,
+            lineNumber: 76,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -93461,7 +93464,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 83,
+            lineNumber: 85,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -93470,7 +93473,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 84,
+            lineNumber: 86,
             columnNumber: 25
           }
         }, "Phone Number"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -93484,7 +93487,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 85,
+            lineNumber: 87,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -93492,7 +93495,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 95,
+            lineNumber: 97,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -93501,7 +93504,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 96,
+            lineNumber: 98,
             columnNumber: 25
           }
         }, "Payment Date"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -93514,7 +93517,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 97,
+            lineNumber: 99,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -93522,7 +93525,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 106,
+            lineNumber: 108,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -93531,7 +93534,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 107,
+            lineNumber: 109,
             columnNumber: 25
           }
         }, "Payment Amount"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -93544,7 +93547,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 108,
+            lineNumber: 110,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -93552,7 +93555,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 117,
+            lineNumber: 119,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -93561,7 +93564,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 118,
+            lineNumber: 120,
             columnNumber: 25
           }
         }, "Bank Account Number"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -93574,7 +93577,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 119,
+            lineNumber: 121,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("button", {
@@ -93583,7 +93586,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 129,
+            lineNumber: 131,
             columnNumber: 21
           }
         }, "Submit")))

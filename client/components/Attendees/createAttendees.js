@@ -9,7 +9,7 @@ const initialState = {
     "payDate": '',
     "payAmount": '',
     "accountNo": '',
-    "availEvents": []
+    "workshops": []
 }
 
 class AddAttendees extends Component {
@@ -26,7 +26,8 @@ class AddAttendees extends Component {
         const id = "60bf1ae16c22fe2780516c66";
         Axios.get(`http://localhost:3001/conferenceEvent/readConferenceEvents/${id}`)
             .then(response => {
-                this.setState({ availEvents: response.data });
+                this.setState({ workshops: response.data.response });
+                console.log('RESPONSE', this.state.workshops);
             }).catch(error => {
                 alert('Cannot Fetch Data');
             })
