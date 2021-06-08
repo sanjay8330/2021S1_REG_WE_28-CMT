@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const ConferenceEventSchema = new mongoose.Schema({
     conferenceID: {
@@ -6,18 +6,18 @@ const ConferenceEventSchema = new mongoose.Schema({
         required: true,
         ref:'conference'
     },
-    research: [{
+    research: {
         type: mongoose.Schema.Types.ObjectId,
         required: false,
         ref: 'research'
-    }],
-    workshop: [{
+    },
+    workshop: {
         type: mongoose.Schema.Types.ObjectId,
         required: false,
         ref: 'workshops'
-    }],
+    },
     allocatedTime: {
-        type: Number,
+        type: String,
         required: true
     },
     adminApprovalStatus: {

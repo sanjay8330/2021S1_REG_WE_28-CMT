@@ -6,7 +6,7 @@ router.route("/insertConferenceEvent").post(async (req, res) => {
     const conferenceID = req.body.conferenceID;
     const research = req.body.research;
     const workshop = req.body.workshop;
-    const allocatedTime = req.body.allocatedTime;
+    const allocatedTime = req.body.allocatedTime; 
     const adminApprovalStatus = req.body.adminApprovalStatus;
 
     const conferenceEvent = new ConferenceEventModel({
@@ -38,36 +38,25 @@ router.route("/readAllConferenceEvents").get(async (req, res) => {
 });
 
 //Read a particular conference detail - All workshops - For Attendees
-router.route("/readConferenceWorkshops/:id").get(async (req, res) => {
+router.route("/readConferenceEvents/:id").get(async (req, res) => {
     const id = req.params.id;
 
-    await ConferenceEventModel.find({conferenceID:id, adminApprovalStatus: 'Approved'})
+    await ConferenceEventModel.find({ conferenceID:id })
     .populate('workshop', 'workshopTitle workshopDescription')
-    .then(data => {
-        res.status(200).send({data: data.workshop});
-    }).catch(error => {
-        res.status(500).send({error: error.message});
-    })
-});
-
-//Read a particular conference detail - All research - For Attendees
-router.route("/readConferenceResearch/:id").get(async (req, res) => {
-    const id = req.params.id;
-
-    await ConferenceEventModel.find({conferenceID:id, adminApprovalStatus: 'Approved'})
     .populate('research', 'researchTitle researchDescription')
-    .then(data => {
-        res.status(200).send({data: data.research});
+    .then(response => {
+        res.status(200).send({response: response});
     }).catch(error => {
         res.status(500).send({error: error.message});
     })
 });
 
+//OPTIONAL - SEEMS UNUSED - REVIEW BY SANJAY
 //Read conference by ID - used by the Admin - view all events in a particular conference
 router.route("/readById/:id").get(async (req, res) => {
     const id = req.params.id;
 
-    ConferenceModel.find({conferenceID:id}, (error,result) => {
+    ConferenceEventModel.find({conferenceID:id}, (error,result) => {
         if(error){
             res.send(error);
         }
@@ -80,7 +69,7 @@ router.route("/readById/:id").get(async (req, res) => {
 router.route("/deleteById/:id").get(async (req, res) => {
     const id = req.params.id;
 
-    ConferenceModel.findByIdAndRemove({conferenceID: id}, (error,result) => {
+    ConferenceEventModel.findByIdAndRemove({conferenceID: id}, (error,result) => {
         if(error){
             res.send(error);
         }
@@ -96,7 +85,7 @@ router.route("/approveOrDecline/:id").put(async (req, res) => {
     const id = req.params.id;
 
     try{
-        await ConferenceModel.findById(id, (err, updatedConferenceEventObject) => {
+        await ConferenceEventModel.findById(id, (err, updatedConferenceEventObject) => {
             updatedConferenceEventObject.adminApprovalStatus = adminApprovalStatus;
             updatedConferenceEventObject.save();
             res.send("Updated Successfully");
