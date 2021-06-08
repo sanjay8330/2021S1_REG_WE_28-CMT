@@ -22,6 +22,7 @@ class AddAttendees extends Component {
 
     componentDidMount() {
         //For Demo purpose
+        //Need to check on this
         const id = "60bf1ae16c22fe2780516c66";
         Axios.get(`http://localhost:3001/conferenceEvent/readConferenceEvents/${id}`)
             .then(response => {
