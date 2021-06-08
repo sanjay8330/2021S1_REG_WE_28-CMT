@@ -5,6 +5,7 @@ import AddWorkshop from './components/Workshops/createWorkshop';
 import AddAttendees from './components/Attendees/createAttendees';
 import AddResearch from './components/Research/createResearch';
 
+//The main file for App render
 function App(){
     return(
         <div>
