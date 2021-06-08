@@ -69,7 +69,7 @@ class AddResearch extends Component {
                             name="authorName"
                             value={this.state.authorName}
                             onChange={this.onChange}
-                            required="true"
+                            required
                         />
                     </div>
                     <div className="mb-3">
@@ -81,7 +81,7 @@ class AddResearch extends Component {
                             name="authorEmail"
                             value={this.state.authorEmail}
                             onChange={this.onChange}
-                            required="true"
+                            required
                         />
                     </div>
                     <div className="mb-3">
@@ -94,7 +94,7 @@ class AddResearch extends Component {
                             name="authorPhone"
                             value={this.state.authorPhone}
                             onChange={this.onChange}
-                            required="true"
+                            required
                         />
                     </div>
                     <div className="mb-3">
@@ -106,11 +106,11 @@ class AddResearch extends Component {
                             name="title"
                             value={this.state.title}
                             onChange={this.onChange}
-                            required="true"
+                            required
                         />
                     </div>
-                    <div class="mb-3">
-                        <label htmlFor="researchdescrip" class="form-label">Research Paper Description</label>
+                    <div className="mb-3">
+                        <label htmlFor="researchdescrip" className="form-label">Research Paper Description</label>
                         <textarea
                             className="form-control"
                             id="description"
@@ -118,18 +118,18 @@ class AddResearch extends Component {
                             name="description"
                             value={this.state.description}
                             onChange={this.onChange}
-                            required="true">
+                            required>
                         </textarea>
                     </div>
-                    <div class="mb-3">
-                        <label htmlFor="upload file" class="form-label">Upload Research Paper</label>
+                    <div className="mb-3">
+                        <label htmlFor="upload file" className="form-label">Upload Research Paper</label>
                         <input
                             type="file"
                             className="form-control"
                             id="file"
                             name="file"
                             onChange={this.onFileChange}
-                            required="true"
+                            required
                         />
                     </div>
 

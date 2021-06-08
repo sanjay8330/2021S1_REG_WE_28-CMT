@@ -107,8 +107,8 @@ class AddWorkshop extends Component {
                             onChange={this.onChange}
                         />
                     </div>
-                    <div class="mb-3">
-                        <label htmlFor="workshopdescrip" class="form-label">Workshop Description</label>
+                    <div className="mb-3">
+                        <label htmlFor="workshopdescrip" className="form-label">Workshop Description</label>
                         <textarea 
                             className="form-control" 
                             id="exampleFormControlTextarea1" 
@@ -118,8 +118,8 @@ class AddWorkshop extends Component {
                             onChange={this.onChange}>
                         </textarea>
                     </div>
-                    <div class="mb-3">
-                        <label htmlFor="workshopspeakers" class="form-label">Workshop Speakers</label>
+                    <div className="mb-3">
+                        <label htmlFor="workshopspeakers" className="form-label">Workshop Speakers</label>
                         <textarea 
                             className="form-control" 
                             id="workshopSpeakers" 
@@ -129,8 +129,8 @@ class AddWorkshop extends Component {
                             onChange={this.onChange}>
                         </textarea>
                     </div>
-                    <div class="mb-3">
-                        <label htmlFor="upload file" class="form-label">Upload Workshop Flyer</label>
+                    <div className="mb-3">
+                        <label htmlFor="upload file" className="form-label">Upload Workshop Flyer</label>
                         <input
                             type="file"
                             className="form-control"
