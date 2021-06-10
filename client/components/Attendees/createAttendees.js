@@ -9,7 +9,6 @@ const initialState = {
     "payDate": '',
     "payAmount": '',
     "accountNo": '',
-    "workshops": []
 }
 
 class AddAttendees extends Component {
@@ -18,19 +17,6 @@ class AddAttendees extends Component {
         this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
         this.state = initialState;
-    }
-
-    componentDidMount() {
-        //For Demo purpose
-        //Need to check on this
-        const id = "60bf1ae16c22fe2780516c66";
-        Axios.get(`http://localhost:3001/conferenceEvent/readConferenceEvents/${id}`)
-            .then(response => {
-                this.setState({ workshops: response.data.response });
-                console.log('RESPONSE', this.state.workshops);
-            }).catch(error => {
-                alert('Cannot Fetch Data');
-            })
     }
 
     onChange(e) {
