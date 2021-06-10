@@ -75,6 +75,23 @@ router.route("/approveOrDecline/:id").put(async (req, res) => {
     }
 });
 
+//Update the Workshop details - used by admin
+router.route("/adminApproveOrDecline/:id").put(async (req, res) => {
+    const adminApprovalStatus = req.body.adminApprovalStatus;
+    //Research paper or workshop ID
+    const id = req.params.id;
+
+    try{
+        await WorkshopModel.findById(id, (err, updatedWorkshopObject) => {
+            updatedWorkshopObject.adminApprovalStatus = adminApprovalStatus;
+            updatedWorkshopObject.save();
+            res.send("Updated Successfully");
+        });
+    }catch(err){
+        console.log(err);
+    }
+});
+
 //Update the Workshop details - used by editor to add the date and time of workshop
 router.route("/addWorkshopDateTime/:id").put(async (req, res) => {
     const workshopDate = req.body.workshopDate;

@@ -1,17 +1,17 @@
 const mongoose = require('mongoose');
 
-const ConferenceWorkshopSchema = new mongoose.Schema({
+const ConferenceResearchSchema = new mongoose.Schema({
     conference: {
         type: mongoose.Schema.Types.ObjectId,
         required: false,
         ref: 'conference'
     },
-    workshops: [{
+    researches: [{
         type: mongoose.Schema.Types.ObjectId,
         required: false,
-        ref: 'workshops'
+        ref: 'research'
     }]
 })
 
-const ConferenceWorkshop = mongoose.model("conferenceWorkshops", ConferenceWorkshopSchema);
-module.exports = ConferenceWorkshop;
+const ConferenceResearch = mongoose.model("conferenceResearches", ConferenceResearchSchema);
+module.exports = ConferenceResearch;
