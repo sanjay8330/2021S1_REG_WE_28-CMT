@@ -86,6 +86,23 @@ router.route("/approveOrDecline/:id").put(async (req, res) => {
     }
 });
 
+//Update the Research details - used by admin
+router.route("/adminApproveOrDecline/:id").put(async (req, res) => {
+    const adminApprovalStatus = req.body.adminApprovalStatus;
+    //Research paper or workshop ID
+    const id = req.params.id;
+
+    try{
+        await ResearchModel.findById(id, (err, updatedResearchObject) => {
+            updatedResearchObject.adminApprovalStatus = adminApprovalStatus;
+            updatedResearchObject.save();
+            res.send("Updated Successfully");
+        });
+    }catch(err){
+        console.log(err);
+    }
+});
+
 //Update the Research details - used by editor to add the reseach date and time at conference
 router.route("/addResearchDateTime/:id").put(async (req, res) => {
     const researchDate = req.body.researchDate;

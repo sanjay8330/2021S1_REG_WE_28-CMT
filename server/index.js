@@ -17,12 +17,14 @@ const attendeeRouter = require('./routes/Attendee');
 const researchRouter = require('./routes/Research');
 const conferenceRouter = require('./routes/Conference');
 const conferenceWorkshops = require('./routes/ConferenceWorkshop');
+const conferenceResearches = require('./routes/ConferenceResearch');
 
 app.use("/workshop", workshopRouter);
 app.use("/attendee", attendeeRouter);
 app.use("/research", researchRouter);
 app.use("/conference", conferenceRouter);
 app.use("/conferenceWorkshops", conferenceWorkshops);
+app.use("/conferenceResearchs", conferenceResearches);
 
 
 //Connection to mongoose

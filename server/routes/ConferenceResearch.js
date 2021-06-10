@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const ConferenceWorkshopModel = require('../models/ConferenceWorkshops');
+const ConferenceResearchModel = require('../models/ConferenceResearches');
 
 //Insert Workshops to the conference - Editor
-router.route('/insertConferenceWorkshops').post(async (req, res) => {
+router.route('/insertConferenceResearches').post(async (req, res) => {
 
     if (req.body) {
-        const ConferenceWorkshops = new ConferenceWorkshopModel(req.body);
-        await ConferenceWorkshops.save()
+        const ConferenceResearches = new ConferenceResearchModel(req.body);
+        await ConferenceResearches.save()
             .then(data => {
                 res.status(200).send({ data: data });
             }).catch(error => {
@@ -16,13 +16,13 @@ router.route('/insertConferenceWorkshops').post(async (req, res) => {
 });
 
 //Insert Workshops to the conference - Editor
-router.route('/getConferenceWorkshops/:id').get(async (req, res) => {
+router.route('/getConferenceResearches/:id').get(async (req, res) => {
 
     if (req.params && req.params.id) {
-        await ConferenceWorkshopModel.findById(req.params.id)
-        .populate('workshops', 'workshopTitle workshopDescription')
+        await ConferenceResearchModel.findById(req.params.id)
+        .populate('researches', 'researchTitle researchDescription')
         .then(data => {
-            res.status(200).send({workshops: data.workshops});
+            res.status(200).send({researches: data.researches});
         }).catch(error => {
             res.status(500).send({error: error.message});
         })
