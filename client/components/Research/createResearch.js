@@ -9,7 +9,8 @@ const initialStates = {
     "title": '',
     "description": '',
     "approvalStatus": 'Pending Approval',
-    "fileURL": ''
+    "fileURL": '',
+    "adminApprovalStatus": 'Pending Approval'
 }
 class AddResearch extends Component {
     constructor(props) {
@@ -45,7 +46,8 @@ class AddResearch extends Component {
             "researchTitle": this.state.title,
             "researchDescription": this.state.description,
             "approvalStatus": this.state.approvalStatus, 
-            "downloadURL": this.state.fileURL
+            "downloadURL": this.state.fileURL,
+            "adminApprovalStatus": this.state.adminApprovalStatus
         }
         Axios.post('http://localhost:3001/research/insertResearch', research)
         .then(response => {

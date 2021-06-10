@@ -10,6 +10,7 @@ router.route("/insertResearch").post(async (req, res) => {
     const researchDescription = req.body.researchDescription;
     const approvalStatus = req.body.approvalStatus;
     const downloadURL = req.body.downloadURL;
+    const adminApprovalStatus = req.body.adminApprovalStatus;
 
     const research = new ResearchModel({
         authorName: authorName,
@@ -18,7 +19,8 @@ router.route("/insertResearch").post(async (req, res) => {
         researchTitle: researchTitle,
         researchDescription: researchDescription,
         approvalStatus: approvalStatus,
-        downloadURL: downloadURL
+        downloadURL: downloadURL,
+        adminApprovalStatus: adminApprovalStatus,
     });
 
     try{
@@ -68,14 +70,33 @@ router.route("/deleteById/:id").get(async (req, res) => {
 });
 
 //Update the Research details - used by reviewer
-router.route("/approveOrDecline").put(async (req, res) => {
+router.route("/approveOrDecline/:id").put(async (req, res) => {
     const approvalStatus = req.body.approvalStatus;
     //Research paper or workshop ID
-    const id = req.body.id;
+    const id = req.params.id;
 
     try{
         await ResearchModel.findById(id, (err, updatedResearchObject) => {
             updatedResearchObject.approvalStatus = approvalStatus;
+            updatedResearchObject.save();
+            res.send("Updated Successfully");
+        });
+    }catch(err){
+        console.log(err);
+    }
+});
+
+//Update the Research details - used by editor to add the reseach date and time at conference
+router.route("/addResearchDateTime/:id").put(async (req, res) => {
+    const researchDate = req.body.researchDate;
+    const researchTime = req.body.researchTime;
+    //Research paper ID
+    const id = req.params.id;
+
+    try{
+        await ResearchModel.findById(id, (err, updatedResearchObject) => {
+            updatedResearchObject.researchDate = researchDate;
+            updatedResearchObject.researchTime = researchTime;
             updatedResearchObject.save();
             res.send("Updated Successfully");
         });

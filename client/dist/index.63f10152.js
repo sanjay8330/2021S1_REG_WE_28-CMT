@@ -26481,41 +26481,42 @@ try {
   var _componentsResearchCreateResearch = require('./components/Research/createResearch');
   var _componentsResearchCreateResearchDefault = _parcelHelpers.interopDefault(_componentsResearchCreateResearch);
   var _jsxFileName = "C:\\Users\\HP\\Desktop\\Assignments\\AF Project\\client\\App.jsx";
+  // The main file for App render
   function App() {
     return (
       /*#__PURE__*/_reactDefault.default.createElement("div", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 10,
+          lineNumber: 11,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11,
+          lineNumber: 12,
           columnNumber: 13
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_componentsNavBarNavBarDefault.default, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 12,
+          lineNumber: 13,
           columnNumber: 17
         }
       }), /*#__PURE__*/_reactDefault.default.createElement("section", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 14,
+          lineNumber: 15,
           columnNumber: 17
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Switch, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 15,
+          lineNumber: 16,
           columnNumber: 21
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -26525,7 +26526,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 16,
+          lineNumber: 17,
           columnNumber: 25
         }
       }), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -26534,7 +26535,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17,
+          lineNumber: 18,
           columnNumber: 25
         }
       }), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -26543,7 +26544,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18,
+          lineNumber: 19,
           columnNumber: 25
         }
       })))))
@@ -30668,7 +30669,8 @@ try {
     "workshopTitle": '',
     "workshopDescription": '',
     "workshopSpeakers": '',
-    "fileURL": ''
+    "fileURL": '',
+    "adminApprovalStatus": ''
   };
   class AddWorkshop extends _react.Component {
     constructor(props) {
@@ -30706,7 +30708,8 @@ try {
         "workshopDescription": this.state.workshopDescription,
         "workshopSpeakers": this.state.workshopSpeakers,
         "approvalStatus": 'Approval Pending',
-        "downloadURL": this.state.fileURL
+        "downloadURL": this.state.fileURL,
+        "adminApprovalStatus": 'Approval Pending'
       };
       _axiosDefault.default.post('http://localhost:3001/workshop/insertWorkshop', workshop).then(response => {
         alert('Workshop Details Added Successfully');
@@ -30721,14 +30724,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 62,
+            lineNumber: 64,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 63,
+            lineNumber: 65,
             columnNumber: 17
           }
         }, "Add Workshop Details"), /*#__PURE__*/_reactDefault.default.createElement("form", {
@@ -30736,7 +30739,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 64,
+            lineNumber: 66,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30744,7 +30747,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 65,
+            lineNumber: 67,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -30753,7 +30756,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 66,
+            lineNumber: 68,
             columnNumber: 25
           }
         }, "Workshop Conductor Name"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -30766,7 +30769,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 67,
+            lineNumber: 69,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30774,7 +30777,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 76,
+            lineNumber: 78,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -30783,7 +30786,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 77,
+            lineNumber: 79,
             columnNumber: 25
           }
         }, "Workshop Conductor Email"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -30796,7 +30799,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 78,
+            lineNumber: 80,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30804,7 +30807,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 87,
+            lineNumber: 89,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -30813,7 +30816,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 88,
+            lineNumber: 90,
             columnNumber: 25
           }
         }, "Workshop Conductor Phone"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -30827,7 +30830,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 89,
+            lineNumber: 91,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30835,7 +30838,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 99,
+            lineNumber: 101,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -30844,7 +30847,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 100,
+            lineNumber: 102,
             columnNumber: 25
           }
         }, "Workshop Title"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -30857,7 +30860,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 101,
+            lineNumber: 103,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30865,7 +30868,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 110,
+            lineNumber: 112,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -30874,7 +30877,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 111,
+            lineNumber: 113,
             columnNumber: 25
           }
         }, "Workshop Description"), /*#__PURE__*/_reactDefault.default.createElement("textarea", {
@@ -30887,7 +30890,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 112,
+            lineNumber: 114,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30895,7 +30898,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 121,
+            lineNumber: 123,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -30904,7 +30907,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 122,
+            lineNumber: 124,
             columnNumber: 25
           }
         }, "Workshop Speakers"), /*#__PURE__*/_reactDefault.default.createElement("textarea", {
@@ -30917,7 +30920,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 123,
+            lineNumber: 125,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -30925,7 +30928,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 132,
+            lineNumber: 134,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -30934,7 +30937,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 133,
+            lineNumber: 135,
             columnNumber: 25
           }
         }, "Upload Workshop Flyer"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -30946,7 +30949,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 134,
+            lineNumber: 136,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("button", {
@@ -30955,7 +30958,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 143,
+            lineNumber: 145,
             columnNumber: 21
           }
         }, "Submit")))
@@ -93329,8 +93332,7 @@ try {
     "events": [],
     "payDate": '',
     "payAmount": '',
-    "accountNo": '',
-    "availEvents": []
+    "accountNo": ''
   };
   class AddAttendees extends _react.Component {
     constructor(props) {
@@ -93338,17 +93340,6 @@ try {
       this.onChange = this.onChange.bind(this);
       this.onSubmit = this.onSubmit.bind(this);
       this.state = initialState;
-    }
-    componentDidMount() {
-      // For Demo purpose
-      const id = "60bf1ae16c22fe2780516c66";
-      _axiosDefault.default.get(`http://localhost:3001/conferenceEvent/readConferenceEvents/${id}`).then(response => {
-        this.setState({
-          availEvents: response.data
-        });
-      }).catch(error => {
-        alert('Cannot Fetch Data');
-      });
     }
     onChange(e) {
       this.setState({
@@ -93378,14 +93369,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 58,
+            lineNumber: 46,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 59,
+            lineNumber: 47,
             columnNumber: 17
           }
         }, "Add Attendee Details"), /*#__PURE__*/_reactDefault.default.createElement("form", {
@@ -93393,7 +93384,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 60,
+            lineNumber: 48,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -93401,7 +93392,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 61,
+            lineNumber: 49,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -93410,7 +93401,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 62,
+            lineNumber: 50,
             columnNumber: 25
           }
         }, "Full Name"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -93423,7 +93414,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 63,
+            lineNumber: 51,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -93431,7 +93422,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 72,
+            lineNumber: 60,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -93440,7 +93431,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 73,
+            lineNumber: 61,
             columnNumber: 25
           }
         }, "Email Address"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -93453,7 +93444,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 74,
+            lineNumber: 62,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -93461,7 +93452,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 83,
+            lineNumber: 71,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -93470,7 +93461,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 84,
+            lineNumber: 72,
             columnNumber: 25
           }
         }, "Phone Number"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -93484,7 +93475,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 85,
+            lineNumber: 73,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -93492,7 +93483,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 95,
+            lineNumber: 83,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -93501,7 +93492,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 96,
+            lineNumber: 84,
             columnNumber: 25
           }
         }, "Payment Date"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -93514,7 +93505,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 97,
+            lineNumber: 85,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -93522,7 +93513,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 106,
+            lineNumber: 94,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -93531,7 +93522,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 107,
+            lineNumber: 95,
             columnNumber: 25
           }
         }, "Payment Amount"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -93544,7 +93535,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 108,
+            lineNumber: 96,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -93552,7 +93543,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 117,
+            lineNumber: 105,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -93561,7 +93552,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 118,
+            lineNumber: 106,
             columnNumber: 25
           }
         }, "Bank Account Number"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -93574,7 +93565,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 119,
+            lineNumber: 107,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("button", {
@@ -93583,7 +93574,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 129,
+            lineNumber: 117,
             columnNumber: 21
           }
         }, "Submit")))
@@ -93619,7 +93610,8 @@ try {
     "title": '',
     "description": '',
     "approvalStatus": 'Pending Approval',
-    "fileURL": ''
+    "fileURL": '',
+    "adminApprovalStatus": 'Pending Approval'
   };
   class AddResearch extends _react.Component {
     constructor(props) {
@@ -93656,7 +93648,8 @@ try {
         "researchTitle": this.state.title,
         "researchDescription": this.state.description,
         "approvalStatus": this.state.approvalStatus,
-        "downloadURL": this.state.fileURL
+        "downloadURL": this.state.fileURL,
+        "adminApprovalStatus": this.state.adminApprovalStatus
       };
       _axiosDefault.default.post('http://localhost:3001/research/insertResearch', research).then(response => {
         alert('Data Added Successfully');
@@ -93671,14 +93664,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 60,
+            lineNumber: 62,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 61,
+            lineNumber: 63,
             columnNumber: 17
           }
         }, "Add Research Paper Details"), /*#__PURE__*/_reactDefault.default.createElement("form", {
@@ -93686,7 +93679,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 62,
+            lineNumber: 64,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -93694,7 +93687,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 63,
+            lineNumber: 65,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -93703,7 +93696,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 64,
+            lineNumber: 66,
             columnNumber: 25
           }
         }, "Research Paper Author Name"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -93717,7 +93710,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 65,
+            lineNumber: 67,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -93725,7 +93718,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 75,
+            lineNumber: 77,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -93734,7 +93727,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 76,
+            lineNumber: 78,
             columnNumber: 25
           }
         }, "Research Paper Author Email"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -93748,7 +93741,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 77,
+            lineNumber: 79,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -93756,7 +93749,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 87,
+            lineNumber: 89,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -93765,7 +93758,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 88,
+            lineNumber: 90,
             columnNumber: 25
           }
         }, "Research Paper Author Phone"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -93780,7 +93773,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 89,
+            lineNumber: 91,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -93788,7 +93781,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 100,
+            lineNumber: 102,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -93797,7 +93790,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 101,
+            lineNumber: 103,
             columnNumber: 25
           }
         }, "Research Paper Title"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -93811,7 +93804,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 102,
+            lineNumber: 104,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -93819,7 +93812,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 112,
+            lineNumber: 114,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -93828,7 +93821,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 113,
+            lineNumber: 115,
             columnNumber: 25
           }
         }, "Research Paper Description"), /*#__PURE__*/_reactDefault.default.createElement("textarea", {
@@ -93842,7 +93835,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 114,
+            lineNumber: 116,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -93850,7 +93843,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 124,
+            lineNumber: 126,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -93859,7 +93852,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 125,
+            lineNumber: 127,
             columnNumber: 25
           }
         }, "Upload Research Paper"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -93872,7 +93865,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 126,
+            lineNumber: 128,
             columnNumber: 25
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("button", {
@@ -93881,7 +93874,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 136,
+            lineNumber: 138,
             columnNumber: 21
           }
         }, "Submit")))

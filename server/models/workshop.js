@@ -3,6 +3,9 @@ const mongoose = require('mongoose');
 /**The workshop details include conductorID, title,objectives,speakers
  * date , time and outcome
   */
+/**The workshop date and workshop time is updated by the editor
+ * The adminApprovalStatus is updated by the admin
+ */
 
 /**The Workshopflyer ulpoad should be included */
 const WorkshopSchema = new mongoose.Schema({
@@ -45,6 +48,21 @@ const WorkshopSchema = new mongoose.Schema({
         type: String,
         required:true,
         trim: true
+    },
+    workshopDate: {
+        type: String,
+        required: false,
+        trim: true,
+    },
+    workshopTime: {
+        type: String,
+        required: false,
+        trim: true,
+    },
+    adminApprovalStatus: {
+        type: String,
+        required: false,
+        trim: true,
     }
 });
 

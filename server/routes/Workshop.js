@@ -11,6 +11,7 @@ router.route("/insertWorkshop").post(async (req, res) => {
     const workshopSpeakers = req.body.workshopSpeakers;
     const approvalStatus = req.body.approvalStatus;
     const downloadURL = req.body.downloadURL;
+    const adminApprovalStatus = req.body.adminApprovalStatus;
 
     const workshop = new WorkshopModel({
         workshopConductorName: workshopConductorName,
@@ -20,7 +21,8 @@ router.route("/insertWorkshop").post(async (req, res) => {
         workshopDescription: workshopDescription,
         workshopSpeakers: workshopSpeakers,
         approvalStatus: approvalStatus,
-        downloadURL: downloadURL  
+        downloadURL: downloadURL,
+        adminApprovalStatus: adminApprovalStatus,  
     });
 
     try{
@@ -57,10 +59,10 @@ router.route("/readById/:id").get(async (req, res) => {
 });
 
 //Update the Workshop details - used by reviewer
-router.route("/approveOrDecline").put(async (req, res) => {
+router.route("/approveOrDecline/:id").put(async (req, res) => {
     const approvalStatus = req.body.approvalStatus;
     //Research paper or workshop ID
-    const id = req.body.id;
+    const id = req.params.id;
 
     try{
         await WorkshopModel.findById(id, (err, updatedWorkshopObject) => {
@@ -73,7 +75,26 @@ router.route("/approveOrDecline").put(async (req, res) => {
     }
 });
 
-//Delete Research by ID - In case its declined
+//Update the Workshop details - used by editor to add the date and time of workshop
+router.route("/addWorkshopDateTime/:id").put(async (req, res) => {
+    const workshopDate = req.body.workshopDate;
+    const workshopTime = req.body.workshopTime;
+    //workshop ID
+    const id = req.params.id;
+
+    try{
+        await WorkshopModel.findById(id, (err, updatedWorkshopObject) => {
+            updatedWorkshopObject.workshopDate = workshopDate;
+            updatedWorkshopObject.workshopTime = workshopTime;
+            updatedWorkshopObject.save();
+            res.send("Updated Successfully");
+        });
+    }catch(err){
+        console.log(err);
+    }
+});
+
+//Delete Workshop by ID - In case its declined
 router.route("/deleteById/:id").get(async (req, res) => {
     const id = req.params.id;
 

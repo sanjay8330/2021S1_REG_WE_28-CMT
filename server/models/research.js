@@ -39,6 +39,21 @@ const ResearchSchema = new mongoose.Schema({
         type: String,
         required:true,
         trim: true
+    },
+    researchDate: {
+        type: String,
+        required: false,
+        trim: true,
+    },
+    researchTime: {
+        type: String,
+        required: false,
+        trim: true,
+    },
+    adminApprovalStatus: {
+        type: String,
+        required: false,
+        trim: true,
     } 
 });
 
