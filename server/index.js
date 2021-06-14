@@ -3,7 +3,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyparser = require('body-parser');
 const cors = require('cors');
+const dotenv = require('dotenv');
 
+dotenv.config();
 //Creating an app from express
 const app = express();
 
@@ -26,11 +28,16 @@ app.use("/conference", conferenceRouter);
 app.use("/conferenceWorkshops", conferenceWorkshops);
 app.use("/conferenceResearchs", conferenceResearches);
 
-
+const PORT = process.env.PORT || 3001;
+const MONGODB_URI = process.env.MONGODB_URI;
 //Connection to mongoose
-mongoose.connect("mongodb+srv://AF:sanjay-8330@cmt.g1xsc.mongodb.net/CMTDatabase?retryWrites=true&w=majority", {
+mongoose.connect(MONGODB_URI || '&w=majority' , {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+}, (error) => {
+    if(error) {
+        console.log('Error in connection');
+    }
 })
 
 mongoose.connection.once('open', () => {
@@ -38,7 +45,9 @@ mongoose.connection.once('open', () => {
 })
 
 //Running on the server
-app.listen(3001,() => {
-    console.log("Server is started and running on 3001");
-})
+app.listen(PORT,() => {
+    console.log(`Server is started and running on ${PORT}`);
+});
+
+module.exports = app;
 
