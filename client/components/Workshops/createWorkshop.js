@@ -21,11 +21,11 @@ class AddWorkshop extends Component {
         this.state = initialStates;
     }
 
-    onChange(e){
+    onChange(e) {
         this.setState({ [e.target.name]: e.target.value });
     }
 
-    async onFileChange (e){
+    async onFileChange(e) {
         const file = e.target.files[0];
         const storageRef = firebase.storage().ref();
         const fileRef = storageRef.child(file.name);
@@ -34,10 +34,18 @@ class AddWorkshop extends Component {
         })
         const downloadURL = await fileRef.getDownloadURL();
         console.log('Download URL', downloadURL);
-        this.setState({ fileURL: downloadURL});
+        this.setState({ fileURL: downloadURL });
+
+        //In case the above code fails  -due to time to upload and set the download URL
+        /*
+        const downloadURL = await fileRef.getDownloadURL().then(() => {
+            console.log('Download URL', downloadURL);
+            this.setState({ fileURL: downloadURL });
+        })
+        */
     }
 
-    onSubmit(e){
+    onSubmit(e) {
         e.preventDefault();
         let workshop = {
             "workshopConductorName": this.state.conductorName,
@@ -51,11 +59,11 @@ class AddWorkshop extends Component {
             "adminApprovalStatus": 'Approval Pending'
         }
         Axios.post('http://localhost:3001/workshop/insertWorkshop', workshop)
-        .then(response => {
-            alert('Workshop Details Added Successfully');
-        }).catch(error => {
-            alert('Error ',error.message);
-        })
+            .then(response => {
+                alert('Workshop Details Added Successfully');
+            }).catch(error => {
+                alert('Error ', error.message);
+            })
 
     }
 
@@ -111,9 +119,9 @@ class AddWorkshop extends Component {
                     </div>
                     <div className="mb-3">
                         <label htmlFor="workshopdescrip" className="form-label">Workshop Description</label>
-                        <textarea 
-                            className="form-control" 
-                            id="exampleFormControlTextarea1" 
+                        <textarea
+                            className="form-control"
+                            id="exampleFormControlTextarea1"
                             rows="3"
                             name="workshopDescription"
                             value={this.state.workshopDescription}
@@ -122,9 +130,9 @@ class AddWorkshop extends Component {
                     </div>
                     <div className="mb-3">
                         <label htmlFor="workshopspeakers" className="form-label">Workshop Speakers</label>
-                        <textarea 
-                            className="form-control" 
-                            id="workshopSpeakers" 
+                        <textarea
+                            className="form-control"
+                            id="workshopSpeakers"
                             rows="3"
                             name="workshopSpeakers"
                             value={this.state.workshopSpeakers}
