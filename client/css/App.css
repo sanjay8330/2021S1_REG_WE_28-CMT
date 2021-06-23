@@ -24,3 +24,47 @@ input, button {
     margin: 3px;
   }
 
+  body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  .sidenav {
+    height: 46%;
+    width: 160px;
+    z-index: 4;
+    top: 100;
+    left: 0;
+    background-color: rgb(14, 39, 83);
+    overflow-x: hidden;
+    padding-top: 30px;
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  
+
+  .topnav-right {
+    float: right;
+  }
+  
+
