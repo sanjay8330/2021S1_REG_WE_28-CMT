@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import NavBar from './components/NavBar/navBar';
 import AddWorkshop from './components/Workshops/createWorkshop';
 import AddAttendees from './components/Attendees/createAttendees';
+import AddUser from './components/AppUser/createUser';
 import AddResearch from './components/Research/createResearch';
 
 //The main file for App render
@@ -16,6 +17,7 @@ function App(){
                     <Switch>
                         <Route path="/addWorkshop" component={ AddWorkshop } exact></Route>
                         <Route path="/addAttendee" component={ AddAttendees }></Route>
+                        <Route path="/addUser" component={ AddUser }></Route>
                         <Route path="/addResearch" component={ AddResearch }></Route>
                     </Switch>
                 </section>

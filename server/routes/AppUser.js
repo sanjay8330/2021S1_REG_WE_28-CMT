@@ -44,7 +44,7 @@ router.route('updateUserById').put(async (req, res) => {
 })
 
 //Delete the user - ADMIN TASK
-router.router('deleteUser/:id').delete(async (req, res) => {
+router.route('deleteUser/:id').delete(async (req, res) => {
     if(req.params && req.params.id){
         await UserModel.findByIdAndDelete(req.params.id)
         .then(data => {
@@ -53,4 +53,6 @@ router.router('deleteUser/:id').delete(async (req, res) => {
             res.status(500).send({error: error});
         })
     }
-})
+});
+
+module.exports = router;

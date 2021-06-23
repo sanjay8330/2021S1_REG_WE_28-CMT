@@ -25,6 +25,9 @@ class NavBar extends Component {
                                 <li className="nav-item">
                                     <a className="nav-link" href="/addResearch">Research Paper</a>
                                 </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="/addUser">User</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
