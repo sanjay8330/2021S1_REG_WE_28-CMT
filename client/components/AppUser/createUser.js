@@ -17,17 +17,37 @@ class AddUser extends Component {
         super(props);
         this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
+        this.onSelectedOption = this.onSelectedOption.bind(this);
         this.state = initialState;
     }
 
     componentDidMount(){
-        this.setState({ options: ['Reviewer', 'Admin', 'Editor']});
+        let data = [];
+        let userType1 = {
+            value: 'Reviewer',
+            label: 'Reviewer'
+        }
+        let userType2 = {
+            value: 'Editor',
+            label: 'Editor' 
+        }
+        let userType3 = {
+            value: 'Administrator',
+            label: 'Administrator' 
+        }
+        data.push(userType1);
+        data.push(userType2);
+        data.push(userType3);
+        this.setState({ options: data });
     }
 
     onChange(e) {
         this.setState({ [e.target.name]: e.target.value });
     }
 
+    onSelectedOption(e){
+        this.setState({ category : e.value });
+    }
     onSubmit(e) {
         e.preventDefault();
         if(!this.state.password === this.state.confirmPassword){
@@ -55,7 +75,7 @@ class AddUser extends Component {
                 <form onSubmit={this.onSubmit}>
                     <Select 
                         options={this.state.options}
-                        className="basic-select"
+                        onChange={this.onSelectedOption}
                     />
                     <div className="mb-3">
                         <label htmlFor="username" className="form-label">Username</label>
