@@ -94004,14 +94004,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 73,
+            lineNumber: 74,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 74,
+            lineNumber: 75,
             columnNumber: 17
           }
         }, "Add Application User Details"), /*#__PURE__*/_reactDefault.default.createElement("form", {
@@ -94019,7 +94019,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 75,
+            lineNumber: 76,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactSelectDefault.default, {
@@ -94028,16 +94028,16 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 76,
-            columnNumber: 21
+            lineNumber: 77,
+            columnNumber: 25
           }
         }), /*#__PURE__*/_reactDefault.default.createElement("div", {
           className: "mb-3",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 80,
-            columnNumber: 21
+            lineNumber: 81,
+            columnNumber: 25
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
           htmlFor: "username",
@@ -94045,8 +94045,8 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 81,
-            columnNumber: 25
+            lineNumber: 82,
+            columnNumber: 29
           }
         }, "Username"), /*#__PURE__*/_reactDefault.default.createElement("input", {
           type: "text",
@@ -94058,16 +94058,16 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 82,
-            columnNumber: 25
+            lineNumber: 83,
+            columnNumber: 29
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
           className: "mb-3",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 91,
-            columnNumber: 21
+            lineNumber: 92,
+            columnNumber: 25
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
           htmlFor: "email",
@@ -94075,8 +94075,8 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 92,
-            columnNumber: 25
+            lineNumber: 93,
+            columnNumber: 29
           }
         }, "Email Address"), /*#__PURE__*/_reactDefault.default.createElement("input", {
           type: "email",
@@ -94088,16 +94088,16 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 93,
-            columnNumber: 25
+            lineNumber: 94,
+            columnNumber: 29
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
           className: "mb-3",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 102,
-            columnNumber: 21
+            lineNumber: 103,
+            columnNumber: 25
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
           htmlFor: "password",
@@ -94105,8 +94105,8 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 103,
-            columnNumber: 25
+            lineNumber: 104,
+            columnNumber: 29
           }
         }, "Password"), /*#__PURE__*/_reactDefault.default.createElement("input", {
           type: "password",
@@ -94118,16 +94118,16 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 104,
-            columnNumber: 25
+            lineNumber: 105,
+            columnNumber: 29
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
           className: "mb-3",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 113,
-            columnNumber: 21
+            lineNumber: 114,
+            columnNumber: 25
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
           htmlFor: "confirmPassword",
@@ -94135,8 +94135,8 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 114,
-            columnNumber: 25
+            lineNumber: 115,
+            columnNumber: 29
           }
         }, "Confirm Password"), /*#__PURE__*/_reactDefault.default.createElement("input", {
           type: "password",
@@ -94148,16 +94148,16 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 115,
-            columnNumber: 25
+            lineNumber: 116,
+            columnNumber: 29
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
           className: "mb-3",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 124,
-            columnNumber: 21
+            lineNumber: 125,
+            columnNumber: 25
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
           htmlFor: "contactNumber",
@@ -94165,8 +94165,8 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 125,
-            columnNumber: 25
+            lineNumber: 126,
+            columnNumber: 29
           }
         }, "Contact Number"), /*#__PURE__*/_reactDefault.default.createElement("input", {
           type: "tel",
@@ -94179,8 +94179,8 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 126,
-            columnNumber: 25
+            lineNumber: 127,
+            columnNumber: 29
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("button", {
           type: "submit",
@@ -94188,8 +94188,8 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 137,
-            columnNumber: 21
+            lineNumber: 138,
+            columnNumber: 25
           }
         }, "Submit")))
       );
