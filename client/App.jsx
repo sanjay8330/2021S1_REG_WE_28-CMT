@@ -6,6 +6,7 @@ import Home from './components/Home';
 
 import AddWorkshop from './components/Workshops/createWorkshop';
 import AddAttendees from './components/Attendees/createAttendees';
+import AddUser from './components/AppUser/createUser';
 import AddResearch from './components/Research/createResearch';
 
 //Dashboard types
@@ -14,12 +15,24 @@ import AdminDashboard from './components/Dashboard/adminDashboard';
 import reviewerDashboard from './components/Dashboard/reviewerDashboard';
 import editorDashboard from './components/Dashboard/editorDashboard';
 
+<<<<<<< HEAD
 //The main file for App render
 export default class App extends React.Component {
     constructor(props) {
         super(props);
     }
     
+=======
+                <section>
+                    <Switch>
+                        <Route path="/addWorkshop" component={ AddWorkshop } exact></Route>
+                        <Route path="/addAttendee" component={ AddAttendees }></Route>
+                        <Route path="/addUser" component={ AddUser }></Route>
+                        <Route path="/addResearch" component={ AddResearch }></Route>
+                    </Switch>
+                </section>
+            </Router>
+>>>>>>> 6c88172644f2fdeba4fb08a87907a5f7496473d4
 
     render() {
         return (

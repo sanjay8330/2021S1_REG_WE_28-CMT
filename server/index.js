@@ -20,6 +20,7 @@ const researchRouter = require('./routes/Research');
 const conferenceRouter = require('./routes/Conference');
 const conferenceWorkshops = require('./routes/ConferenceWorkshop');
 const conferenceResearches = require('./routes/ConferenceResearch');
+const appUser = require('./routes/AppUser');
 
 app.use("/workshop", workshopRouter);
 app.use("/attendee", attendeeRouter);
@@ -27,6 +28,7 @@ app.use("/research", researchRouter);
 app.use("/conference", conferenceRouter);
 app.use("/conferenceWorkshops", conferenceWorkshops);
 app.use("/conferenceResearchs", conferenceResearches);
+app.use('/user', appUser);
 
 const PORT = process.env.PORT || 3001;
 const MONGODB_URI = process.env.MONGODB_URI;

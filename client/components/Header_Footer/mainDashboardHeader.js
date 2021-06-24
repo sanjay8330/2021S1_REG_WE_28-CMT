@@ -19,6 +19,9 @@ class Header extends Component {
                                 <li className="nav-item">
                                     <a className="nav-link active" aria-current="page" href="/dashboard">DASHBOARD</a>
                                 </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="/addUser">User</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
