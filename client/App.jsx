@@ -7,6 +7,7 @@ import Home from './components/Home';
 import AddWorkshop from './components/Workshops/createWorkshop';
 import AddAttendees from './components/Attendees/createAttendees';
 import AddUser from './components/AppUser/createUser';
+import AddGeneralUser from './components/AppUser/createGeneralUser';
 import AddResearch from './components/Research/createResearch';
 
 //Dashboard types
@@ -31,6 +32,7 @@ export default class App extends React.Component {
                             <Route path="/" component={Home} exact />
                             <Route path="/addWorkshop" component={AddWorkshop}></Route>
                             <Route path="/addAttendee" component={AddAttendees}></Route>
+                            <Route path="/generalUserSignUp" component={ AddGeneralUser }></Route>
                             <Route path="/addResearch" component={AddResearch}></Route>
                             <Route path="/dashboard" component={MainDashboard}></Route>
                             <Route path="/adminDashboard" component={AdminDashboard}></Route>
