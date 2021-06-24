@@ -37,10 +37,10 @@ class Header extends Component {
                                 <a className="nav-link" aria-current="page" href="/generalUserSignUp">SignUp</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" aria-current="page" href="/logout">Logout</a>
+                                <a className="nav-link" aria-current="page" href="/login">Login</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" aria-current="page" href="/login">Login</a>
+                                <a className="nav-link" aria-current="page" href="/logout">Logout</a>
                             </li>
                         </ul>
                     </div>

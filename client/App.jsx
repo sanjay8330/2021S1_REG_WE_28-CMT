@@ -17,6 +17,9 @@ import AdminDashboard from './components/Dashboard/adminDashboard';
 import reviewerDashboard from './components/Dashboard/reviewerDashboard';
 import editorDashboard from './components/Dashboard/editorDashboard';
 
+import viewWorkshopReviewer from './components/reviewerRole/viewWorkshop';
+import DisplayResearchReviewer from './components/reviewerRole/viewResearchpaper';
+
 //The main file for App render
 export default class App extends React.Component {
     constructor(props) {
@@ -40,6 +43,10 @@ export default class App extends React.Component {
                             <Route path="/adminDashboard" component={AdminDashboard}></Route>
                             <Route path="/reviewerDashboard" component={reviewerDashboard}></Route>
                             <Route path="/editorDashboard" component={editorDashboard}></Route>
+
+                            <Route path="/DisplayWorkshopReviewer" component={viewWorkshopReviewer}></Route>
+                            <Route path="/DisplayResearchReviewer" component={DisplayResearchReviewer}></Route>
+
                         </Switch>
                     </section>
                     <Footer />
