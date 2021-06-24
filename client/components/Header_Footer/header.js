@@ -39,6 +39,9 @@ class Header extends Component {
                             <li className="nav-item">
                                 <a className="nav-link" aria-current="page" href="/logout">Logout</a>
                             </li>
+                            <li className="nav-item">
+                                <a className="nav-link" aria-current="page" href="/login">Login</a>
+                            </li>
                         </ul>
                     </div>
                 </nav>
