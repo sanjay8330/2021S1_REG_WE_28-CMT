@@ -74,10 +74,11 @@ class AddUser extends Component {
             <div className="container">
                 <h3>Add Application User Details</h3>
                 <form onSubmit={this.onSubmit}>
+                        <label htmlFor="username" className="form-label">User Type</label>
                         <Select
                             options={this.state.options}
                             onChange={this.onSelectedOption}
-                        />
+                        /><br />
                         <div className="mb-3">
                             <label htmlFor="username" className="form-label">Username</label>
                             <input
