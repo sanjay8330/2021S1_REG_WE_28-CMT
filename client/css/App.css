@@ -18,8 +18,8 @@
 }
 
 input, button {
-    width: 200px;
-    height: 30px;
+    width: 80px;
+    height: 35px;
     font-size: 20px;
     margin: 3px;
   }
@@ -29,8 +29,8 @@ input, button {
   }
   
   .sidenav {
-    height: 46%;
-    width: 160px;
+    height: 50%;
+    width: 165px;
     z-index: 4;
     top: 100;
     left: 0;
@@ -66,5 +66,4 @@ input, button {
   .topnav-right {
     float: right;
   }
-  
 

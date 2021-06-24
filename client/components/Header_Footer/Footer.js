@@ -8,15 +8,27 @@ const FooterPagePro = () => {
         <MDBRow className="text-center text-md-left mt-3 pb-3 text-white">
           <MDBCol md="3" lg="3" xl="3" className="mx-auto mt-3">
             <h6 className="text-uppercase mb-4 font-weight-bold">
-            Conference Management Tool (CMT)
+              Conference Management Tool (CMT)
             </h6>
             <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            </p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </p><br/>
+            
+              <ul className="list-unstyled list-inline mb-0">
+                <li className="list-inline-item">
+                  <h5 className="mb-1">Register In Here</h5>
+                </li>
+                <li className="list-inline-item">
+                  <a href="/#" className="btn btn-danger btn-rounded">
+                    Sign up!
+                  </a>
+                </li>
+              </ul>
+           
             <div className="text-center py-3">
-        <ul className="list-unstyled list-inline mb-0">
-        </ul>
-      </div>
+              <ul className="list-unstyled list-inline mb-0">
+              </ul>
+            </div>
           </MDBCol>
           <hr className="w-100 clearfix d-md-none" />
           <hr className="w-100 clearfix d-md-none" />
@@ -38,7 +50,7 @@ const FooterPagePro = () => {
           <MDBCol md="4" lg="3" xl="3" className="mx-auto mt-3">
             <h6 className="text-uppercase mb-4 font-weight-bold">Contact</h6>
             <p>
-              <i className="fa fa-home mr-3" /> No:110/3 Main Road, Colombo 5
+              <i className="fa fa-home mr-3" /> No:110/3 Main Road, Colombo
             </p>
             <p>
               <i className="fa fa-envelope mr-3" /> AFFinalProject@gmail.com

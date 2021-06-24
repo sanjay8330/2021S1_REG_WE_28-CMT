@@ -17,13 +17,13 @@ class Header extends Component {
                         <div className="collapse navbar-collapse" id="navbarNav">
                             <ul className="navbar-nav">
                                 <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page" href="/#">View Workshop</a>
+                                    <a className="nav-link active" aria-current="page" href="/DisplayWorkshopReviewer">View Workshop</a>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link active" aria-current="page" href="/#">Edit Workshop</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page" href="/#">View Research Papers</a>
+                                    <a className="nav-link active" aria-current="page" href="/DisplayResearchReviewer">View Research Papers</a>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link active" aria-current="page" href="/#">Edit Research Papers</a>
