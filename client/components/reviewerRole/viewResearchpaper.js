@@ -49,7 +49,7 @@ export default class researchPaper extends Component {
                                     <td>{item.researchTitle}</td>
                                     <td>{item.researchDescription}</td>
                                     <td>{item.approvalStatus}</td>
-                                    <td><a class="btn btn-success" href="path/to/settings" aria-label="Edit">
+                                    <td><a class="btn btn-success" href="UpdateResearchReviewer" aria-label="Edit">
                                         <i class="fa fa-edit" aria-hidden="true"></i>
                                     </a></td>
                                     <td>
