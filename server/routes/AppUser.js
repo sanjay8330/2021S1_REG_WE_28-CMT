@@ -25,7 +25,7 @@ router.route('/getAllUsers').get(async (req, res) => {
 });
 
 //Get the user by ID - ADMIN TASK
-router.route('getUserById/:id').get(async (req, res) => {
+router.route('/getUserById/:id').get(async (req, res) => {
     if(req.params && req.params.id){
         await UserModel.findById(req.params.id)
         .then(data => {
@@ -37,14 +37,14 @@ router.route('getUserById/:id').get(async (req, res) => {
 });
 
 //Update the user details - ADMIN TASK (SOME LOGICS TO BE IMPLEMENTED)
-router.route('updateUserById').put(async (req, res) => {
+router.route('/updateUserById').put(async (req, res) => {
     if(req.body){
 
     }
 })
 
 //Delete the user - ADMIN TASK
-router.route('deleteUser/:id').delete(async (req, res) => {
+router.route('/deleteUser/:id').delete(async (req, res) => {
     if(req.params && req.params.id){
         await UserModel.findByIdAndDelete(req.params.id)
         .then(data => {
@@ -54,5 +54,17 @@ router.route('deleteUser/:id').delete(async (req, res) => {
         })
     }
 });
+
+//Validate the user - ALL USERS TASK
+router.route('/validateUser/:emailID').get(async (req, res) => {
+    if(req.params && req.params.emailID){
+        await UserModel.find({userEmail: req.params.emailID })
+        .then(data => {
+            res.status(200).send({data: data});
+        }).catch(error => {
+            res.status(500).send({error: error});
+        })
+    }
+})
 
 module.exports = router;

@@ -21,34 +21,41 @@ class UserLogin extends Component {
         this.setState({ [e.target.name]: e.target.value });
     }
 
-    componentDidMount(){
-        Axios.get('http://localhost:3001/user/getAllUsers')
-        .then(response => {
-            this.setState({ users: response.data.data });
-        }).catch(error => {
-            alert('Error Fetching Data!');
-        })
-    }
-
     onSubmit(e) {
         e.preventDefault();
-        
-        this.state.users.length > 0 && this.state.users.map((item, key) => {
-            if(item.userEmail === this.state.email && item.userPassword === this.state.password){
-                if(item.userCategory === 'Reviewer'){
-                    alert('Reviewer login Successful!!');
-                }else if(item.userCategory === 'Editor'){
-                    alert('Editor login Successful!!');
-                }else if(item.userCategory === 'Administrator'){
-                    alert('Administrator login Successful!!');
-                }else{
-                    alert('General User login success');
-                }
-            }else{
-                alert('Invalid Login');
+
+        Axios.get(`http://localhost:3001/user/validateUser/${this.state.email}`)
+        .then(response => {
+            this.setState({ users: response.data.data });
+            console.log(this.state.users.length);
+
+            //Handle the invalid login
+            if(this.state.users.length == 0){
+                alert('User Not found!!!');
             }
-        })
-       
+
+            this.state.users.length > 0 && this.state.users.map((item, key) => {
+                if(item.userPassword === this.state.password){
+                    if(item.userCategory === 'General User'){
+                        alert('General User logged In');
+                    }
+                    if(item.userCategory === 'Reviewer'){
+                        window.location = '/reviewerDashboard';
+                    }
+                    if(item.userCategory === 'Editor'){
+                        window.location = '/editorDashboard';
+                    }
+                    if(item.userCategory === 'Administrator'){
+                        window.location = '/adminDashboard';
+                    }
+
+                }else{
+                    alert('Password or Username is Invalid!!');
+                }
+            })
+        }).catch(error => {
+            alert('Error ', error.message);
+        })  
     }
 
     render() {
