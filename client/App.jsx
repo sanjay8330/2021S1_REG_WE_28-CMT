@@ -19,8 +19,11 @@ import AdminDashboard from './components/Dashboard/adminDashboard';
 import reviewerDashboard from './components/Dashboard/reviewerDashboard';
 import editorDashboard from './components/Dashboard/editorDashboard';
 
+//reviewer Role
 import viewWorkshopReviewer from './components/reviewerRole/viewWorkshop';
 import DisplayResearchReviewer from './components/reviewerRole/viewResearchpaper';
+import updateWorkshopReviewer from './components/reviewerRole/updateWorkshop';
+import updateResearchReviewer from './components/reviewerRole/updateResearch';
 
 //The main file for App render
 export default class App extends React.Component {
@@ -44,6 +47,7 @@ export default class App extends React.Component {
                             <Route path="/adminWorkshops" component={ ViewWorkshop }></Route>
                             <Route path="/adminResearches" component={ ViewResearchPaper }></Route>
                             <Route path="/addResearch" component={AddResearch}></Route>
+                            
                             <Route path="/dashboard" component={MainDashboard}></Route>
                             <Route path="/adminDashboard" component={AdminDashboard}></Route>
                             <Route path="/reviewerDashboard" component={reviewerDashboard}></Route>
@@ -51,7 +55,8 @@ export default class App extends React.Component {
 
                             <Route path="/DisplayWorkshopReviewer" component={viewWorkshopReviewer}></Route>
                             <Route path="/DisplayResearchReviewer" component={DisplayResearchReviewer}></Route>
-
+                            <Route path="/UpdateWorkshopReviewer" component={updateWorkshopReviewer}></Route>
+                            <Route path="/UpdateResearchReviewer" component={updateResearchReviewer}></Route>
                         </Switch>
                     </section>
                     <Footer />

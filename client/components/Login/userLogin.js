@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from '../../components/Header_Footer/header';
 import Axios from 'axios';
 
 const initialState = {
@@ -6,7 +7,6 @@ const initialState = {
     "password": '',
     "users": []
 }
-
 
 
 class UserLogin extends Component {
@@ -25,46 +25,48 @@ class UserLogin extends Component {
         e.preventDefault();
 
         Axios.get(`http://localhost:3001/user/validateUser/${this.state.email}`)
-        .then(response => {
-            this.setState({ users: response.data.data });
-            console.log(this.state.users.length);
+            .then(response => {
+                this.setState({ users: response.data.data });
+                console.log(this.state.users.length);
 
-            //Handle the invalid login
-            if(this.state.users.length == 0){
-                alert('User Not found!!!');
-            }
-
-            this.state.users.length > 0 && this.state.users.map((item, key) => {
-                if(item.userPassword === this.state.password){
-                    if(item.userCategory === 'General User'){
-                        alert('General User logged In');
-                    }
-                    if(item.userCategory === 'Reviewer'){
-                        window.location = '/reviewerDashboard';
-                    }
-                    if(item.userCategory === 'Editor'){
-                        window.location = '/editorDashboard';
-                    }
-                    if(item.userCategory === 'Administrator'){
-                        window.location = '/adminDashboard';
-                    }
-
-                }else{
-                    alert('Password or Username is Invalid!!');
+                //Handle the invalid login
+                if (this.state.users.length == 0) {
+                    alert('User Not found!!!');
                 }
+
+                this.state.users.length > 0 && this.state.users.map((item, key) => {
+                    if (item.userPassword === this.state.password) {
+                        if (item.userCategory === 'General User') {
+                            alert('General User logged In');
+                        }
+                        if (item.userCategory === 'Reviewer') {
+                            window.location = '/reviewerDashboard';
+                        }
+                        if (item.userCategory === 'Editor') {
+                            window.location = '/editorDashboard';
+                        }
+                        if (item.userCategory === 'Administrator') {
+                            window.location = '/adminDashboard';
+                        }
+
+                    } else {
+                        alert('Password or Username is Invalid!!');
+                    }
+                })
+            }).catch(error => {
+                alert('Error ', error.message);
             })
-        }).catch(error => {
-            alert('Error ', error.message);
-        })  
     }
 
     render() {
         return (
-            <div className="container">
-                <h3>Login - CMT Application</h3>
-                <form onSubmit={this.onSubmit}>
-                    <div className="mb-3">
-                        <label htmlFor="email" className="form-label">Email Address</label>
+            <div>
+                <Header /><br />
+                <div className="login">
+                    <center><h2 class="log" style={{ color: "white" }}>Login to Account</h2></center><br /><br />
+                    <form onSubmit={this.onSubmit}>
+
+                        <span style={{ color: "white" }}>Email</span>
                         <input
                             type="email"
                             className="form-control"
@@ -72,10 +74,10 @@ class UserLogin extends Component {
                             name="email"
                             value={this.state.email}
                             onChange={this.onChange}
-                        />
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="password" className="form-label">Password</label>
+                            placeholder="Enter email address"
+                        /><br />
+
+                        <span style={{ color: "white" }}>Password</span>
                         <input
                             type="password"
                             className="form-control"
@@ -83,12 +85,15 @@ class UserLogin extends Component {
                             name="password"
                             value={this.state.password}
                             onChange={this.onChange}
-                        />
-                    </div>
+                            placeholder="Enter password"
+                        /><br />
 
-                    <button type="submit" className="btn btn-primary">Login</button>
-                </form>
+                        <button type="submit" className="signin">Login</button><br />
+                        <center><a href="/generalUserSignUp">Create New account</a></center>
+                    </form>
+                </div>
             </div>
+
         )
     }
 }
