@@ -15,11 +15,11 @@ export default class dashboard extends Component {
   }
 
   navigateToWorkshop(e){
-    window.location = '/addWorkshop';
+    window.location = '/adminWorkshops';
   }
 
   navigateToResearch(e){
-    window.location = '/addResearch';
+    window.location = '/adminResearches';
   }
   render() {
     return (
