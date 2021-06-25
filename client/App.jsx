@@ -38,6 +38,7 @@ export default class App extends React.Component {
                             <Route path="/addAttendee" component={AddAttendees}></Route>
                             <Route path="/generalUserSignUp" component={ AddGeneralUser }></Route>
                             <Route path="/login" component={ UserLogin }></Route>
+                            <Route path="/addUser" component={ AddUser }></Route>
                             <Route path="/addResearch" component={AddResearch}></Route>
                             <Route path="/dashboard" component={MainDashboard}></Route>
                             <Route path="/adminDashboard" component={AdminDashboard}></Route>

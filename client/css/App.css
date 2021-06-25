@@ -67,3 +67,8 @@ input, button {
     float: right;
   }
 
+  
+  .btn {
+    width: fit-content;
+  }
+
