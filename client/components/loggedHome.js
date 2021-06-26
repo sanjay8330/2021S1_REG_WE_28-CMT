@@ -1,16 +1,14 @@
 import React, { Component } from 'react'
-import Header from '../components/Header_Footer/header';
+import Header from '../components/Header_Footer/loggedHeader';
 import '../css/App.css';
 
-export default class home extends Component {
+export default class LoggedHome extends Component {
   render() {
     return (
       <div>
         <Header /><br /><br /><br />
         <div class="jumbotron feature">
-          <div class="container">
-            <h1><span class="glyphicon glyphicon-equalizer"></span>SLIIT PROJECT CONFERENCE </h1>
-          </div>
+          <h1>HOME PAGE</h1>
         </div>
         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />

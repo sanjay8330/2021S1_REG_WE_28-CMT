@@ -35,9 +35,9 @@ export default class workshop extends Component {
     render() {
         return (
             <div>
-                <Header /><br />
+                <Header /><br /><br/><br/><br/>
                 <div className="container1"><br />
-                    <center><h1>View Workshops</h1></center><hr /><br /><br />
+                    <center><h1>WORKSHOP DETAILS - REVIEWER VIEW</h1></center><hr /><br /><br />
 
                     <table class="table border shadow">
                         <thead class="thead-dark">

@@ -28,9 +28,9 @@ export default class ViewResearchPaper extends Component {
     render() {
         return (
             <div>
-                <Header /><br />
+                <Header /><br /><br /><br /><br />
                 <div className="container1"><br />
-                    <center><h1>View Research Papers - Admin View</h1></center><hr />
+                    <center><h1>RESEARCH PAPERS - ADMIN VIEW</h1></center><hr/>
 
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                         <button class="btn btn-primary" type="button" onClick={this.navigateToAddResearch}>Add New Research Paper</button>

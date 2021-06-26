@@ -73,85 +73,85 @@ class AddUser extends Component {
     render() {
         return (
             <div>
-                <Header />
-            <div className="container" style={{ width: "740px" }}>
-                <br /><br />
-                <div className="w-100 mx-auto shadow p-5">
-                    <div className="card card-body" style={{ width: "600px", backgroundColor: "#dfe5e8" }}>
-                        <center><h2 class="mt-1 bg-primary text-center text-white p-2 rounded shadow">Add Application User Details</h2></center><br />
-                        <form onSubmit={this.onSubmit}>
-                            <label htmlFor="username" className="form-label">User Type</label>
-                            <Select
-                                options={this.state.options}
-                                onChange={this.onSelectedOption}
-                            /><br />
-                            <div className="mb-3">
-                                <label htmlFor="username" className="form-label">Username</label>
-                                <input
-                                    type="text"
-                                    className="form-control"
-                                    id="name"
-                                    name="name"
-                                    value={this.state.name}
-                                    onChange={this.onChange}
-                                />
-                            </div>
-                            <div className="mb-3">
-                                <label htmlFor="email" className="form-label">Email Address</label>
-                                <input
-                                    type="email"
-                                    className="form-control"
-                                    id="email"
-                                    name="email"
-                                    value={this.state.email}
-                                    onChange={this.onChange}
-                                />
-                            </div>
-                            <div className="mb-3">
-                                <label htmlFor="password" className="form-label">Password</label>
-                                <input
-                                    type="password"
-                                    className="form-control"
-                                    id="password"
-                                    name="password"
-                                    value={this.state.password}
-                                    onChange={this.onChange}
-                                />
-                            </div>
-                            <div className="mb-3">
-                                <label htmlFor="confirmPassword" className="form-label">Confirm Password</label>
-                                <input
-                                    type="password"
-                                    className="form-control"
-                                    id="confirmPassword"
-                                    name="confirmPassword"
-                                    value={this.state.confirmPassword}
-                                    onChange={this.onChange}
-                                />
-                            </div>
-                            <div className="mb-3">
-                                <label htmlFor="contactNumber" className="form-label">Contact Number</label>
-                                <input
-                                    type="tel"
-                                    pattern="[0-9]{10}"
-                                    className="form-control"
-                                    id="contact"
-                                    name="contact"
-                                    value={this.state.contact}
-                                    onChange={this.onChange}
-                                />
-                            </div>
+                <Header /><br/><br/><br/>
+                <div className="container" style={{ width: "740px" }}>
+                    <br /><br />
+                    <div className="w-100 mx-auto shadow p-5">
+                        <div className="card card-body" style={{ width: "600px", backgroundColor: "#dfe5e8" }}>
+                            <center><h2 class="mt-1 bg-primary text-center text-white p-2 rounded shadow">Add Application User Details</h2></center><br />
+                            <form onSubmit={this.onSubmit}>
+                                <label htmlFor="username" className="form-label">User Type</label>
+                                <Select
+                                    options={this.state.options}
+                                    onChange={this.onSelectedOption}
+                                /><br />
+                                <div className="mb-3">
+                                    <label htmlFor="username" className="form-label">Username</label>
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        id="name"
+                                        name="name"
+                                        value={this.state.name}
+                                        onChange={this.onChange}
+                                    />
+                                </div>
+                                <div className="mb-3">
+                                    <label htmlFor="email" className="form-label">Email Address</label>
+                                    <input
+                                        type="email"
+                                        className="form-control"
+                                        id="email"
+                                        name="email"
+                                        value={this.state.email}
+                                        onChange={this.onChange}
+                                    />
+                                </div>
+                                <div className="mb-3">
+                                    <label htmlFor="password" className="form-label">Password</label>
+                                    <input
+                                        type="password"
+                                        className="form-control"
+                                        id="password"
+                                        name="password"
+                                        value={this.state.password}
+                                        onChange={this.onChange}
+                                    />
+                                </div>
+                                <div className="mb-3">
+                                    <label htmlFor="confirmPassword" className="form-label">Confirm Password</label>
+                                    <input
+                                        type="password"
+                                        className="form-control"
+                                        id="confirmPassword"
+                                        name="confirmPassword"
+                                        value={this.state.confirmPassword}
+                                        onChange={this.onChange}
+                                    />
+                                </div>
+                                <div className="mb-3">
+                                    <label htmlFor="contactNumber" className="form-label">Contact Number</label>
+                                    <input
+                                        type="tel"
+                                        pattern="[0-9]{10}"
+                                        className="form-control"
+                                        id="contact"
+                                        name="contact"
+                                        value={this.state.contact}
+                                        onChange={this.onChange}
+                                    />
+                                </div>
 
-                            <button type="submit" className="btn btn-primary">Submit</button>
-                        </form>
+                                <button type="submit" className="btn btn-primary">Submit</button>
+                            </form>
                         </div>
                     </div>
                     <br /><br />
                 </div>
-                </div>
+            </div>
 
-                    )
+        )
     }
 }
 
-                    export default AddUser;
+export default AddUser;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from '../../components/Header_Footer/header';
+import Header from '../../components/Header_Footer/loggedHeader';
 import Axios from 'axios';
 
 const initialState = {
@@ -46,7 +46,7 @@ class AddAttendees extends Component {
         
         return (
             <div>
-                <Header />
+                <Header /><br/><br/><br/><br/>
                 <div className="container" style={{ width: "740px" }}>
 
                     <br /><br />

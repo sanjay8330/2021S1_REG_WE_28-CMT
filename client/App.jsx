@@ -12,6 +12,7 @@ import UserLogin from './components/Login/userLogin';
 import ViewWorkshop from './components/AdminRole/viewWorkshops';
 import ViewResearchPaper from './components/AdminRole/viewResearch';
 import AddResearch from './components/Research/createResearch';
+import loggedHome from './components/loggedHome';
 
 //Dashboard types
 import MainDashboard from './components/Dashboard/mainDashboard';
@@ -47,6 +48,7 @@ export default class App extends React.Component {
                             <Route path="/adminWorkshops" component={ ViewWorkshop }></Route>
                             <Route path="/adminResearches" component={ ViewResearchPaper }></Route>
                             <Route path="/addResearch" component={AddResearch}></Route>
+                            <Route path="/loggedHome" component={loggedHome}></Route>
                             
                             <Route path="/dashboard" component={MainDashboard}></Route>
                             <Route path="/adminDashboard" component={AdminDashboard}></Route>

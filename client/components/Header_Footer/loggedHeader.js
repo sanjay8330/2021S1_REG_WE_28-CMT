@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../../css/style.css';
 
-class Header extends Component {
+class loggedHeader extends Component {
   constructor(props) {
     super(props);
   }
@@ -18,10 +18,10 @@ class Header extends Component {
 
               <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
-                  <li><a class="nav-link scrollto active" href="/">Home</a></li>
-                  <li><a class="nav-link scrollto" href="/conferenece">Conferenece</a></li>
-                  <li><a class="nav-link scrollto" href="/generalUserSignUp">SignIn</a></li>
-                  <li><a class="nav-link scrollto" href="/login">Login</a></li>
+                  <li><a class="nav-link scrollto active" href="/loggedHome">Home</a></li>
+                  <li><a class="nav-link scrollto" href="/addWorkshop">Workshops</a></li>
+                  <li><a class="nav-link scrollto" href="/addAttendee">Attendees</a></li>
+                  <li><a class="nav-link scrollto" href="/addResearch">ResearchPapers</a></li>
                   <li><a class="nav-link scrollto" href="/logout">Logout</a></li>
                 </ul>
               </nav>
@@ -32,4 +32,4 @@ class Header extends Component {
     }
 }
 
-        export default Header;
+        export default loggedHeader;
