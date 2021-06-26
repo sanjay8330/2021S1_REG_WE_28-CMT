@@ -34,7 +34,7 @@ class Header extends Component {
                     <div class="topnav-right">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <a className="nav-link" aria-current="page" href="/generalUserSignUp">SignUp</a>
+                                <a className="nav-link" aria-current="page" href="/signUpHome">SignUp</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" aria-current="page" href="/login">Login</a>
