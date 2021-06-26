@@ -11,6 +11,10 @@ export default class SignUpHome extends Component {
         window.location = '/addUserWorkshop';
     }
 
+    navigateToUserResearchAdd(e){
+        window.location = '/addUserResearch';
+    }
+
     render() {
         return (
             <div>
@@ -18,7 +22,7 @@ export default class SignUpHome extends Component {
                 <h2>Sign up Home</h2>
                 <div class="d-grid gap-2 col-6 mx-auto">
                     <button class="btn btn-primary" type="button" onClick={this.navigateToUserWorkshopAdd}>Sign Up to add Workshop</button>
-                    <button class="btn btn-primary" type="button">Sign Up to add Research Paper</button>
+                    <button class="btn btn-primary" type="button" onClick={this.navigateToUserResearchAdd}>Sign Up to add Research Paper</button>
                 </div>
             </div>
         )
