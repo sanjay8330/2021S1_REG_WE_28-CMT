@@ -8,6 +8,9 @@ import AddWorkshop from './components/Workshops/createWorkshop';
 import AddAttendees from './components/Attendees/createAttendees';
 import AddUser from './components/AppUser/createUser';
 import AddGeneralUser from './components/AppUser/createGeneralUser';
+import SignUpHome from './components/AppUser/signUpHome';
+import UserPlusWorkshop from './components/AppUser/createUserWorkshop';
+import UserPlusResearch from './components/AppUser/createUserResearch';
 import UserLogin from './components/Login/userLogin';
 import ViewWorkshop from './components/AdminRole/viewWorkshops';
 import ViewResearchPaper from './components/AdminRole/viewResearch';
@@ -45,6 +48,9 @@ export default class App extends React.Component {
                             <Route path="/generalUserSignUp" component={ AddGeneralUser }></Route>
                             <Route path="/login" component={ UserLogin }></Route>
                             <Route path="/addUser" component={ AddUser }></Route>
+                            <Route path="/signUpHome" component={ SignUpHome }></Route>
+                            <Route path="/addUserWorkshop" component={ UserPlusWorkshop }></Route>
+                            <Route path="/addUserResearch" component={ UserPlusResearch }></Route>
                             <Route path="/adminWorkshops" component={ ViewWorkshop }></Route>
                             <Route path="/adminResearches" component={ ViewResearchPaper }></Route>
                             <Route path="/addResearch" component={AddResearch}></Route>
