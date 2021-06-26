@@ -63,7 +63,11 @@ const WorkshopSchema = new mongoose.Schema({
         type: String,
         required: false,
         trim: true,
-    }
+    },
+    workshopAmount: {
+        type: Number,
+        required: false
+    },
 });
 
 const Workshop = mongoose.model("workshops",WorkshopSchema);

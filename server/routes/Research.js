@@ -72,12 +72,14 @@ router.route("/deleteById/:id").get(async (req, res) => {
 //Update the Research details - used by reviewer
 router.route("/approveOrDecline/:id").put(async (req, res) => {
     const approvalStatus = req.body.approvalStatus;
+    const researchAmount = req.body.researchAmount;
     //Research paper or workshop ID
     const id = req.params.id;
 
     try{
         await ResearchModel.findById(id, (err, updatedResearchObject) => {
             updatedResearchObject.approvalStatus = approvalStatus;
+            updatedResearchObject.researchAmount = researchAmount;
             updatedResearchObject.save();
             res.send("Updated Successfully");
         });

@@ -54,6 +54,10 @@ const ResearchSchema = new mongoose.Schema({
         type: String,
         required: false,
         trim: true,
+    },
+    researchAmount: {
+        type: Number,
+        required: false
     } 
 });
 

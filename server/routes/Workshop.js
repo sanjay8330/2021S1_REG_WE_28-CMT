@@ -61,14 +61,20 @@ router.route("/readById/:id").get(async (req, res) => {
 //Update the Workshop details - used by reviewer
 router.route("/approveOrDecline/:id").put(async (req, res) => {
     const approvalStatus = req.body.approvalStatus;
+    const workshopAmount = req.body.workshopAmount;
     //Research paper or workshop ID
     const id = req.params.id;
 
     try{
         await WorkshopModel.findById(id, (err, updatedWorkshopObject) => {
             updatedWorkshopObject.approvalStatus = approvalStatus;
-            updatedWorkshopObject.save();
-            res.send("Updated Successfully");
+            updatedWorkshopObject.workshopAmount = workshopAmount;
+            updatedWorkshopObject.save()
+            .then(response => {
+                res.status(200).send({response: response});
+            }).catch(error => {
+                res.status(500).send({error: error.message});
+            })
         });
     }catch(err){
         console.log(err);
