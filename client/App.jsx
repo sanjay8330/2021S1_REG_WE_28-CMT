@@ -55,7 +55,7 @@ export default class App extends React.Component {
 
                             <Route path="/DisplayWorkshopReviewer" component={viewWorkshopReviewer}></Route>
                             <Route path="/DisplayResearchReviewer" component={DisplayResearchReviewer}></Route>
-                            <Route path="/UpdateWorkshopReviewer" component={updateWorkshopReviewer}></Route>
+                            <Route path="/UpdateWorkshopReviewer/:id" component={updateWorkshopReviewer}></Route>
                             <Route path="/UpdateResearchReviewer" component={updateResearchReviewer}></Route>
                         </Switch>
                     </section>

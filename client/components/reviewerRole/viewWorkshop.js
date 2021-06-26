@@ -8,6 +8,8 @@ export default class workshop extends Component {
     //initializing the states
     constructor(props) {
         super(props);
+        this.navigateToWorkshopUpdate = this.navigateToWorkshopUpdate.bind(this);
+        this.refreshPage = this.refreshPage.bind(this);
         this.state = {
             workshops: []
         }
@@ -18,6 +20,16 @@ export default class workshop extends Component {
             .then(response => {
                 this.setState({ workshops: response.data });
             })
+    }
+
+    //Navigate to the workshop Update page
+    navigateToWorkshopUpdate(e, workshopId) {
+        window.location = `/UpdateWorkshopReviewer/${workshopId}`;
+    }
+
+    //Refresh the entire page
+    refreshPage(e){
+        window.location= '/DisplayWorkshopReviewer';
     }
 
     render() {
@@ -51,7 +63,7 @@ export default class workshop extends Component {
                                     <td>{item.workshopDescription}</td>
                                     <td>{item.workshopSpeakers}</td>
                                     <td>{item.approvalStatus}</td>
-                                    <td><a class="btn btn-success" href="/UpdateWorkshopReviewer" aria-label="Edit">
+                                    <td><a class="btn btn-success" onClick={e => this.navigateToWorkshopUpdate(e, item._id)} aria-label="Edit">
                                         <i class="fa fa-edit" aria-hidden="true"></i>
                                     </a></td>
                                     <td>
