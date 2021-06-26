@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
-import Header from '../../components/Header_Footer/header';
+import Header from '../../components/Header_Footer/loggedHeader';
 import firebase from '../../Firebase/firebase';
 
 const initialStates = {
@@ -72,7 +72,7 @@ class AddWorkshop extends Component {
         
         return (
             <div>
-                <Header />
+                <Header /><br/><br/><br/><br/>
                 <div className="container" style={{ width: "740px" }}>
                     <br /><br />
                     <div className="w-100 mx-auto shadow p-5">

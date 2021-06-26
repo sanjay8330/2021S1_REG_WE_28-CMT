@@ -6,7 +6,7 @@ export default class dashboard extends Component {
   render() {
     return (
       <div>
-        <Header /><br/>
+        <Header /><br/><br/><br/>
         <div class="sidenav"><br/>
             <a href="/dashboard"><i class="fa fa-fw fa-home"></i>Dashboard</a><br/>
             <a href="/adminDashboard"><i class="fa fa-fw fa-user"></i>Admin</a><br/>

@@ -29,9 +29,9 @@ export default class ViewWorkshop extends Component {
     render() {
         return (
             <div>
-                <Header /><br />
-                <div className="container1"><br />
-                    <center><h1>View Workshops - Admin View</h1></center><hr />
+                <Header /><br /><br /><br /><br /><br />
+                <div className="container1">
+                    <center><h1>WORKSHOP DETAILS - ADMIN VIEW</h1></center><hr/>
 
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                         <button class="btn btn-primary" type="button" onClick={this.navigateToAddWorkshop}>Add New Workshops</button>
@@ -80,7 +80,7 @@ export default class ViewWorkshop extends Component {
                         </tbody>
                     </table>
 
-                </div><br /><br /><br /><br /><br /><br /><br /><br />
+                </div><br /><br /><br />
 
             </div>
         )

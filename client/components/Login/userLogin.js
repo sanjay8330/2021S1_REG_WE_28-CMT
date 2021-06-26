@@ -37,6 +37,7 @@ class UserLogin extends Component {
                     if (item.userPassword === this.state.password) {
                         if (item.userCategory === 'General User') {
                             alert('General User logged In');
+                            window.location = '/loggedHome';
                         }
                         if (item.userCategory === 'Reviewer') {
                             window.location = '/reviewerDashboard';
@@ -60,7 +61,7 @@ class UserLogin extends Component {
     render() {
         return (
             <div>
-                <Header /><br />
+                <Header /><br /><br /><br /><br /><br />
                 <div className="login">
                     <center><h2 class="log" style={{ color: "white" }}>Login to Account</h2></center><br /><br />
                     <form onSubmit={this.onSubmit}>
@@ -90,7 +91,7 @@ class UserLogin extends Component {
                         <button type="submit" className="signin">Login</button><br />
                         <center><a href="/generalUserSignUp">Create New account</a></center>
                     </form>
-                </div>
+                </div><br/>
             </div>
 
         )

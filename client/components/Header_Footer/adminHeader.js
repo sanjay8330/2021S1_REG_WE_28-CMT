@@ -4,48 +4,31 @@ class Header extends Component {
     constructor(props) {
         super(props);
     }
-    
+
 
     render() {
         return (
             <div>
-                <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <div className="container-fluid">
-                        <a className="navbar-brand" href="/#" style={{ color: "red" }}>ADMIN</a>
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
-                        <div className="collapse navbar-collapse" id="navbarNav">
-                            <ul className="navbar-nav">
-                                <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page" href="/#">Workshop</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page" href="/#">Research Papers</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page" href="/#">Conference Event</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page" href="/#">Research Paper Author Payments</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page" href="/#">Attendee Payments</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page" href="/#">Users</a>
-                                </li>
-                            </ul>
+                <header id="header" class="d-flex align-items-center ">
+                    <div class="container-fluid container-xxl d-flex align-items-center">
+
+                        <div id="logo" class="me-auto">
+                            <h1><a href="index.html">CMT-<span>2021</span></a></h1>
                         </div>
+                        <nav id="navbar" class="navbar order-last order-lg-0">
+                            <ul>
+                                <li><a class="nav-link scrollto active" href="/dashboard">ADMIN</a></li>
+                                <li><a class="nav-link scrollto" href="/#">Workshop</a></li>
+                                <li><a class="nav-link scrollto" href="/#">Research Papers</a></li>
+                                <li><a class="nav-link scrollto" href="/#">Conference Event</a></li>
+                                <li><a class="nav-link scrollto" href="/#">Research Paper Author Payments</a></li>
+                                <li><a class="nav-link scrollto" href="/#">Attendee Payments</a></li>
+                                <li><a class="nav-link scrollto" href="/#">Users</a></li>
+                                <li><a class="nav-link scrollto" href="/dashboard">Logout</a></li>
+                            </ul>
+                        </nav>
                     </div>
-                    <div class="topnav-right">
-                        <ul className="navbar-nav">
-                            <li className="nav-item">
-                                <a className="nav-link" aria-current="page" href="/dashboard">Logout</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
+                </header>
             </div>
         )
     }

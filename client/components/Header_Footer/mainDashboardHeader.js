@@ -8,31 +8,21 @@ class Header extends Component {
     render() {
         return (
             <div>
-                <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <div className="container-fluid">
-                        <a className="navbar-brand" href="/dashboard" style={{ color: "red" }}>CMT-2021</a>
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
-                        <div className="collapse navbar-collapse" id="navbarNav">
-                            <ul className="navbar-nav">
-                                <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page" href="/dashboard">DASHBOARD</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="/addUser">User</a>
-                                </li>
-                            </ul>
+                <header id="header" class="d-flex align-items-center ">
+                    <div class="container-fluid container-xxl d-flex align-items-center">
+
+                        <div id="logo" class="me-auto">
+                            <h1><a href="index.html">CMT-<span>2021</span></a></h1>
                         </div>
+                        <nav id="navbar" class="navbar order-last order-lg-0">
+                            <ul>
+                                <li><a class="nav-link scrollto active" href="/dashboard">Dashboard</a></li>
+                                <li><a class="nav-link scrollto" href="/addUser">user</a></li>
+                                <li><a class="nav-link scrollto" href="/logout">Logout</a></li>
+                            </ul>
+                        </nav>
                     </div>
-                    <div class="topnav-right">
-                        <ul className="navbar-nav">
-                            <li className="nav-item">
-                                <a className="nav-link" aria-current="page" href="/dashboard">Logout</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
+                </header>
             </div>
         )
     }

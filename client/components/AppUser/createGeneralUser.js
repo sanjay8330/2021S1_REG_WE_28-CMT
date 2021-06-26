@@ -46,7 +46,7 @@ class AddGeneralUser extends Component {
     render() {
         return (
             <div>
-                <Header /><br/>
+                <Header /><br/><br /><br /><br /><br />
                 <div className="register">
                     <center><h2 class="reg1" style={{ color: "white" }}>Create Account</h2></center><br />
                     <form onSubmit={this.onSubmit}>
