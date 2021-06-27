@@ -35,11 +35,11 @@ class UpdateResearch extends Component {
             "researchAmount": this.state.researchAmount
         }
         Axios.put(`http://localhost:3001/research/approveOrDecline/${this.props.match.params.id}`, updResearch)
-        .then(response => {
-            alert('Updated Successfully');
-        }).catch(error => {
-            alert(error.message);
-        })
+            .then(response => {
+                alert('Updated Successfully');
+            }).catch(error => {
+                alert(error.message);
+            })
     }
 
     render() {
@@ -60,40 +60,35 @@ class UpdateResearch extends Component {
 
                 <div className="container" style={{ width: "740px" }}>
                     <br />
-                    <div className="w-100 mx-auto shadow p-5">
-                        <div className="card card-body" style={{ width: "600px", backgroundColor: "#dfe5e8" }}>
-                            <center><h2 class="mt-1 bg-primary text-center text-white p-2 rounded shadow">Update Research Paper Details</h2></center><br />
-                            <form onSubmit={this.onSubmit}>
-                                <div className="mb-3">
-                                    <label htmlFor="researchAmount" className="form-label">Research paper Amount at Conference</label>
-                                    <input
-                                        type="number"
-                                        className="form-control"
-                                        id="researchAmount"
-                                        name="researchAmount"
-                                        value={this.state.researchAmount}
-                                        onChange={this.onChange}
-                                        required
-                                    />
-                                </div>
-                                <div className="mb-3">
-                                    <label htmlFor="approval" className="form-label">Approval Status</label>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        id="approvalStatus"
-                                        name="approvalStatus"
-                                        value={this.state.approvalStatus}
-                                        required
-                                        readOnly
-                                    />
-                                </div>
+                    <div className="add5">
+                        <center><h2 class="log" style={{ color: "white" }}>Update Research Paper Details</h2></center><br />
+                        <form onSubmit={this.onSubmit} style={{ height: "100px;" }}>
 
-                                <button type="submit" className="btn btn-primary">Submit</button>
-                            </form>
-                        </div>
-                    </div>
-                    <br /><br />
+                        <span style={{ color: "white" }}>Research Amount</span>
+                                <input
+                                    type="number"
+                                    className="form-control"
+                                    id="researchAmount"
+                                    name="researchAmount"
+                                    value={this.state.researchAmount}
+                                    onChange={this.onChange}
+                                    required
+                                /><br/>
+                            
+                            <span style={{ color: "white" }}>Approval Status</span>
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    id="approvalStatus"
+                                    name="approvalStatus"
+                                    value={this.state.approvalStatus}
+                                    required
+                                    readOnly
+                                /><br/>
+                           
+                            <button type="submit" className="btn btn-primary">Submit</button>
+                        </form>
+                    </div><br />
                 </div>
             </div>
         )

@@ -13,6 +13,7 @@ export default class researchPaper extends Component {
             research: []
         }
     }
+
     //retrieving all research
     componentDidMount() {
         axios.get('http://localhost:3001/research/readAllResearch/')
@@ -21,15 +22,24 @@ export default class researchPaper extends Component {
             })
     }
 
+    //delete() method
+    delete(researchId) {
+        axios.get('http://localhost:3001/research/deleteById/' + researchId)
+            .then(response => {
+                alert("Are you sure you want to delete this Research Paper?");
+                this.componentDidMount();
+            });
+    }
+
     //Navigating to the updating page
-    navigateToResearchUpdate(e, researchID){
+    navigateToResearchUpdate(e, researchID) {
         window.location = `/UpdateResearchReviewer/${researchID}`;
     }
 
     render() {
         return (
             <div>
-                <Header /><br /><br/><br/><br/>
+                <Header /><br /><br /><br /><br />
                 <div className="container1"><br />
                     <center><h1>RESEARCH PAPERS - REVIEWER VIEW</h1></center><hr /><br /><br />
 
@@ -61,8 +71,7 @@ export default class researchPaper extends Component {
                                         <i class="fa fa-edit" aria-hidden="true"></i>
                                     </a></td>
                                     <td>
-                                        <a class="btn btn-danger" href="path/to/settings" aria-label="Delete">
-                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                        <a class="btn btn-danger" onClick={() => this.delete(item._id)} href="#" aria-label="Delete"><i class="fa fa-trash" aria-hidden="true"></i>
                                         </a>
                                     </td>
                                 </tr>

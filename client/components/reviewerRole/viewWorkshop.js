@@ -28,14 +28,23 @@ export default class workshop extends Component {
     }
 
     //Refresh the entire page
-    refreshPage(e){
-        window.location= '/DisplayWorkshopReviewer';
+    refreshPage(e) {
+        window.location = '/DisplayWorkshopReviewer';
+    }
+
+    //delete() method
+    delete(workshopId) {
+        axios.get('http://localhost:3001/workshop/deleteById/' + workshopId)
+            .then(response => {
+                alert("Are you sure you want to delete this Workshop Details?");
+                this.componentDidMount();
+            });
     }
 
     render() {
         return (
             <div>
-                <Header /><br /><br/><br/><br/>
+                <Header /><br /><br /><br /><br />
                 <div className="container1"><br />
                     <center><h1>WORKSHOP DETAILS - REVIEWER VIEW</h1></center><hr /><br /><br />
 
@@ -69,8 +78,7 @@ export default class workshop extends Component {
                                         <i class="fa fa-edit" aria-hidden="true"></i>
                                     </a></td>
                                     <td>
-                                        <a class="btn btn-danger" href="path/to/settings" aria-label="Delete">
-                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                        <a class="btn btn-danger" onClick={() => this.delete(item._id)} href="#" aria-label="Delete"><i class="fa fa-trash" aria-hidden="true"></i>
                                         </a>
                                     </td>
                                 </tr>

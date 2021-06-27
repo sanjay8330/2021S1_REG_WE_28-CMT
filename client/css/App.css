@@ -27,7 +27,20 @@ input, button {
   body {
     font-family: "Lato", sans-serif;
   }
-  
+
+  .home{
+    background-image: url('../images/backgrounImg.jpg'); 
+    background-size: cover;
+    text-shadow: 5px 10px 10px black;
+    text-align: center;
+  }
+
+  .text{
+    font-size: 70px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(161, 183, 243);
+  }
+
   .sidenav {
     height: 50%;
     width: 165px;
@@ -72,14 +85,6 @@ input, button {
     width: fit-content;
   }
 
-  .feature {
-    background-image: url('../images/image2.jpg');
-    background-position: top right;
-    background-size: cover;
-    color: white;
-    text-shadow: 5px 10px 10px black;
-    }
-  
     .signin {
       background-color: #d3d3d3;
       font-family: 'Montserrat', sans-serif;
@@ -166,6 +171,72 @@ input, button {
       
       .reg:focus {
         outline: none;
+      }
+
+      .add1 {
+        position: relative;
+        height: 840px;
+        width: 570px;
+        margin: auto;
+        padding: 20px 60px;
+        background: url(../images/formImg.jpg) no-repeat   center center #505050;   
+        background-size: cover;
+        box-shadow: 0px 30px 60px -5px #000;
+      }
+
+      .add2 {
+        position: relative;
+        height: 680px;
+        width: 570px;
+        margin: auto;
+        padding: 20px 60px;
+        background: url(../images/formImg.jpg) no-repeat   center center #505050;   
+        background-size: cover;
+        box-shadow: 0px 30px 60px -5px #000;
+      }
+
+      .add3 {
+        position: relative;
+        height: 710px;
+        width: 570px;
+        margin: auto;
+        padding: 20px 60px;
+        background: url(../images/formImg.jpg) no-repeat   center center #505050;   
+        background-size: cover;
+        box-shadow: 0px 30px 60px -5px #000;
+      }
+
+      .add4 {
+        position: relative;
+        height: 680px;
+        width: 570px;
+        margin: auto;
+        padding: 20px 60px;
+        background: url(../images/formImg.jpg) no-repeat   center center #505050;   
+        background-size: cover;
+        box-shadow: 0px 30px 60px -5px #000;
+      }
+
+      .update {
+        position: relative;
+        height: 330px;
+        width: 570px;
+        margin: auto;
+        padding: 20px 60px;
+        background: url(../images/formImg.jpg) no-repeat   center center #505050;   
+        background-size: cover;
+        box-shadow: 0px 30px 60px -5px #000;
+      }
+
+      .add5 {
+        position: relative;
+        height: 330px;
+        width: 570px;
+        margin: auto;
+        padding: 20px 60px;
+        background: url(../images/formImg.jpg) no-repeat   center center #505050;   
+        background-size: cover;
+        box-shadow: 0px 30px 60px -5px #000;
       }
 
 

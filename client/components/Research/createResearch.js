@@ -60,94 +60,83 @@ class AddResearch extends Component {
     }
 
     render() {
-        
+
         return (
             <div>
-                <Header /><br/><br/><br/><br/>
-                <div className="container" style={{ width: "740px" }}>
-                    <br /><br />
-                    <div className="w-100 mx-auto shadow p-5">
-                        <div className="card card-body" style={{ width: "600px", backgroundColor: "#dfe5e8" }}>
-                            <center><h2 class="mt-1 bg-primary text-center text-white p-2 rounded shadow">Add Research Paper Details</h2></center><br />
-                            <form onSubmit={this.onSubmit}>
-                                <div className="mb-3">
-                                    <label htmlFor="authorName" className="form-label">Research Paper Author Name</label>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        id="authorName"
-                                        name="authorName"
-                                        value={this.state.authorName}
-                                        onChange={this.onChange}
-                                        required
-                                    />
-                                </div>
-                                <div className="mb-3">
-                                    <label htmlFor="authorEmail" className="form-label">Research Paper Author Email</label>
-                                    <input
-                                        type="email"
-                                        className="form-control"
-                                        id="authorEmail"
-                                        name="authorEmail"
-                                        value={this.state.authorEmail}
-                                        onChange={this.onChange}
-                                        required
-                                    />
-                                </div>
-                                <div className="mb-3">
-                                    <label htmlFor="authorPhone" className="form-label">Research Paper Author Phone</label>
-                                    <input
-                                        type="tel"
-                                        pattern="[0-9]{10}"
-                                        className="form-control"
-                                        id="authorPhone"
-                                        name="authorPhone"
-                                        value={this.state.authorPhone}
-                                        onChange={this.onChange}
-                                        required
-                                    />
-                                </div>
-                                <div className="mb-3">
-                                    <label htmlFor="researchTitle" className="form-label">Research Paper Title</label>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        id="title"
-                                        name="title"
-                                        value={this.state.title}
-                                        onChange={this.onChange}
-                                        required
-                                    />
-                                </div>
-                                <div className="mb-3">
-                                    <label htmlFor="researchdescrip" className="form-label">Research Paper Description</label>
-                                    <textarea
-                                        className="form-control"
-                                        id="description"
-                                        rows="3"
-                                        name="description"
-                                        value={this.state.description}
-                                        onChange={this.onChange}
-                                        required>
-                                    </textarea>
-                                </div>
-                                <div className="mb-3">
-                                    <label htmlFor="upload file" className="form-label">Upload Research Paper</label>
-                                    <input
-                                        type="file"
-                                        className="form-control"
-                                        id="file"
-                                        name="file"
-                                        onChange={this.onFileChange}
-                                        required
-                                    />
-                                </div>
-                                <button type="submit" className="btn btn-primary" id="submitBtn" disabled>Submit</button>
-                            </form>
-                        </div>
-                    </div>
-                    <br /><br />
-                </div>
+                <Header /><br /><br /><br /><br /><br />
+                <div className="add3">
+                    <center><h2 class="log" style={{ color: "white" }}>Add Research Paper Details</h2></center><br />
+                    <form onSubmit={this.onSubmit} style={{ height: "100px;" }}>
+
+                        <span style={{ color: "white" }}>Research Paper Author Name</span>
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="authorName"
+                            name="authorName"
+                            value={this.state.authorName}
+                            onChange={this.onChange}
+                            required
+                        /><br />
+
+                        <span style={{ color: "white" }}>Research Paper Author Email</span>
+                        <input
+                            type="email"
+                            className="form-control"
+                            id="authorEmail"
+                            name="authorEmail"
+                            value={this.state.authorEmail}
+                            onChange={this.onChange}
+                            required
+                        /><br />
+
+                        <span style={{ color: "white" }}>Research Paper Author Phone</span>
+                        <input
+                            type="tel"
+                            pattern="[0-9]{10}"
+                            className="form-control"
+                            id="authorPhone"
+                            name="authorPhone"
+                            value={this.state.authorPhone}
+                            onChange={this.onChange}
+                            required
+                        /><br />
+
+                        <span style={{ color: "white" }}>Research Paper Title</span>
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="title"
+                            name="title"
+                            value={this.state.title}
+                            onChange={this.onChange}
+                            required
+                        /><br />
+
+                        <span style={{ color: "white" }}>Research Paper Description</span>
+                        <textarea
+                            className="form-control"
+                            id="description"
+                            rows="3"
+                            name="description"
+                            value={this.state.description}
+                            onChange={this.onChange}
+                            required>
+                        </textarea><br />
+
+                        <span style={{ color: "white" }}>Upload Research Paper</span>
+                        <input
+                            type="file"
+                            className="form-control"
+                            id="file"
+                            name="file"
+                            onChange={this.onFileChange}
+                            required
+                        /><br />
+
+                        <button type="submit" className="btn btn-primary">Submit</button>
+                    </form>
+                </div><br />
             </div>
         )
     }
