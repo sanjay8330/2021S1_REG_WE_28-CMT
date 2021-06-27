@@ -16,6 +16,8 @@ import ViewWorkshop from './components/AdminRole/viewWorkshops';
 import ViewResearchPaper from './components/AdminRole/viewResearch';
 import AddResearch from './components/Research/createResearch';
 import loggedHome from './components/loggedHome';
+import UnApprovedResearch from './components/AdminRole/viewResearchNA';
+import UnApprovedWorkshop from './components/AdminRole/viewWorkshopNA';
 
 //Dashboard types
 import AdminDashboard from './components/Dashboard/adminDashboard';
@@ -54,6 +56,8 @@ export default class App extends React.Component {
                             <Route path="/adminResearches" component={ ViewResearchPaper }></Route>
                             <Route path="/addResearch" component={AddResearch}></Route>
                             <Route path="/loggedHome" component={loggedHome}></Route>
+                            <Route path="/getNAResearch" component={ UnApprovedResearch }></Route>
+                            <Route path="/getNAWorkshop" component={ UnApprovedWorkshop }></Route>
                             
                             <Route path="/adminDashboard" component={AdminDashboard}></Route>
                             <Route path="/reviewerDashboard" component={reviewerDashboard}></Route>

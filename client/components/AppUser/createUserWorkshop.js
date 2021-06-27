@@ -96,7 +96,7 @@ export default class UserPlusWorkshop extends Component {
     render() {
         return (
             <div>
-                <Header /><br />
+                <Header /><br /><br /><br /><br /><br />
                 <div className="container">
                     <center><h2 class="reg1" style={{ color: "black" }}>User Details</h2></center><br />
                     <form onSubmit={this.onSubmit}>
