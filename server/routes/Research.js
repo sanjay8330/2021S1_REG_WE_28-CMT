@@ -43,6 +43,29 @@ router.route("/readAllResearch").get(async (req, res) => {
     })
 });
 
+//Read all research papers approved by reviewer - ADMIN TASK
+router.route("/readAllApprovedResearch").get(async (req, res) => {
+    ResearchModel.find({approvalStatus: 'Approved'}, (error,result) => {
+        if(error){
+            res.send(error);
+        }
+
+        res.send(result)
+    })
+});
+
+//Read all research papers approved by reviewer - ADMIN TASK
+router.route("/readAllUnApprovedResearch").get(async (req, res) => {
+    ResearchModel.find({approvalStatus: 'Pending Approval'}, (error,result) => {
+        if(error){
+            res.send(error);
+        }
+
+        res.send(result)
+    })
+});
+
+
 //Read Research by ID - used by the reviewer
 router.route("/readById/:id").get(async (req, res) => {
     const id = req.params.id;
@@ -72,14 +95,20 @@ router.route("/deleteById/:id").get(async (req, res) => {
 //Update the Research details - used by reviewer
 router.route("/approveOrDecline/:id").put(async (req, res) => {
     const approvalStatus = req.body.approvalStatus;
+    const researchAmount = req.body.researchAmount;
     //Research paper or workshop ID
     const id = req.params.id;
 
     try{
         await ResearchModel.findById(id, (err, updatedResearchObject) => {
             updatedResearchObject.approvalStatus = approvalStatus;
-            updatedResearchObject.save();
-            res.send("Updated Successfully");
+            updatedResearchObject.researchAmount = researchAmount;
+            updatedResearchObject.save()
+            .then(response => {
+                res.status(200).send({response: response});
+            }).catch(error => {
+                res.status(500).send({error: error.message});
+            })
         });
     }catch(err){
         console.log(err);

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 import Select from 'react-select';
+import Header from '../Header_Footer/adminHeader';
 
 const initialState = {
     "name": '',
@@ -71,76 +72,76 @@ class AddUser extends Component {
 
     render() {
         return (
-            <div className="container">
-                <h3>Add Application User Details</h3>
-                <form onSubmit={this.onSubmit}>
-                        <label htmlFor="username" className="form-label">User Type</label>
+            <div>
+                <Header /><br /><br /><br /><br /><br />
+                <div className="add4">
+                    <center><h2 class="log" style={{ color: "white" }}>Add Application User Details</h2></center><br />
+                    <form onSubmit={this.onSubmit} style={{ height: "100px;" }}>
+
+                        <span style={{ color: "white" }}>User Type</span>
                         <Select
                             options={this.state.options}
                             onChange={this.onSelectedOption}
                         /><br />
-                        <div className="mb-3">
-                            <label htmlFor="username" className="form-label">Username</label>
-                            <input
-                                type="text"
-                                className="form-control"
-                                id="name"
-                                name="name"
-                                value={this.state.name}
-                                onChange={this.onChange}
-                            />
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor="email" className="form-label">Email Address</label>
-                            <input
-                                type="email"
-                                className="form-control"
-                                id="email"
-                                name="email"
-                                value={this.state.email}
-                                onChange={this.onChange}
-                            />
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor="password" className="form-label">Password</label>
-                            <input
-                                type="password"
-                                className="form-control"
-                                id="password"
-                                name="password"
-                                value={this.state.password}
-                                onChange={this.onChange}
-                            />
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor="confirmPassword" className="form-label">Confirm Password</label>
-                            <input
-                                type="password"
-                                className="form-control"
-                                id="confirmPassword"
-                                name="confirmPassword"
-                                value={this.state.confirmPassword}
-                                onChange={this.onChange}
-                            />
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor="contactNumber" className="form-label">Contact Number</label>
-                            <input
-                                type="tel"
-                                pattern="[0-9]{10}"
-                                className="form-control"
-                                id="contact"
-                                name="contact"
-                                value={this.state.contact}
-                                onChange={this.onChange}
-                            />
-                        </div>
+
+                        <span style={{ color: "white" }}>Username</span>
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="name"
+                            name="name"
+                            value={this.state.name}
+                            onChange={this.onChange}
+                        /><br />
+
+                        <span style={{ color: "white" }}>Email Address</span>
+                        <input
+                            type="email"
+                            className="form-control"
+                            id="email"
+                            name="email"
+                            value={this.state.email}
+                            onChange={this.onChange}
+                        /><br />
+
+                        <span style={{ color: "white" }}>Password</span>
+                        <input
+                            type="password"
+                            className="form-control"
+                            id="password"
+                            name="password"
+                            value={this.state.password}
+                            onChange={this.onChange}
+                        /><br />
+
+                        <span style={{ color: "white" }}>Confirm Password</span>
+                        <input
+                            type="password"
+                            className="form-control"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            value={this.state.confirmPassword}
+                            onChange={this.onChange}
+                        /><br />
+
+                        <span style={{ color: "white" }}>Contact Number</span>
+                        <input
+                            type="tel"
+                            pattern="[0-9]{10}"
+                            className="form-control"
+                            id="contact"
+                            name="contact"
+                            value={this.state.contact}
+                            onChange={this.onChange}
+                        /><br />
 
                         <button type="submit" className="btn btn-primary">Submit</button>
-                </form>
+                    </form>
+                </div><br />
             </div>
-                )
+
+        )
     }
 }
 
-                export default AddUser;
+export default AddUser;

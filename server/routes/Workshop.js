@@ -45,6 +45,28 @@ router.route("/readAllWorkshops").get(async (req, res) => {
     })
 });
 
+//Read all approved workshop details - used by the admin
+router.route("/readAllApprovedWorkshops").get(async (req, res) => {
+    WorkshopModel.find({approvalStatus: 'Approved'}, (error,result) => {
+        if(error){
+            res.send(error);
+        }
+
+        res.send(result)
+    })
+});
+
+//Read all unapproved workshop details - used by the admin
+router.route("/readAllUnApprovedWorkshops").get(async (req, res) => {
+    WorkshopModel.find({approvalStatus: 'Approval Pending'}, (error,result) => {
+        if(error){
+            res.send(error);
+        }
+
+        res.send(result)
+    })
+});
+
 //Read workshop details by ID - used by the reviewer to approve/decline
 router.route("/readById/:id").get(async (req, res) => {
     const id = req.params.id;
@@ -61,14 +83,20 @@ router.route("/readById/:id").get(async (req, res) => {
 //Update the Workshop details - used by reviewer
 router.route("/approveOrDecline/:id").put(async (req, res) => {
     const approvalStatus = req.body.approvalStatus;
+    const workshopAmount = req.body.workshopAmount;
     //Research paper or workshop ID
     const id = req.params.id;
 
     try{
         await WorkshopModel.findById(id, (err, updatedWorkshopObject) => {
             updatedWorkshopObject.approvalStatus = approvalStatus;
-            updatedWorkshopObject.save();
-            res.send("Updated Successfully");
+            updatedWorkshopObject.workshopAmount = workshopAmount;
+            updatedWorkshopObject.save()
+            .then(response => {
+                res.status(200).send({response: response});
+            }).catch(error => {
+                res.status(500).send({error: error.message});
+            })
         });
     }catch(err){
         console.log(err);
