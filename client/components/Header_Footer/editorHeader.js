@@ -17,9 +17,9 @@ class Header extends Component {
                         <nav id="navbar" class="navbar order-last order-lg-0">
                             <ul>
                                 <li><a class="nav-link scrollto active" href="/">EDITOR</a></li>
-                                <li><a class="nav-link scrollto" href="/#">Workshop</a></li>
-                                <li><a class="nav-link scrollto" href="/#">Research Papers</a></li>
-                                <li><a class="nav-link scrollto" href="/#">Add Conference</a></li>
+                                <li><a class="nav-link scrollto" href="/#">Add Workshop to Conference</a></li>
+                                <li><a class="nav-link scrollto" href="/#">Add Research Papers to Conference</a></li>
+                                <li><a class="nav-link scrollto" href="/viewConference">Manage Conferences</a></li>
                                 <li><a class="nav-link scrollto" href="/">Logout</a></li>
                             </ul>
                         </nav>
