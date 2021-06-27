@@ -39,7 +39,9 @@ export default class ViewResearchPaper extends Component {
                 <div className="container1"><br />
 
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <button class="btn btn-primary" type="button" onClick={this.navigateToNAResearch}>View Approval Pending Research Papers</button>
+
+                    <button class="btn btn-primary" type="button" onClick={this.navigateToNAResearch}>View Approval Pending Research Paper</button>
+
                         <button class="btn btn-primary" type="button" onClick={this.navigateToAddResearch}>Add New Research Paper</button>
                     </div><br />
 
