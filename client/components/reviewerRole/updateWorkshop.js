@@ -32,21 +32,21 @@ class UpdateWorkshop extends Component {
             "workshopAmount": this.state.workshopAmount
         }
         Axios.put(`http://localhost:3001/workshop/approveOrDecline/${this.props.match.params.id}`, updWorkshop)
-        .then(response => {
-            alert('Updated Successfully');
-        }).catch(error => {
-            alert(error.message);
-        })
+            .then(response => {
+                alert('Updated Successfully');
+            }).catch(error => {
+                alert(error.message);
+            })
     }
 
-    onChange(e){
+    onChange(e) {
         this.setState({ [e.target.name]: e.target.value });
     }
     render() {
 
         return (
             <div>
-                <Header />
+                <Header /><br /><br /><br /><br />
 
                 {this.state.workshop.length > 0 && this.state.workshop.map((item, index) => (
                     <div key={index} className="card mb-3">
@@ -57,43 +57,35 @@ class UpdateWorkshop extends Component {
                     </div>
                 ))}
 
-                <div className="container" style={{ width: "740px" }}>
-                    <br /><br />
-                    <div className="w-100 mx-auto shadow p-5">
-                        <div className="card card-body" style={{ width: "600px", backgroundColor: "#dfe5e8" }}>
-                            <center><h2 class="mt-1 bg-primary text-center text-white p-2 rounded shadow">Update Research Paper Details</h2></center><br />
-                            <form onSubmit={this.onSubmit}>
-                                <div className="mb-3">
-                                    <label htmlFor="workshopAmount" className="form-label">Workshop Amount</label>
-                                    <input
-                                        type="number"
-                                        className="form-control"
-                                        id="workshopAmount"
-                                        name="workshopAmount"
-                                        value={this.state.workshopAmount}
-                                        onChange={this.onChange}
-                                        required
-                                    />
-                                </div>
-                                <div className="mb-3">
-                                    <label htmlFor="approval" className="form-label">Approval Status</label>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        id="approvalStatus"
-                                        name="approvalStatus"
-                                        value={this.state.approvalStatus}
-                                        required
-                                        readOnly
-                                    />
-                                </div>
-                                
-                                <button type="submit" className="btn btn-primary">Submit</button>
-                            </form>
-                        </div>
-                    </div>
-                    <br /><br />
-                </div>
+                <div className="update">
+                    <center><h2 class="log" style={{ color: "white" }}>Update Workshop Details</h2></center><br />
+                    <form onSubmit={this.onSubmit} style={{ height: "100px;" }}>
+
+                        <span style={{ color: "white" }}>Workshop Amount</span>
+                        <input
+                            type="number"
+                            className="form-control"
+                            id="workshopAmount"
+                            name="workshopAmount"
+                            value={this.state.workshopAmount}
+                            onChange={this.onChange}
+                            required
+                        /><br />
+
+                        <span style={{ color: "white" }}>Approval Status</span>
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="approvalStatus"
+                            name="approvalStatus"
+                            value={this.state.approvalStatus}
+                            required
+                            readOnly
+                        /><br />
+
+                        <button type="submit" className="btn btn-primary">Submit</button>
+                    </form>
+                </div><br />
             </div>
         )
     }

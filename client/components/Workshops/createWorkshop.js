@@ -69,100 +69,87 @@ class AddWorkshop extends Component {
     }
 
     render() {
-        
+
         return (
             <div>
-                <Header /><br/><br/><br/><br/>
-                <div className="container" style={{ width: "740px" }}>
-                    <br /><br />
-                    <div className="w-100 mx-auto shadow p-5">
-                        <div className="card card-body" style={{ width: "600px", backgroundColor: "#dfe5e8" }}>
-                            <center><h2 class="mt-1 bg-primary text-center text-white p-2 rounded shadow">Add Workshop Details</h2></center><br />
-                            <form onSubmit={this.onSubmit}>
-                                <div className="mb-3">
-                                    <label htmlFor="conductorName" className="form-label">Workshop Conductor Name</label>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        id="conductorName"
-                                        name="conductorName"
-                                        value={this.state.conductorName}
-                                        onChange={this.onChange}
-                                    />
-                                </div>
-                                <div className="mb-3">
-                                    <label htmlFor="conductorEmail" className="form-label">Workshop Conductor Email</label>
-                                    <input
-                                        type="email"
-                                        className="form-control"
-                                        id="conductorEmail"
-                                        name="conductorEmail"
-                                        value={this.state.conductorEmail}
-                                        onChange={this.onChange}
-                                    />
-                                </div>
-                                <div className="mb-3">
-                                    <label htmlFor="conductorPhone" className="form-label">Workshop Conductor Phone</label>
-                                    <input
-                                        type="tel"
-                                        pattern="[0-9]{10}"
-                                        className="form-control"
-                                        id="conductorPhone"
-                                        name="conductorPhone"
-                                        value={this.state.conductorPhone}
-                                        onChange={this.onChange}
-                                    />
-                                </div>
-                                <div className="mb-3">
-                                    <label htmlFor="workshopTitle" className="form-label">Workshop Title</label>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        id="workshopTitle"
-                                        name="workshopTitle"
-                                        value={this.state.workshopTitle}
-                                        onChange={this.onChange}
-                                    />
-                                </div>
-                                <div className="mb-3">
-                                    <label htmlFor="workshopdescrip" className="form-label">Workshop Description</label>
-                                    <textarea
-                                        className="form-control"
-                                        id="exampleFormControlTextarea1"
-                                        rows="3"
-                                        name="workshopDescription"
-                                        value={this.state.workshopDescription}
-                                        onChange={this.onChange}>
-                                    </textarea>
-                                </div>
-                                <div className="mb-3">
-                                    <label htmlFor="workshopspeakers" className="form-label">Workshop Speakers</label>
-                                    <textarea
-                                        className="form-control"
-                                        id="workshopSpeakers"
-                                        rows="3"
-                                        name="workshopSpeakers"
-                                        value={this.state.workshopSpeakers}
-                                        onChange={this.onChange}>
-                                    </textarea>
-                                </div>
-                                <div className="mb-3">
-                                    <label htmlFor="upload file" className="form-label">Upload Workshop Flyer</label>
-                                    <input
-                                        type="file"
-                                        className="form-control"
-                                        id="file"
-                                        name="file"
-                                        onChange={this.onFileChange}
-                                    />
-                                </div>
+                <Header /><br /><br /><br /><br /><br />
+                <div className="add1">
+                    <center><h2 class="log" style={{ color: "white" }}>Add Workshop Details</h2></center><br />
+                    <form onSubmit={this.onSubmit} style={{ height: "100px;" }}>
 
-                                <button type="submit" className="btn btn-primary">Submit</button>
-                            </form>
-                        </div>
-                    </div>
-                    <br /><br />
-                </div>
+                        <span style={{ color: "white" }}>Workshop Conductor Name</span>
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="conductorName"
+                            name="conductorName"
+                            value={this.state.conductorName}
+                            onChange={this.onChange}
+                        /><br />
+
+                        <span style={{ color: "white" }}>Workshop Conductor Email</span>
+                        <input
+                            type="email"
+                            className="form-control"
+                            id="conductorEmail"
+                            name="conductorEmail"
+                            value={this.state.conductorEmail}
+                            onChange={this.onChange}
+                        /><br />
+
+                        <span style={{ color: "white" }}>Workshop Conductor Phone</span>
+                        <input
+                            type="tel"
+                            pattern="[0-9]{10}"
+                            className="form-control"
+                            id="conductorPhone"
+                            name="conductorPhone"
+                            value={this.state.conductorPhone}
+                            onChange={this.onChange}
+                        /><br />
+
+                        <span style={{ color: "white" }}>Workshop Title</span>
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="workshopTitle"
+                            name="workshopTitle"
+                            value={this.state.workshopTitle}
+                            onChange={this.onChange}
+                        /><br />
+
+                        <span style={{ color: "white" }}>Workshop Description</span>
+                        <textarea
+                            className="form-control"
+                            id="exampleFormControlTextarea1"
+                            rows="3"
+                            name="workshopDescription"
+                            value={this.state.workshopDescription}
+                            onChange={this.onChange}>
+                        </textarea><br />
+
+                        <span style={{ color: "white" }}>Workshop Speakers</span>
+                        <textarea
+                            className="form-control"
+                            id="workshopSpeakers"
+                            rows="3"
+                            name="workshopSpeakers"
+                            value={this.state.workshopSpeakers}
+                            onChange={this.onChange}>
+                        </textarea><br />
+
+                        <span style={{ color: "white" }}>Upload Workshop Flyer</span>
+                        <input
+                            type="file"
+                            className="form-control"
+                            id="file"
+                            name="file"
+                            onChange={this.onFileChange}
+                        /><br />
+
+                        <button type="submit" className="btn btn-primary">Submit</button>
+                    </form>
+                </div><br />
             </div>
         )
     }

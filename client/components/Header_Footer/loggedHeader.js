@@ -22,7 +22,7 @@ class loggedHeader extends Component {
                   <li><a class="nav-link scrollto" href="/addWorkshop">Workshops</a></li>
                   <li><a class="nav-link scrollto" href="/addAttendee">Attendees</a></li>
                   <li><a class="nav-link scrollto" href="/addResearch">ResearchPapers</a></li>
-                  <li><a class="nav-link scrollto" href="/logout">Logout</a></li>
+                  <li><a class="nav-link scrollto" href="/">Logout</a></li>
                 </ul>
               </nav>
             </div>

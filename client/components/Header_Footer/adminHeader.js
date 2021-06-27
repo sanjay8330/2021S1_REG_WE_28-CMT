@@ -24,7 +24,7 @@ class Header extends Component {
                                 <li><a class="nav-link scrollto" href="/#">Research Paper Author Payments</a></li>
                                 <li><a class="nav-link scrollto" href="/#">Attendee Payments</a></li>
                                 <li><a class="nav-link scrollto" href="/#">Users</a></li>
-                                <li><a class="nav-link scrollto" href="/dashboard">Logout</a></li>
+                                <li><a class="nav-link scrollto" href="/">Logout</a></li>
                             </ul>
                         </nav>
                     </div>
