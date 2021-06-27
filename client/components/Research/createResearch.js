@@ -66,7 +66,7 @@ class AddResearch extends Component {
                 <Header /><br /><br /><br /><br /><br />
                 <div className="add3">
                     <center><h2 class="log" style={{ color: "white" }}>Add Research Paper Details</h2></center><br />
-                    <form onSubmit={this.onSubmit} style={{ height: "100px;" }}>
+                    <form onSubmit={this.onSubmit} style={{ height: "100px" }}>
 
                         <span style={{ color: "white" }}>Research Paper Author Name</span>
                         <input
@@ -134,7 +134,7 @@ class AddResearch extends Component {
                             required
                         /><br />
 
-                        <button type="submit" className="btn btn-primary">Submit</button>
+                        <button type="submit" className="btn btn-primary" id="submitBtn" disabled>Submit</button>
                     </form>
                 </div><br />
             </div>
