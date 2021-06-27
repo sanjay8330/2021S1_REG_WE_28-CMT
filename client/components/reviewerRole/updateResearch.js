@@ -66,7 +66,7 @@ class UpdateResearch extends Component {
                         <center><h2 class="log" style={{ color: "white" }}>Update Research Paper Details</h2></center><br />
                         <form onSubmit={this.onSubmit} style={{ height: "100px;" }}>
 
-                            <span style={{ color: "white" }}>Research Amount</span>
+                            <span style={{ color: "white" }}>Research Amount (Rs)</span>
                             <input
                                 type="number"
                                 className="form-control"
