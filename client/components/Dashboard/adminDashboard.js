@@ -14,29 +14,33 @@ export default class dashboard extends Component {
     window.location = '/addUser';
   }
 
-  navigateToWorkshop(e){
+  navigateToWorkshop(e) {
     window.location = '/adminWorkshops';
   }
 
-  navigateToResearch(e){
+  navigateToResearch(e) {
     window.location = '/adminResearches';
   }
   render() {
     return (
-      <div class = "home">
+      <div class="home">
         <Header /><br /><br /><br /><br /><br /><br />
-        <div class = "text">
-           <span class="glyphicon glyphicon-equalizer">DASHBOARD - ADMIN</span>
+        <div class="text">
+          <span class="glyphicon glyphicon-equalizer">DASHBOARD - ADMIN</span>
         </div>
-        <div class="d-grid gap-2 col-6 mx-auto">
-          <button class="btn btn-primary" type="button" onClick={this.navigateToUserAdd}>User Management</button>
-          <button class="btn btn-primary" type="button" onClick={this.navigateToWorkshop}>Manage Workshops</button>
-          <button class="btn btn-primary" type="button" onClick={this.navigateToResearch}>Manage Research Papers</button>
+      
+        <div class="sidenav">
+          <a href="#" onClick={this.navigateToUserAdd}>User Management</a>
+          <a href="#" onClick={this.navigateToWorkshop}>Manage Workshops</a>
+          <a href="#" onClick={this.navigateToResearch}>Manage Research Papers</a>
         </div>
+
         <br /><br /><br /><br /><br /><br />
         <br /><br /><br /><br /><br /><br />
+        <br /><br /><br />
 
       </div>
+
     )
   }
 }

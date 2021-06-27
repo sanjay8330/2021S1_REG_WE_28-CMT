@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from '../../components/Header_Footer/header';
 import Axios from 'axios';
 import firebase from '../../Firebase/firebase';
+import '../../css/App.css';
 
 const initialState = {
     "name": '',
@@ -85,11 +86,11 @@ export default class UserPlusResearch extends Component {
         return (
             <div>
                 <Header /><br /><br /><br /><br /><br />
-                <div className="container">
-                    <center><h2 class="reg1" style={{ color: "black" }}>User Details</h2></center><br />
-                    <form onSubmit={this.onSubmit}>
+                <div className="add6">
+                    <center><h2 class="log" style={{ color: "white" }}>User Details</h2></center><br />
+                    <form onSubmit={this.onSubmit} style={{ height: "100px;" }}>
 
-                        <span style={{ color: "black" }}>Username</span>
+                        <span style={{ color: "white" }}>Username</span>
                         <input
                             type="text"
                             className="form-control"
@@ -100,7 +101,7 @@ export default class UserPlusResearch extends Component {
                             placeholder="Enter username"
                         /><br />
 
-                        <span style={{ color: "black" }}>Email</span>
+                        <span style={{ color: "white" }}>Email</span>
                         <input
                             type="email"
                             className="form-control"
@@ -111,7 +112,7 @@ export default class UserPlusResearch extends Component {
                             placeholder="Enter email address"
                         /><br />
 
-                        <span style={{ color: "black" }}>Password</span>
+                        <span style={{ color: "white" }}>Password</span>
                         <input
                             type="password"
                             className="form-control"
@@ -122,7 +123,7 @@ export default class UserPlusResearch extends Component {
                             placeholder="Enter password"
                         /><br />
 
-                        <span style={{ color: "black" }}>Confirm Password</span>
+                        <span style={{ color: "white" }}>Confirm Password</span>
                         <input
                             type="password"
                             className="form-control"
@@ -133,7 +134,7 @@ export default class UserPlusResearch extends Component {
                             placeholder="Enter username"
                         /><br />
 
-                        <span style={{ color: "black" }}>Contact Number</span>
+                        <span style={{ color: "white" }}>Contact Number</span>
                         <input
                             type="tel"
                             pattern="[0-9]{10}"
@@ -143,83 +144,81 @@ export default class UserPlusResearch extends Component {
                             value={this.state.contact}
                             onChange={this.onChange}
                             placeholder="Enter contact number"
-                        />
+                        /><br />
 
-                        <hr />
-                        <center><h2 class="reg1" style={{ color: "black" }}>Research Paper Details</h2></center><br />
+                        <hr style = {{color: "#10ebd5"}}/>
+                        <center><h2 class="reg1" style={{ color: "white" }}>Research Paper Details</h2></center><br />
 
-                        <div className="mb-3">
-                            <label htmlFor="authorName" className="form-label">Research Paper Author Name</label>
-                            <input
-                                type="text"
-                                className="form-control"
-                                id="authorName"
-                                name="authorName"
-                                value={this.state.authorName}
-                                onChange={this.onChange}
-                                required
-                            />
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor="authorEmail" className="form-label">Research Paper Author Email</label>
-                            <input
-                                type="email"
-                                className="form-control"
-                                id="authorEmail"
-                                name="authorEmail"
-                                value={this.state.authorEmail}
-                                onChange={this.onChange}
-                                required
-                            />
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor="authorPhone" className="form-label">Research Paper Author Phone</label>
-                            <input
-                                type="tel"
-                                pattern="[0-9]{10}"
-                                className="form-control"
-                                id="authorPhone"
-                                name="authorPhone"
-                                value={this.state.authorPhone}
-                                onChange={this.onChange}
-                                required
-                            />
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor="researchTitle" className="form-label">Research Paper Title</label>
-                            <input
-                                type="text"
-                                className="form-control"
-                                id="title"
-                                name="title"
-                                value={this.state.title}
-                                onChange={this.onChange}
-                                required
-                            />
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor="researchdescrip" className="form-label">Research Paper Description</label>
-                            <textarea
-                                className="form-control"
-                                id="description"
-                                rows="3"
-                                name="description"
-                                value={this.state.description}
-                                onChange={this.onChange}
-                                required>
-                            </textarea>
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor="upload file" className="form-label">Upload Research Paper</label>
-                            <input
-                                type="file"
-                                className="form-control"
-                                id="file"
-                                name="file"
-                                onChange={this.onFileChange}
-                                required
-                            />
-                        </div>
+                        <span style={{ color: "white" }}>Research Paper Author Name</span>
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="authorName"
+                            name="authorName"
+                            value={this.state.authorName}
+                            onChange={this.onChange}
+                            required
+                            placeholder="Enter author name"
+                        /><br />
+
+                        <span style={{ color: "white" }}>Research Paper Author Email</span>
+                        <input
+                            type="email"
+                            className="form-control"
+                            id="authorEmail"
+                            name="authorEmail"
+                            value={this.state.authorEmail}
+                            onChange={this.onChange}
+                            required
+                            placeholder="Enter author Email"
+                        /><br />
+
+                        <span style={{ color: "white" }}>Research Paper Author Phone</span>
+                        <input
+                            type="tel"
+                            pattern="[0-9]{10}"
+                            className="form-control"
+                            id="authorPhone"
+                            name="authorPhone"
+                            value={this.state.authorPhone}
+                            onChange={this.onChange}
+                            required
+                            placeholder="Enter author Phone"
+                        /><br />
+
+                        <span style={{ color: "white" }}>Research Paper Title</span>
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="title"
+                            name="title"
+                            value={this.state.title}
+                            onChange={this.onChange}
+                            required
+                            placeholder="Enter title"
+                        /><br />
+
+                        <span style={{ color: "white" }}>Research Paper Description</span>
+                        <textarea
+                            className="form-control"
+                            id="description"
+                            rows="3"
+                            name="description"
+                            value={this.state.description}
+                            onChange={this.onChange}
+                            required
+                            placeholder="Enter description">
+                        </textarea><br />
+
+                        <span style={{ color: "white" }}>Upload Research Paper</span>
+                        <input
+                            type="file"
+                            className="form-control"
+                            id="file"
+                            name="file"
+                            onChange={this.onFileChange}
+                            required
+                        /><br />
 
                         <button type="submit" className="btn btn-primary" id="submitBtn" disabled>Submit</button>
                     </form>

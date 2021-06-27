@@ -44,7 +44,7 @@ export default class ViewWorkshop extends Component {
                         <button class="btn btn-primary" type="button" onClick={this.navigateToAddWorkshop}>Add New Workshops</button>
                     </div><br />
 
-                    <center><h1>WORKSHOP DETAILS approved by Reviewer - ADMIN VIEW</h1></center><hr />
+                    <center><h1>WORKSHOP DETAILS approved by Reviewer - ADMIN VIEW</h1></center><hr /><br />
 
                     <table class="table border shadow">
                         <thead class="thead-dark">
