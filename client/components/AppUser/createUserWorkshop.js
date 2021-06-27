@@ -40,6 +40,7 @@ export default class UserPlusWorkshop extends Component {
         const fileRef = storageRef.child(file.name);
         await fileRef.put(file).then(() => {
             alert('File Uploaded Successfully!!', file.name);
+            document.getElementById("submitBtn").disabled = false;
         })
         const downloadURL = await fileRef.getDownloadURL();
         console.log('Download URL', downloadURL);
@@ -237,7 +238,7 @@ export default class UserPlusWorkshop extends Component {
                             />
                         </div>
                         
-                        <button type="submit" className="btn btn-primary">Submit</button>
+                        <button type="submit" className="btn btn-primary" id="submitBtn" disabled>Submit</button>
                     </form>
                 </div><br />
             </div>

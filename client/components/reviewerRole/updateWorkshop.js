@@ -46,25 +46,26 @@ class UpdateWorkshop extends Component {
 
         return (
             <div>
-                <Header />
+                <Header /><br /><br /><br /><br />
 
                 {this.state.workshop.length > 0 && this.state.workshop.map((item, index) => (
                     <div key={index} className="card mb-3">
                         <div className="p-3">
                             <h4>Workshop Title           : {item.workshopTitle}</h4>
                             <h5>Workshop Conductor Email : {item.workshopConductorEmail}</h5>
+                            <a href={item.downloadURL}>Download Workshop Flyer</a>
                         </div>
                     </div>
                 ))}
 
                 <div className="container" style={{ width: "740px" }}>
-                    <br /><br />
+                    <br />
                     <div className="w-100 mx-auto shadow p-5">
                         <div className="card card-body" style={{ width: "600px", backgroundColor: "#dfe5e8" }}>
                             <center><h2 class="mt-1 bg-primary text-center text-white p-2 rounded shadow">Update Research Paper Details</h2></center><br />
                             <form onSubmit={this.onSubmit}>
                                 <div className="mb-3">
-                                    <label htmlFor="workshopAmount" className="form-label">Workshop Amount</label>
+                                    <label htmlFor="workshopAmount" className="form-label">Workshop Amount at Conference</label>
                                     <input
                                         type="number"
                                         className="form-control"

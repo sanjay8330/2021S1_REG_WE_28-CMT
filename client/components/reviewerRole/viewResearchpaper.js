@@ -8,6 +8,7 @@ export default class researchPaper extends Component {
     //initializing the states
     constructor(props) {
         super(props);
+        this.navigateToResearchUpdate = this.navigateToResearchUpdate.bind(this);
         this.state = {
             research: []
         }
@@ -18,6 +19,11 @@ export default class researchPaper extends Component {
             .then(response => {
                 this.setState({ research: response.data });
             })
+    }
+
+    //Navigating to the updating page
+    navigateToResearchUpdate(e, researchID){
+        window.location = `/UpdateResearchReviewer/${researchID}`;
     }
 
     render() {
@@ -35,9 +41,10 @@ export default class researchPaper extends Component {
                                 <th scope="col">authorContact</th>
                                 <th scope="col">researchTitle</th>
                                 <th scope="col">researchDescription</th>
+                                <th scope="col">Amount in Rs.</th>
                                 <th scope="col">Status</th>
-                                <th scope="col">Edit</th>
-                                <th scope="col">Delete</th>
+                                <th scope="col">Approve</th>
+                                <th scope="col">Decline</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -48,8 +55,9 @@ export default class researchPaper extends Component {
                                     <td>{item.authorContact}</td>
                                     <td>{item.researchTitle}</td>
                                     <td>{item.researchDescription}</td>
+                                    <td>{item.researchAmount}</td>
                                     <td>{item.approvalStatus}</td>
-                                    <td><a class="btn btn-success" href="UpdateResearchReviewer" aria-label="Edit">
+                                    <td><a class="btn btn-success" onClick={e => this.navigateToResearchUpdate(e, item._id)} aria-label="Edit">
                                         <i class="fa fa-edit" aria-hidden="true"></i>
                                     </a></td>
                                     <td>
