@@ -6,11 +6,12 @@ const mongoose = require('mongoose');
   */
 
 const ConferenceSchema = new mongoose.Schema({
-    conferenceID: {
-        type: Number,
-        required: true,
-    },
     conferenceTitle: {
+        type: String,
+        required: true,
+        trim: true,
+    },
+    conferenceBriefing: {
         type: String,
         required: true,
         trim: true,
