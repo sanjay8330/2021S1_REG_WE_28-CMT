@@ -10,18 +10,27 @@ export default class ViewResearchPaper extends Component {
         super(props);
         this.navigateToAddResearch = this.navigateToAddResearch.bind(this);
         this.state = {
-            research: []
+            approvedResearch: [],
+            unapprovedResearch: []
         }
     }
     //retrieving all research
     componentDidMount() {
-        axios.get('http://localhost:3001/research/readAllResearch/')
+        axios.get('http://localhost:3001/research/readAllApprovedResearch/')
             .then(response => {
-                this.setState({ research: response.data });
+                this.setState({ approvedResearch: response.data });
+            }).catch(error => {
+                alert('Error', error.message);
+            })
+        axios.get('http://localhost:3001/research/readAllUnApprovedResearch/')
+            .then(response => {
+                this.setState({ unapprovedResearch: response.data });
+            }).catch(error => {
+                alert('Error', error.message);
             })
     }
 
-    navigateToAddResearch(e){
+    navigateToAddResearch(e) {
         window.location = '/addResearch';
     }
 
@@ -30,11 +39,55 @@ export default class ViewResearchPaper extends Component {
             <div>
                 <Header /><br /><br /><br /><br />
                 <div className="container1"><br />
-                    <center><h1>RESEARCH PAPERS - ADMIN VIEW</h1></center><hr/>
 
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                         <button class="btn btn-primary" type="button" onClick={this.navigateToAddResearch}>Add New Research Paper</button>
                     </div><br />
+
+                    <center><h3>RESEARCH PAPERS Approved BY Reviewer - ADMIN VIEW</h3></center><hr />
+
+                    <table class="table border shadow">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">authorName</th>
+                                <th scope="col">authorEmail</th>
+                                <th scope="col">authorContact</th>
+                                <th scope="col">researchTitle</th>
+                                <th scope="col">researchDescription</th>
+                                <th scope="col">research Date</th>
+                                <th scope="col">research Time</th>
+                                <th scope="col">Reviewer Approval Status</th>
+                                <th scope="col">Admin Approval Status</th>
+                                <th scope="col">Edit</th>
+                                <th scope="col">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {this.state.approvedResearch.length > 0 && this.state.approvedResearch.map((item, index) =>
+                                <tr>
+                                    <td>{item.authorName}</td>
+                                    <td>{item.authorEmail}</td>
+                                    <td>{item.authorContact}</td>
+                                    <td>{item.researchTitle}</td>
+                                    <td>{item.researchDescription}</td>
+                                    <td>{item.researchDate}</td>
+                                    <td>{item.researchTime}</td>
+                                    <td>{item.approvalStatus}</td>
+                                    <td>{item.adminApprovalStatus}</td>
+                                    <td><a class="btn btn-success" href="path/to/settings" aria-label="Approve">
+                                        <i class="fa fa-edit" aria-hidden="true"></i>
+                                    </a></td>
+                                    <td>
+                                        <a class="btn btn-danger" href="path/to/settings" aria-label="Decline">
+                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            )}
+                        </tbody>
+                    </table>
+
+                    <center><h3>RESEARCH PAPERS not approved BY Reviewer - ADMIN VIEW</h3></center><hr />
 
                     <table class="table border shadow">
                         <thead class="thead-dark">
@@ -53,7 +106,7 @@ export default class ViewResearchPaper extends Component {
                             </tr>
                         </thead>
                         <tbody>
-                            {this.state.research.length > 0 && this.state.research.map((item, index) =>
+                            {this.state.unapprovedResearch.length > 0 && this.state.unapprovedResearch.map((item, index) =>
                                 <tr>
                                     <td>{item.authorName}</td>
                                     <td>{item.authorEmail}</td>
