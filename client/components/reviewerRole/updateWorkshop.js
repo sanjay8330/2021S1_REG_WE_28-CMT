@@ -67,7 +67,7 @@ class UpdateWorkshop extends Component {
                     <center><h2 class="log" style={{ color: "white" }}>Update Workshop Details</h2></center><br />
                     <form onSubmit={this.onSubmit} style={{ height: "100px;" }}>
 
-                        <span style={{ color: "white" }}>Workshop Amount</span>
+                        <span style={{ color: "white" }}>Workshop Amount (Rs)</span>
                         <input
                             type="number"
                             className="form-control"
