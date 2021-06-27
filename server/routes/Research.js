@@ -43,6 +43,29 @@ router.route("/readAllResearch").get(async (req, res) => {
     })
 });
 
+//Read all research papers approved by reviewer - ADMIN TASK
+router.route("/readAllApprovedResearch").get(async (req, res) => {
+    ResearchModel.find({approvalStatus: 'Approved'}, (error,result) => {
+        if(error){
+            res.send(error);
+        }
+
+        res.send(result)
+    })
+});
+
+//Read all research papers approved by reviewer - ADMIN TASK
+router.route("/readAllUnApprovedResearch").get(async (req, res) => {
+    ResearchModel.find({approvalStatus: 'Pending Approval'}, (error,result) => {
+        if(error){
+            res.send(error);
+        }
+
+        res.send(result)
+    })
+});
+
+
 //Read Research by ID - used by the reviewer
 router.route("/readById/:id").get(async (req, res) => {
     const id = req.params.id;

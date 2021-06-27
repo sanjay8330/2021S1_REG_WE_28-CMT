@@ -34,9 +34,11 @@ class AddWorkshop extends Component {
             alert('File Uploaded Successfully!!', file.name);
             document.getElementById("submitBtn").disabled = false;
         })
+       
         const downloadURL = await fileRef.getDownloadURL();
         console.log('Download URL', downloadURL);
         this.setState({ fileURL: downloadURL });
+       
 
         //In case the above code fails  -due to time to upload and set the download URL
         /*
@@ -148,7 +150,7 @@ class AddWorkshop extends Component {
                             onChange={this.onFileChange}
                         /><br />
 
-                        <button type="submit" className="btn btn-primary">Submit</button>
+                        <button type="submit" className="btn btn-primary" id="submitBtn" disabled>Submit</button>
                     </form>
                 </div><br />
             </div>

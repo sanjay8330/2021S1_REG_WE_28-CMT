@@ -45,6 +45,28 @@ router.route("/readAllWorkshops").get(async (req, res) => {
     })
 });
 
+//Read all approved workshop details - used by the admin
+router.route("/readAllApprovedWorkshops").get(async (req, res) => {
+    WorkshopModel.find({approvalStatus: 'Approved'}, (error,result) => {
+        if(error){
+            res.send(error);
+        }
+
+        res.send(result)
+    })
+});
+
+//Read all unapproved workshop details - used by the admin
+router.route("/readAllUnApprovedWorkshops").get(async (req, res) => {
+    WorkshopModel.find({approvalStatus: 'Approval Pending'}, (error,result) => {
+        if(error){
+            res.send(error);
+        }
+
+        res.send(result)
+    })
+});
+
 //Read workshop details by ID - used by the reviewer to approve/decline
 router.route("/readById/:id").get(async (req, res) => {
     const id = req.params.id;
