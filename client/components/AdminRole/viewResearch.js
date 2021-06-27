@@ -43,7 +43,7 @@ export default class ViewResearchPaper extends Component {
                         <button class="btn btn-primary" type="button" onClick={this.navigateToAddResearch}>Add New Research Paper</button>
                     </div><br />
 
-                    <center><h3>RESEARCH PAPERS Approved BY Reviewer - ADMIN VIEW</h3></center><hr />
+                    <center><h1>RESEARCH PAPERS Approved BY Reviewer - ADMIN VIEW</h1></center><hr /><br />
 
                     <table class="table border shadow">
                         <thead class="thead-dark">

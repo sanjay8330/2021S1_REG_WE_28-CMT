@@ -88,7 +88,7 @@ class UserLogin extends Component {
                         /><br />
 
                         <button type="submit" className="signin">Login</button><br />
-                        <center><a href="/generalUserSignUp">Create New account</a></center>
+                        <center><a href="/signUpHome">Create New account</a></center>
                     </form>
                 </div><br/>
             </div>

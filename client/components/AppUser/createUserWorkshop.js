@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from '../../components/Header_Footer/header';
 import Axios from 'axios';
 import firebase from '../../Firebase/firebase';
+import '../../css/App.css';
 
 const initialState = {
     "name": '',
@@ -97,11 +98,11 @@ export default class UserPlusWorkshop extends Component {
         return (
             <div>
                 <Header /><br /><br /><br /><br /><br />
-                <div className="container">
-                    <center><h2 class="reg1" style={{ color: "black" }}>User Details</h2></center><br />
-                    <form onSubmit={this.onSubmit}>
+                <div className="add7">
+                    <center><h2 class="log" style={{ color: "white" }}>User Details</h2></center><br />
+                    <form onSubmit={this.onSubmit} style={{ height: "100px;" }}>
 
-                        <span style={{ color: "black" }}>Username</span>
+                        <span style={{ color: "white" }}>Username</span>
                         <input
                             type="text"
                             className="form-control"
@@ -112,7 +113,7 @@ export default class UserPlusWorkshop extends Component {
                             placeholder="Enter username"
                         /><br />
 
-                        <span style={{ color: "black" }}>Email</span>
+                        <span style={{ color: "white" }}>Email</span>
                         <input
                             type="email"
                             className="form-control"
@@ -123,7 +124,7 @@ export default class UserPlusWorkshop extends Component {
                             placeholder="Enter email address"
                         /><br />
 
-                        <span style={{ color: "black" }}>Password</span>
+                        <span style={{ color: "white" }}>Password</span>
                         <input
                             type="password"
                             className="form-control"
@@ -134,7 +135,7 @@ export default class UserPlusWorkshop extends Component {
                             placeholder="Enter password"
                         /><br />
 
-                        <span style={{ color: "black" }}>Confirm Password</span>
+                        <span style={{ color: "white" }}>Confirm Password</span>
                         <input
                             type="password"
                             className="form-control"
@@ -145,7 +146,7 @@ export default class UserPlusWorkshop extends Component {
                             placeholder="Enter username"
                         /><br />
 
-                        <span style={{ color: "black" }}>Contact Number</span>
+                        <span style={{ color: "white" }}>Contact Number</span>
                         <input
                             type="tel"
                             pattern="[0-9]{10}"
@@ -155,89 +156,87 @@ export default class UserPlusWorkshop extends Component {
                             value={this.state.contact}
                             onChange={this.onChange}
                             placeholder="Enter contact number"
-                        />
+                        /><br />
+                        <hr style={{ color: "#10ebd5" }} />
 
-                        <hr />
-                        <center><h2 class="reg1" style={{ color: "black" }}>Workshop Details</h2></center><br />
+                        <center><h2 class="reg1" style={{ color: "white" }}>Workshop Details</h2></center><br />
 
-                        <div className="mb-3">
-                            <label htmlFor="conductorName" className="form-label">Workshop Conductor Name</label>
-                            <input
-                                type="text"
-                                className="form-control"
-                                id="conductorName"
-                                name="conductorName"
-                                value={this.state.conductorName}
-                                onChange={this.onChange}
-                            />
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor="conductorEmail" className="form-label">Workshop Conductor Email</label>
-                            <input
-                                type="email"
-                                className="form-control"
-                                id="conductorEmail"
-                                name="conductorEmail"
-                                value={this.state.conductorEmail}
-                                onChange={this.onChange}
-                            />
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor="conductorPhone" className="form-label">Workshop Conductor Phone</label>
-                            <input
-                                type="tel"
-                                pattern="[0-9]{10}"
-                                className="form-control"
-                                id="conductorPhone"
-                                name="conductorPhone"
-                                value={this.state.conductorPhone}
-                                onChange={this.onChange}
-                            />
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor="workshopTitle" className="form-label">Workshop Title</label>
-                            <input
-                                type="text"
-                                className="form-control"
-                                id="workshopTitle"
-                                name="workshopTitle"
-                                value={this.state.workshopTitle}
-                                onChange={this.onChange}
-                            />
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor="workshopdescrip" className="form-label">Workshop Description</label>
-                            <textarea
-                                className="form-control"
-                                id="exampleFormControlTextarea1"
-                                rows="3"
-                                name="workshopDescription"
-                                value={this.state.workshopDescription}
-                                onChange={this.onChange}>
-                            </textarea>
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor="workshopspeakers" className="form-label">Workshop Speakers</label>
-                            <textarea
-                                className="form-control"
-                                id="workshopSpeakers"
-                                rows="3"
-                                name="workshopSpeakers"
-                                value={this.state.workshopSpeakers}
-                                onChange={this.onChange}>
-                            </textarea>
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor="upload file" className="form-label">Upload Workshop Flyer</label>
-                            <input
-                                type="file"
-                                className="form-control"
-                                id="file"
-                                name="file"
-                                onChange={this.onFileChange}
-                            />
-                        </div>
-                        
+                        <span style={{ color: "white" }}>Workshop Conductor Name</span>
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="conductorName"
+                            name="conductorName"
+                            value={this.state.conductorName}
+                            onChange={this.onChange}
+                            placeholder="Enter conductor Name"
+                        /><br />
+
+                        <span style={{ color: "white" }}>Workshop Conductor Email</span>
+                        <input
+                            type="email"
+                            className="form-control"
+                            id="conductorEmail"
+                            name="conductorEmail"
+                            value={this.state.conductorEmail}
+                            onChange={this.onChange}
+                            placeholder="Enter conductor Email"
+                        /><br />
+
+                        <span style={{ color: "white" }}>Workshop Conductor Phone</span>
+                        <input
+                            type="tel"
+                            pattern="[0-9]{10}"
+                            className="form-control"
+                            id="conductorPhone"
+                            name="conductorPhone"
+                            value={this.state.conductorPhone}
+                            onChange={this.onChange}
+                            placeholder="Enter conductor Phone"
+                        /><br />
+
+                        <span style={{ color: "white" }}>Workshop Title</span>
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="workshopTitle"
+                            name="workshopTitle"
+                            value={this.state.workshopTitle}
+                            onChange={this.onChange}
+                            placeholder="Enter workshop Title"
+                        /><br />
+
+                        <span style={{ color: "white" }}>Workshop Description</span>
+                        <textarea
+                            className="form-control"
+                            id="exampleFormControlTextarea1"
+                            rows="3"
+                            name="workshopDescription"
+                            value={this.state.workshopDescription}
+                            onChange={this.onChange}
+                            placeholder="Enter workshop Description">
+                        </textarea><br />
+
+                        <span style={{ color: "white" }}>Workshop Speakers</span>
+                        <textarea
+                            className="form-control"
+                            id="workshopSpeakers"
+                            rows="3"
+                            name="workshopSpeakers"
+                            value={this.state.workshopSpeakers}
+                            onChange={this.onChange}
+                            placeholder="Enter workshop Speakers">
+                        </textarea><br />
+
+                        <span style={{ color: "white" }}>Upload Workshop Flyer</span>
+                        <input
+                            type="file"
+                            className="form-control"
+                            id="file"
+                            name="file"
+                            onChange={this.onFileChange}
+                        /><br />
+
                         <button type="submit" className="btn btn-primary" id="submitBtn" disabled>Submit</button>
                     </form>
                 </div><br />

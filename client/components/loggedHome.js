@@ -20,17 +20,19 @@ export default class LoggedHome extends Component {
   render() {
     return (
       <div>
-        <Header /><br /><br /><br />
-        <div class="jumbotron feature">
-          <h1>HOME PAGE</h1>
-          <div class="d-grid gap-2 col-6 mx-auto">
-            <button class="btn btn-primary" type="button" onClick={this.navigateToAddWorkshop}>Add Workshops</button>
-            <button class="btn btn-primary" type="button" onClick={this.navigateToAddResearch}>Add Research papers</button>
-            <button class="btn btn-primary" type="button">Make Payments for Research paper</button>
-          </div>
+        <Header /><br /><br /><br /><br /><br />
+        <div>
+          <center><h1>HOME PAGE</h1></center><br />
         </div>
+
+        <div class="sidenav">
+          <a href="#" onClick={this.navigateToAddWorkshop}>Add Workshops</a>
+          <a href="#" onClick={this.navigateToAddResearch}>Add Research papers</a>
+          <a href="#">Make Payments for Research paper</a>
+        </div>
+
         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br />
       </div>
     )
   }

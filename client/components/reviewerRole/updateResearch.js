@@ -20,6 +20,7 @@ class UpdateResearch extends Component {
         Axios.get(`http://localhost:3001/research/readById/${this.props.match.params.id}`)
             .then(response => {
                 this.setState({ research: response.data });
+                console.log('RESPONSE ', this.state.research.length);
             }).catch(error => {
                 alert('Error ', error.message);
             })
