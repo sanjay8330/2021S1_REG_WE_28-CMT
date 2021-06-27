@@ -80,8 +80,12 @@ router.route("/approveOrDecline/:id").put(async (req, res) => {
         await ResearchModel.findById(id, (err, updatedResearchObject) => {
             updatedResearchObject.approvalStatus = approvalStatus;
             updatedResearchObject.researchAmount = researchAmount;
-            updatedResearchObject.save();
-            res.send("Updated Successfully");
+            updatedResearchObject.save()
+            .then(response => {
+                res.status(200).send({response: response});
+            }).catch(error => {
+                res.status(500).send({error: error.message});
+            })
         });
     }catch(err){
         console.log(err);
