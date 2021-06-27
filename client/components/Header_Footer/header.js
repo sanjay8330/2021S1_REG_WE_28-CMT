@@ -18,7 +18,7 @@ class Header extends Component {
               <ul>
                 <li><a class="nav-link scrollto active" href="/">Home</a></li>
                 <li><a class="nav-link scrollto" href="/conferenece">Conferenece</a></li>
-                <li><a class="nav-link scrollto" href="/generalUserSignUp">SignUp</a></li>
+                <li><a class="nav-link scrollto" href="/signUpHome">SignUp</a></li>
                 <li><a class="nav-link scrollto" href="/login">Login</a></li>
                 <li><a class="nav-link scrollto" href="/">Logout</a></li>
               </ul>
