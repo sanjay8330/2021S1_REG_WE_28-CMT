@@ -18,7 +18,7 @@ export default class SignUpHome extends Component {
     render() {
         return (
             <div>
-                <Header /><br />
+                <Header /><br /><br /><br /><br /><br />
                 <h2>Sign up Home</h2>
                 <div class="d-grid gap-2 col-6 mx-auto">
                     <button class="btn btn-primary" type="button" onClick={this.navigateToUserWorkshopAdd}>Sign Up to add Workshop</button>

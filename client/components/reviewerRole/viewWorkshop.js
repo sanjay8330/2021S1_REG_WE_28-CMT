@@ -57,6 +57,7 @@ export default class workshop extends Component {
                                 <th scope="col">Title</th>
                                 <th scope="col">Description</th>
                                 <th scope="col">Speakers</th>
+                                <th scope="col">Amount in Rs.</th>
                                 <th scope="col">Status</th>
                                 <th scope="col">Edit</th>
                                 <th scope="col">Delete</th>
@@ -71,6 +72,7 @@ export default class workshop extends Component {
                                     <td>{item.workshopTitle}</td>
                                     <td>{item.workshopDescription}</td>
                                     <td>{item.workshopSpeakers}</td>
+                                    <td>{item.workshopAmount}</td>
                                     <td>{item.approvalStatus}</td>
                                     <td><a class="btn btn-success" onClick={e => this.navigateToWorkshopUpdate(e, item._id)} aria-label="Edit">
                                         <i class="fa fa-edit" aria-hidden="true"></i>

@@ -53,6 +53,7 @@ class UpdateWorkshop extends Component {
                         <div className="p-3">
                             <h4>Workshop Title           : {item.workshopTitle}</h4>
                             <h5>Workshop Conductor Email : {item.workshopConductorEmail}</h5>
+                            <a href={item.downloadURL}>Download Workshop Flyer</a>
                         </div>
                     </div>
                 ))}

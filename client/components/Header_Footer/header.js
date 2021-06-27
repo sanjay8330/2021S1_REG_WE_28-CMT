@@ -12,7 +12,7 @@ class Header extends Component {
         <header id="header" class="d-flex align-items-center ">
           <div class="container-fluid container-xxl d-flex align-items-center">
             <div id="logo" class="me-auto">
-              <h1><a href="/">CMT-<span>2021</span></a></h1>
+              <h1><a href="index.html">CMT-<span>2021</span></a></h1>
             </div>
             <nav id="navbar" class="navbar order-last order-lg-0">
               <ul>
