@@ -3,34 +3,23 @@ import axios from 'axios';
 import Header from '../Header_Footer/adminHeader';
 import '../../css/App.css';
 
-export default class ViewWorkshop extends Component {
+export default class UnApprovedWorkshop extends Component {
 
     //initializing the states
     constructor(props) {
         super(props);
-        this.navigateToAddWorkshop = this.navigateToAddWorkshop.bind(this);
-        this.navigateToNAWorkshop = this.navigateToNAWorkshop.bind(this);
         this.state = {
-            approvedWorkshops: []
+            unapprovedWorkshops: []
         }
     }
     //retrieving all workshops
     componentDidMount() {
-        axios.get('http://localhost:3001/workshop/readAllApprovedWorkshops/')
+        axios.get('http://localhost:3001/workshop/readAllUnApprovedWorkshops/')
             .then(response => {
-                this.setState({ approvedWorkshops: response.data });
+                this.setState({ unapprovedWorkshops: response.data });
             }).catch(error => {
                 alert('Error ', error.message);
             })
-    }
-
-    //Navigating to the add workshop page
-    navigateToAddWorkshop(e) {
-        window.location = '/addWorkshop';
-    }
-
-    navigateToNAWorkshop(e) {
-        window.location = '/getNAWorkshop';
     }
 
     render() {
@@ -38,15 +27,9 @@ export default class ViewWorkshop extends Component {
             <div>
                 <Header /><br /><br /><br /><br /><br />
                 <div className="container1">
+                    <center><h1>Workshop waiting for Reviewer Approval</h1></center><hr />
 
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button class="btn btn-primary" type="button" onClick={this.navigateToNAWorkshop}>Workshops waiting for Reviewer Approval</button>
-                        <button class="btn btn-primary" type="button" onClick={this.navigateToAddWorkshop}>Add New Workshops</button>
-                    </div><br />
-
-                    <center><h1>WORKSHOP DETAILS approved by Reviewer - ADMIN VIEW</h1></center><hr />
-
-                    <table class="table border shadow">
+                    <table class="table border shadow" aria-readonly="true">
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="col">Name</th>
@@ -59,12 +42,10 @@ export default class ViewWorkshop extends Component {
                                 <th scope="col">Workshop Time</th>
                                 <th scope="col">Reviewer Approval Status</th>
                                 <th scope="col">Admin Approval Status</th>
-                                <th scope="col">Edit</th>
-                                <th scope="col">Delete</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {this.state.approvedWorkshops.length > 0 && this.state.approvedWorkshops.map((item, index) =>
+                            {this.state.unapprovedWorkshops.length > 0 && this.state.unapprovedWorkshops.map((item, index) =>
                                 <tr>
                                     <td>{item.workshopConductorName}</td>
                                     <td>{item.workshopConductorEmail}</td>
@@ -76,14 +57,6 @@ export default class ViewWorkshop extends Component {
                                     <td>{item.workshopTime}</td>
                                     <td>{item.approvalStatus}</td>
                                     <td>{item.adminApprovalStatus}</td>
-                                    <td><a class="btn btn-success" href="path/to/settings" aria-label="Approve">
-                                        <i class="fa fa-edit" aria-hidden="true"></i>
-                                    </a></td>
-                                    <td>
-                                        <a class="btn btn-danger" href="path/to/settings" aria-label="Reject">
-                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                        </a>
-                                    </td>
                                 </tr>
                             )}
                         </tbody>
