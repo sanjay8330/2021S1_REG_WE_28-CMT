@@ -18,9 +18,7 @@ class Header extends Component {
                             <ul>
                                 <li><a class="nav-link scrollto active" href="//DisplayWorkshopReviewer">REVIEWER</a></li>
                                 <li><a class="nav-link scrollto" href="/DisplayWorkshopReviewer">View Workshop</a></li>
-                                <li><a class="nav-link scrollto" href="/#">Edit Workshop</a></li>
                                 <li><a class="nav-link scrollto" href="/DisplayResearchReviewer">View Research Papers</a></li>
-                                <li><a class="nav-link scrollto" href="/#">Edit Research Papers</a></li>
                                 <li><a class="nav-link scrollto" href="/">Logout</a></li>
                             </ul>
                         </nav>
