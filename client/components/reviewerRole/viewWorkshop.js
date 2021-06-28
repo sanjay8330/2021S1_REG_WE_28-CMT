@@ -36,7 +36,7 @@ export default class workshop extends Component {
     delete(workshopId) {
         axios.get('http://localhost:3001/workshop/deleteById/' + workshopId)
             .then(response => {
-                alert("Are you sure you want to delete this Workshop Details?");
+                // alert("Are you sure you want to delete this Workshop Details?");
                 this.componentDidMount();
             });
     }
@@ -51,16 +51,16 @@ export default class workshop extends Component {
                     <table class="table border shadow">
                         <thead class="thead-dark">
                             <tr>
-                                <th scope="col">Name</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">Phone</th>
-                                <th scope="col">Title</th>
-                                <th scope="col">Description</th>
-                                <th scope="col">Speakers</th>
-                                <th scope="col">Amount in Rs.</th>
-                                <th scope="col">Status</th>
-                                <th scope="col">Edit</th>
-                                <th scope="col">Delete</th>
+                                <th scope="col">NAME</th>
+                                <th scope="col">EMAIL</th>
+                                <th scope="col">PHONE</th>
+                                <th scope="col">TIITLE</th>
+                                <th scope="col">DESCRIPTION</th>
+                                <th scope="col">SPEAKERS</th>
+                                <th scope="col">AMOUNT</th>
+                                <th scope="col">STATUS</th>
+                                <th scope="col">APPROVE</th>
+                                <th scope="col">DECLINE</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -72,14 +72,14 @@ export default class workshop extends Component {
                                     <td>{item.workshopTitle}</td>
                                     <td>{item.workshopDescription}</td>
                                     <td>{item.workshopSpeakers}</td>
-                                    <td>{item.workshopAmount}</td>
+                                    <td>Rs. {item.workshopAmount}</td>
                                     <td>{item.approvalStatus}</td>
                                     <td><a class="btn btn-success" onClick={e => this.navigateToWorkshopUpdate(e, item._id)} aria-label="Edit">
                                         <i class="fa fa-edit" aria-hidden="true"></i>
                                     </a></td>
                                     <td>
-                                        <a class="btn btn-danger" onClick={() => this.delete(item._id)} href="#" aria-label="Delete"><i class="fa fa-trash" aria-hidden="true"></i>
-                                        </a>
+                                        <a class="btn btn-danger" onClick={() => this.delete(item._id)} href="mailto:?Subject=Your Research Paper post has been Declined" aria-label="Delete"><i class="fa fa-trash" aria-hidden="true"></i>
+                                        </a><br />
                                     </td>
                                 </tr>
                             )}
@@ -88,7 +88,7 @@ export default class workshop extends Component {
 
                 </div><br /><br /><br /><br /><br /><br /><br /><br />
 
-            </div>
+            </div >
         )
     }
 }
