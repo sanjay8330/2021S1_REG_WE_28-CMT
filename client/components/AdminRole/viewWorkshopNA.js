@@ -27,7 +27,7 @@ export default class UnApprovedWorkshop extends Component {
             <div>
                 <Header /><br /><br /><br /><br /><br />
                 <div className="container1">
-                    <center><h1>Workshop waiting for Reviewer Approval</h1></center><hr />
+                    <center><h1>Workshop waiting for Reviewer Approval</h1></center><hr /><br />
 
                     <table class="table border shadow" aria-readonly="true">
                         <thead class="thead-dark">
