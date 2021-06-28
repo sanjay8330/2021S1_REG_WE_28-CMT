@@ -33,6 +33,7 @@ import viewWorkshopReviewer from './components/reviewerRole/viewWorkshop';
 import DisplayResearchReviewer from './components/reviewerRole/viewResearchpaper';
 import updateWorkshopReviewer from './components/reviewerRole/updateWorkshop';
 import updateResearchReviewer from './components/reviewerRole/updateResearch';
+import sammary from './components/reviewerRole/sammary';
 
 //The main file for App render
 export default class App extends React.Component {
@@ -75,6 +76,7 @@ export default class App extends React.Component {
                             <Route path="/DisplayResearchReviewer" component={DisplayResearchReviewer}></Route>
                             <Route path="/UpdateWorkshopReviewer/:id" component={updateWorkshopReviewer}></Route>
                             <Route path="/UpdateResearchReviewer/:id" component={updateResearchReviewer}></Route>
+                            <Route path="/sammary" component={sammary}></Route>
                         </Switch>
                     </section>
                     <Footer />

@@ -26,18 +26,18 @@ export default class UnApprovedResearch extends Component {
             <div>
                 <Header /><br /><br /><br /><br />
                 <div className="container1"><br />
-
+                
                     <center><h3>RESEARCH PAPERS waiting for Reviewer Approval - ADMIN VIEW</h3></center><hr />
 
                     <table class="table border shadow">
                         <thead class="thead-dark">
                             <tr>
-                                <th scope="col">authorName</th>
-                                <th scope="col">authorEmail</th>
-                                <th scope="col">authorContact</th>
-                                <th scope="col">researchTitle</th>
-                                <th scope="col">researchDescription</th>
-                                <th scope="col">Reviewer Approval Status</th>
+                                <th scope="col">NAME</th>
+                                <th scope="col">EMAIL</th>
+                                <th scope="col">PHONE</th>
+                                <th scope="col">TITLE</th>
+                                <th scope="col">DESCRIPTION</th>
+                                <th scope="col">REVIEWER APPROVAL STATUS</th>
                             </tr>
                         </thead>
                         <tbody>

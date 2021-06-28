@@ -11,7 +11,7 @@ export default class home extends Component {
             <span class="glyphicon glyphicon-equalizer">SLIIT PROJECT CONFERENCE</span>
           </div>
           <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+          <br /><br /><br /><br /><br /><br />
         </div>
     )
   }

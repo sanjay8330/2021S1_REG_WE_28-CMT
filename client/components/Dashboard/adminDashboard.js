@@ -25,6 +25,7 @@ export default class dashboard extends Component {
     return (
       <div class="home">
         <Header /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br />
         <div class="text">
           <span class="glyphicon glyphicon-equalizer">DASHBOARD - ADMIN</span>
         </div>
@@ -36,9 +37,7 @@ export default class dashboard extends Component {
         </div>
 
         <br /><br /><br /><br /><br /><br />
-        <br /><br /><br /><br /><br /><br />
-        <br /><br /><br />
-
+        <br /><br /><br /><br /><br />
       </div>
 
     )

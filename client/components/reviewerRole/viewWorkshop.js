@@ -46,7 +46,8 @@ export default class workshop extends Component {
             <div>
                 <Header /><br /><br /><br /><br />
                 <div className="container1"><br />
-                    <center><h1>WORKSHOP DETAILS - REVIEWER VIEW</h1></center><hr /><br /><br />
+                    <center><h1>Workshop Details - REVIEWER VIEW</h1></center><hr /><br />
+                    <center><p><b><mark>*** Note: Hi Reviewer, you can approve or decline Workshop details in here ***</mark></b></p></center>
 
                     <table class="table border shadow">
                         <thead class="thead-dark">

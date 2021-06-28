@@ -33,19 +33,20 @@ export default class ViewConference extends Component {
                 <Header /><br /><br /><br /><br />
                 <div className="container1"><br />
 
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button class="btn btn-primary" type="button" onClick={this.navigateToAddConference}>Add New Conference</button>
-                    </div><br />
+                    <div class="sidenavEditor">
+                        <a href="#" onClick={this.navigateToAddConference}>Add New Conference</a>
+                    </div>
+                    <br />
 
-                    <center><h3>Conference Details</h3></center><hr />
+                    <center><h1>Conference Details</h1></center><hr /><br />
 
                     <table class="table border shadow">
                         <thead class="thead-dark">
                             <tr>
-                                <th scope="col">Conference Title</th>
-                                <th scope="col">Conference Briefings</th>
-                                <th scope="col">Conference Date</th>
-                                <th scope="col">Conference Time</th>
+                                <th scope="col">CONFERENECE TITLE</th>
+                                <th scope="col">CONFERENECE BRIEFINGS</th>
+                                <th scope="col">CONFERENECE DATE</th>
+                                <th scope="col">CONFERENECE TIME</th>
                             </tr>
                         </thead>
                         <tbody>

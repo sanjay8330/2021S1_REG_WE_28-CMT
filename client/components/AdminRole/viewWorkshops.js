@@ -36,29 +36,29 @@ export default class ViewWorkshop extends Component {
     render() {
         return (
             <div>
-                <Header /><br /><br /><br /><br /><br />
+                <Header /><br /><br /><br />
                 <div className="container1">
 
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button class="btn btn-primary" type="button" onClick={this.navigateToNAWorkshop}>Workshops waiting for Reviewer Approval</button>
-                        <button class="btn btn-primary" type="button" onClick={this.navigateToAddWorkshop}>Add New Workshops</button>
-                    </div><br />
+                    <div class="sidenavAdmin">
+                        <a href="#" onClick={this.navigateToNAWorkshop}>Workshops waiting for Reviewer Approval</a>
+                        <a href="#"  onClick={this.navigateToAddWorkshop}>Add New Workshops</a>
+                    </div><br /><br /><br /><br />
 
                     <center><h1>Workshop Details approved by Reviewer - ADMIN VIEW</h1></center><hr /><br />
 
-                    <center><p><b>**Note: Hi Admin, you can only view the approved workshops which are reserved/unreserved at conference***</b></p></center>
+                    <center><p><b><mark>**Note: Hi Admin, you can only view the approved workshops which are reserved/unreserved at conference***</mark></b></p></center>
 
                     <table class="table border shadow">
                         <thead class="thead-dark">
                             <tr>
-                                <th scope="col">Name</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">Phone</th>
-                                <th scope="col">Title</th>
-                                <th scope="col">Description</th>
-                                <th scope="col">Speakers</th>
-                                <th scope="col">Reviewer Approval Status</th>
-                                <th scope="col">Event Status</th>
+                                <th scope="col">NAME</th>
+                                <th scope="col">EMAIL</th>
+                                <th scope="col">PHONE</th>
+                                <th scope="col">TITLE</th>
+                                <th scope="col">DESCRIPTION</th>
+                                <th scope="col">SPEAKERS</th>
+                                <th scope="col">REVIEWER APPROVAL STATUS</th>
+                                <th scope="col">EVENT STATUS</th>
                             </tr>
                         </thead>
                         <tbody>

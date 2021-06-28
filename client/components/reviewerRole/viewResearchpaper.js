@@ -41,7 +41,8 @@ export default class researchPaper extends Component {
             <div>
                 <Header /><br /><br /><br /><br />
                 <div className="container1"><br />
-                    <center><h1>RESEARCH PAPERS - REVIEWER VIEW</h1></center><hr /><br />
+                    <center><h1>Research Papers - REVIEWER VIEW</h1></center><hr /><br />
+                    <center><p><b><mark>*** Note: Hi Reviewer, you can approve or decline Research Paper details in here ***</mark></b></p></center>
                     <table class="table border shadow">
                         <thead class="thead-dark">
                             <tr>

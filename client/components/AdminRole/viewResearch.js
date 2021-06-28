@@ -28,7 +28,7 @@ export default class ViewResearchPaper extends Component {
         window.location = '/addResearch';
     }
 
-    navigateToNAResearch(e){
+    navigateToNAResearch(e) {
         window.location = '/getNAResearch';
     }
 
@@ -38,27 +38,26 @@ export default class ViewResearchPaper extends Component {
                 <Header /><br /><br /><br /><br />
                 <div className="container1"><br />
 
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-
-                    <button class="btn btn-primary" type="button" onClick={this.navigateToNAResearch}>View Approval Pending Research Paper</button>
-
-                        <button class="btn btn-primary" type="button" onClick={this.navigateToAddResearch}>Add New Research Paper</button>
-                    </div><br />
+                    <div class="sidenavAdmin">
+                        <a href="#" onClick={this.navigateToNAResearch}>View Approval Pending Research Paper</a>
+                        <a href="#" onClick={this.navigateToAddResearch}>Add New Research Paper</a>
+                    </div>
+                    <br /><br />
 
                     <center><h1>Research Papers Approved BY Reviewer - ADMIN VIEW</h1></center><hr /><br />
 
-                    <center><p><b>**Note: Hi Admin, you can only view the approved research papers which are reserved/unreserved at conference***</b></p></center>
+                    <center><p><b><mark>**Note: Hi Admin, you can only view the approved research papers which are reserved/unreserved at conference***</mark></b></p></center>
 
                     <table class="table border shadow">
                         <thead class="thead-dark">
                             <tr>
-                                <th scope="col">authorName</th>
-                                <th scope="col">authorEmail</th>
-                                <th scope="col">authorContact</th>
-                                <th scope="col">researchTitle</th>
-                                <th scope="col">researchDescription</th>
-                                <th scope="col">Reviewer Approval Status</th>
-                                <th scope="col">Event Status</th>
+                                <th scope="col">NAME</th>
+                                <th scope="col">EMAIL</th>
+                                <th scope="col">PHONE</th>
+                                <th scope="col">TITLE</th>
+                                <th scope="col">DESCRIPTION</th>
+                                <th scope="col">REVIEWER APPROVAL STATUS</th>
+                                <th scope="col">EVENT STATUS</th>
                             </tr>
                         </thead>
                         <tbody>

@@ -28,19 +28,19 @@ export default class ViewResearchEditor extends Component {
                 <Header /><br /><br /><br /><br />
                 <div className="container1"><br />
 
-                    <center><h1>Research Papers Approved By Reviewer - Editor View</h1></center><hr /><br />
-                    <center><p><b>**Note: Hi Editor, you can only view the approved research paper but which are not yet added to the conference here***</b></p></center>
+                    <center><h1>Research Papers Approved By Reviewer - EDITOR VIEW</h1></center><hr /><br />
+                    <center><p><b><mark>**Note: Hi Editor, you can only view the approved research paper but which are not yet added to the conference here***</mark></b></p></center>
 
                     <table class="table border shadow">
                         <thead class="thead-dark">
                             <tr>
-                                <th scope="col">authorName</th>
-                                <th scope="col">authorEmail</th>
-                                <th scope="col">authorContact</th>
-                                <th scope="col">researchTitle</th>
-                                <th scope="col">researchDescription</th>
-                                <th scope="col">Reviewer Approval Status</th>
-                                <th scope="col">Action</th>
+                                <th scope="col">NAME</th>
+                                <th scope="col">EMAIL</th>
+                                <th scope="col">PHONE</th>
+                                <th scope="col">TITLE</th>
+                                <th scope="col">DESCRIPTION</th>
+                                <th scope="col">REVIEWER APPROVAL STATUS</th>
+                                <th scope="col">ACTION</th>
                             </tr>
                         </thead>
                         <tbody>
