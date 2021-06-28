@@ -6,11 +6,21 @@ const ConferenceResearchSchema = new mongoose.Schema({
         required: false,
         ref: 'conference'
     },
-    researches: [{
+    researches: {
         type: mongoose.Schema.Types.ObjectId,
         required: false,
         ref: 'research'
-    }]
+    },
+    allocatedTime: {
+        type: String,
+        required: false,
+        trim: true
+    },
+    adminApprovalStatus: {
+        type: String,
+        required: false,
+        trim: true
+    }
 })
 
 const ConferenceResearch = mongoose.model("conferenceResearches", ConferenceResearchSchema);

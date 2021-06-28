@@ -20,6 +20,8 @@ import UnApprovedResearch from './components/AdminRole/viewResearchNA';
 import UnApprovedWorkshop from './components/AdminRole/viewWorkshopNA';
 import conferenceTime from './components/EditorRole/createConference';
 import ViewConference from './components/EditorRole/viewConferences';
+import ViewResearchEditor from './components/EditorRole/viewResearch';
+import ViewWorkshopEditor from './components/EditorRole/viewWorkshop';
 
 //Dashboard types
 import AdminDashboard from './components/Dashboard/adminDashboard';
@@ -62,6 +64,8 @@ export default class App extends React.Component {
                             <Route path="/getNAWorkshop" component={ UnApprovedWorkshop }></Route>
                             <Route path="/addConference" component={ conferenceTime }></Route>
                             <Route path="/viewConference" component={ ViewConference }></Route>
+                            <Route path="/viewEditorResearch" component={ ViewResearchEditor }></Route>
+                            <Route path="/viewEditorWorkshop" component={ ViewWorkshopEditor }></Route>
                             
                             <Route path="/adminDashboard" component={AdminDashboard}></Route>
                             <Route path="/reviewerDashboard" component={reviewerDashboard}></Route>

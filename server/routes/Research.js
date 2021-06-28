@@ -10,6 +10,7 @@ router.route("/insertResearch").post(async (req, res) => {
     const researchDescription = req.body.researchDescription;
     const approvalStatus = req.body.approvalStatus;
     const downloadURL = req.body.downloadURL;
+    const eventStatus = req.body.eventStatus
 
     const research = new ResearchModel({
         authorName: authorName,
@@ -19,6 +20,7 @@ router.route("/insertResearch").post(async (req, res) => {
         researchDescription: researchDescription,
         approvalStatus: approvalStatus,
         downloadURL: downloadURL,
+        eventStatus: eventStatus
     });
 
     try{
@@ -51,6 +53,18 @@ router.route("/readAllApprovedResearch").get(async (req, res) => {
         res.send(result)
     })
 });
+
+//Read all research papers approved by reviewer - Editor Task
+router.route("/readAllApprovedUnreserved").get(async (req, res) => {
+    ResearchModel.find({approvalStatus: 'Approved', eventStatus: 'Unreserved'}, (error,result) => {
+        if(error){
+            res.send(error);
+        }
+
+        res.send(result)
+    })
+});
+
 
 //Read all research papers approved by reviewer - ADMIN TASK
 router.route("/readAllUnApprovedResearch").get(async (req, res) => {
@@ -101,6 +115,27 @@ router.route("/approveOrDecline/:id").put(async (req, res) => {
         await ResearchModel.findById(id, (err, updatedResearchObject) => {
             updatedResearchObject.approvalStatus = approvalStatus;
             updatedResearchObject.researchAmount = researchAmount;
+            updatedResearchObject.save()
+            .then(response => {
+                res.status(200).send({response: response});
+            }).catch(error => {
+                res.status(500).send({error: error.message});
+            })
+        });
+    }catch(err){
+        console.log(err);
+    }
+});
+
+//Update the Research details - used by editor
+router.route("/changeEventStatus/:id").put(async (req, res) => {
+    const eventStatus = req.body.eventStatus;
+    //Research paper or workshop ID
+    const id = req.params.id;
+
+    try{
+        await ResearchModel.findById(id, (err, updatedResearchObject) => {
+            updatedResearchObject.eventStatus = eventStatus;
             updatedResearchObject.save()
             .then(response => {
                 res.status(200).send({response: response});

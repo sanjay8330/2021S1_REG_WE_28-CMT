@@ -17,7 +17,8 @@ const initialState = {
     "workshopTitle": '',
     "workshopDescription": '',
     "workshopSpeakers": '',
-    "fileURL": ''
+    "fileURL": '',
+    "eventStatus": 'Unreserved'
 }
 
 export default class UserPlusWorkshop extends Component {
@@ -77,7 +78,8 @@ export default class UserPlusWorkshop extends Component {
                     "workshopDescription": this.state.workshopDescription,
                     "workshopSpeakers": this.state.workshopSpeakers,
                     "approvalStatus": 'Approval Pending',
-                    "downloadURL": this.state.fileURL
+                    "downloadURL": this.state.fileURL,
+                    "eventStatus": this.state.eventStatus
                 }
                 Axios.post('http://localhost:3001/workshop/insertWorkshop', workshop)
                     .then(response => {

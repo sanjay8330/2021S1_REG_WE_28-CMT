@@ -11,6 +11,7 @@ router.route("/insertWorkshop").post(async (req, res) => {
     const workshopSpeakers = req.body.workshopSpeakers;
     const approvalStatus = req.body.approvalStatus;
     const downloadURL = req.body.downloadURL;
+    const eventStatus = req.body.eventStatus
 
     const workshop = new WorkshopModel({
         workshopConductorName: workshopConductorName,
@@ -20,7 +21,8 @@ router.route("/insertWorkshop").post(async (req, res) => {
         workshopDescription: workshopDescription,
         workshopSpeakers: workshopSpeakers,
         approvalStatus: approvalStatus,
-        downloadURL: downloadURL
+        downloadURL: downloadURL,
+        eventStatus: eventStatus
     });
 
     try{
@@ -46,6 +48,17 @@ router.route("/readAllWorkshops").get(async (req, res) => {
 //Read all approved workshop details - used by the admin
 router.route("/readAllApprovedWorkshops").get(async (req, res) => {
     WorkshopModel.find({approvalStatus: 'Approved'}, (error,result) => {
+        if(error){
+            res.send(error);
+        }
+
+        res.send(result)
+    })
+});
+
+//Read all approved workshop details - used by the editor
+router.route("/readAllApprovedUnReserved").get(async (req, res) => {
+    WorkshopModel.find({approvalStatus: 'Approved', eventStatus: 'Unreserved'}, (error,result) => {
         if(error){
             res.send(error);
         }
@@ -89,6 +102,27 @@ router.route("/approveOrDecline/:id").put(async (req, res) => {
         await WorkshopModel.findById(id, (err, updatedWorkshopObject) => {
             updatedWorkshopObject.approvalStatus = approvalStatus;
             updatedWorkshopObject.workshopAmount = workshopAmount;
+            updatedWorkshopObject.save()
+            .then(response => {
+                res.status(200).send({response: response});
+            }).catch(error => {
+                res.status(500).send({error: error.message});
+            })
+        });
+    }catch(err){
+        console.log(err);
+    }
+});
+
+//Update the Workshop details - used by editor
+router.route("/changeEventStatus/:id").put(async (req, res) => {
+    const eventStatus = req.body.eventStatus;
+    //Research paper or workshop ID
+    const id = req.params.id;
+
+    try{
+        await WorkshopModel.findById(id, (err, updatedWorkshopObject) => {
+            updatedWorkshopObject.eventStatus = eventStatus;
             updatedWorkshopObject.save()
             .then(response => {
                 res.status(200).send({response: response});
