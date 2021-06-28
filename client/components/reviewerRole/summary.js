@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Header from '../Header_Footer/reviewerHeader';
 import axios from 'axios';
 
-export default class sammary extends Component {
+export default class summary extends Component {
 
     //initializing the states
     constructor(props) {
@@ -30,10 +30,10 @@ export default class sammary extends Component {
             <div>
                 <Header /><br /><br /><br /><br /><br />
                 <center>
-                    <h1>Sammary</h1><hr/><br/>
+                    <h1>Summary</h1><hr/><br/>
                     <div class="containerR" style={{ backgroundColor: "#cee8f0" }}>
                         <div class="table-responsive">
-                            <h2 class="sub-header">Sammary of Workshop Details</h2><br />
+                            <h2 class="sub-header">Summary of Workshop Details</h2><br />
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
@@ -55,7 +55,7 @@ export default class sammary extends Component {
                                 </tbody>
                             </table>
                         </div><hr />
-                        <h2 class="sub-header">Sammary of Research paper Details</h2><br />
+                        <h2 class="sub-header">Summary of Research paper Details</h2><br />
                         <div class="table-responsive">
                             <table class="table table-striped">
                                 <thead>
