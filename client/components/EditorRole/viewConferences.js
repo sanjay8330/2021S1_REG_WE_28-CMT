@@ -46,8 +46,6 @@ export default class ViewConference extends Component {
                                 <th scope="col">Conference Briefings</th>
                                 <th scope="col">Conference Date</th>
                                 <th scope="col">Conference Time</th>
-                                <th scope="col">Add Events</th>
-                                <th scope="col">Delete Conference</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -57,14 +55,6 @@ export default class ViewConference extends Component {
                                     <td>{item.conferenceBriefing}</td>
                                     <td>{item.conferenceDate}</td>
                                     <td>{item.conferenceTime}</td>
-                                    <td><a class="btn btn-success" aria-label="Approve">
-                                        <i class="fa fa-edit" aria-hidden="true"></i>
-                                    </a></td>
-                                    <td>
-                                        <a class="btn btn-danger" aria-label="Decline">
-                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                        </a>
-                                    </td>
                                 </tr>
                             )}
                         </tbody>
