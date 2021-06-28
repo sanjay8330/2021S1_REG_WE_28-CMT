@@ -55,10 +55,7 @@ export default class ViewWorkshop extends Component {
                                 <th scope="col">Title</th>
                                 <th scope="col">Description</th>
                                 <th scope="col">Speakers</th>
-                                <th scope="col">Workshop Date</th>
-                                <th scope="col">Workshop Time</th>
                                 <th scope="col">Reviewer Approval Status</th>
-                                <th scope="col">Admin Approval Status</th>
                                 <th scope="col">Edit</th>
                                 <th scope="col">Delete</th>
                             </tr>
@@ -72,10 +69,7 @@ export default class ViewWorkshop extends Component {
                                     <td>{item.workshopTitle}</td>
                                     <td>{item.workshopDescription}</td>
                                     <td>{item.workshopSpeakers}</td>
-                                    <td>{item.workshopDate}</td>
-                                    <td>{item.workshopTime}</td>
                                     <td>{item.approvalStatus}</td>
-                                    <td>{item.adminApprovalStatus}</td>
                                     <td><a class="btn btn-success" href="path/to/settings" aria-label="Approve">
                                         <i class="fa fa-edit" aria-hidden="true"></i>
                                     </a></td>

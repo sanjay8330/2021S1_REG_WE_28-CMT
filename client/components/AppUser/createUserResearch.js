@@ -17,8 +17,7 @@ const initialState = {
     "title": '',
     "description": '',
     "approvalStatus": 'Pending Approval',
-    "fileURL": '',
-    "adminApprovalStatus": 'Pending Approval'
+    "fileURL": ''
 }
 
 export default class UserPlusResearch extends Component {
@@ -68,8 +67,7 @@ export default class UserPlusResearch extends Component {
                     "researchTitle": this.state.title,
                     "researchDescription": this.state.description,
                     "approvalStatus": this.state.approvalStatus,
-                    "downloadURL": this.state.fileURL,
-                    "adminApprovalStatus": this.state.adminApprovalStatus
+                    "downloadURL": this.state.fileURL
                 }
                 Axios.post('http://localhost:3001/research/insertResearch', research)
                     .then(response => {

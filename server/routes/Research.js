@@ -10,7 +10,6 @@ router.route("/insertResearch").post(async (req, res) => {
     const researchDescription = req.body.researchDescription;
     const approvalStatus = req.body.approvalStatus;
     const downloadURL = req.body.downloadURL;
-    const adminApprovalStatus = req.body.adminApprovalStatus;
 
     const research = new ResearchModel({
         authorName: authorName,
@@ -20,7 +19,6 @@ router.route("/insertResearch").post(async (req, res) => {
         researchDescription: researchDescription,
         approvalStatus: approvalStatus,
         downloadURL: downloadURL,
-        adminApprovalStatus: adminApprovalStatus,
     });
 
     try{
@@ -115,8 +113,9 @@ router.route("/approveOrDecline/:id").put(async (req, res) => {
     }
 });
 
+//Changed due to admin activity---
 //Update the Research details - used by admin
-router.route("/adminApproveOrDecline/:id").put(async (req, res) => {
+/*router.route("/adminApproveOrDecline/:id").put(async (req, res) => {
     const adminApprovalStatus = req.body.adminApprovalStatus;
     //Research paper or workshop ID
     const id = req.params.id;
@@ -149,6 +148,6 @@ router.route("/addResearchDateTime/:id").put(async (req, res) => {
     }catch(err){
         console.log(err);
     }
-});
+});*/
 
 module.exports = router; 

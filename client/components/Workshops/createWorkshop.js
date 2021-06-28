@@ -10,8 +10,7 @@ const initialStates = {
     "workshopTitle": '',
     "workshopDescription": '',
     "workshopSpeakers": '',
-    "fileURL": '',
-    "adminApprovalStatus": ''
+    "fileURL": ''
 }
 class AddWorkshop extends Component {
     constructor(props) {
@@ -59,8 +58,7 @@ class AddWorkshop extends Component {
             "workshopDescription": this.state.workshopDescription,
             "workshopSpeakers": this.state.workshopSpeakers,
             "approvalStatus": 'Approval Pending',
-            "downloadURL": this.state.fileURL,
-            "adminApprovalStatus": 'Approval Pending'
+            "downloadURL": this.state.fileURL
         }
         Axios.post('http://localhost:3001/workshop/insertWorkshop', workshop)
             .then(response => {
