@@ -45,15 +45,15 @@ export default class researchPaper extends Component {
                     <table class="table border shadow">
                         <thead class="thead-dark">
                             <tr>
-                                <th scope="col">authorName</th>
-                                <th scope="col">authorEmail</th>
-                                <th scope="col">authorContact</th>
-                                <th scope="col">researchTitle</th>
-                                <th scope="col">researchDescription</th>
-                                <th scope="col">Amount in Rs.</th>
-                                <th scope="col">Status</th>
-                                <th scope="col">Approve</th>
-                                <th scope="col">Decline</th>
+                                <th scope="col">AUTHORNAME</th>
+                                <th scope="col">EMAIL</th>
+                                <th scope="col">PHONE</th>
+                                <th scope="col">TITLE</th>
+                                <th scope="col">DESCRIPTION</th>
+                                <th scope="col">AMOUNT</th>
+                                <th scope="col">STATUS</th>
+                                <th scope="col">APPROVE</th>
+                                <th scope="col">DECLINE</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -64,13 +64,13 @@ export default class researchPaper extends Component {
                                     <td>{item.authorContact}</td>
                                     <td>{item.researchTitle}</td>
                                     <td>{item.researchDescription}</td>
-                                    <td>{item.researchAmount}</td>
+                                    <td>Rs. {item.researchAmount}</td>
                                     <td>{item.approvalStatus}</td>
                                     <td><a class="btn btn-success" onClick={e => this.navigateToResearchUpdate(e, item._id)} aria-label="Edit">
                                         <i class="fa fa-edit" aria-hidden="true"></i>
                                     </a></td>
                                     <td>
-                                        <a class="btn btn-danger" onClick={() => this.delete(item._id)} href="#" aria-label="Delete"><i class="fa fa-trash" aria-hidden="true"></i>
+                                        <a class="btn btn-danger" onClick={() => this.delete(item._id)} href="mailto:?Subject=Your workshop post has been Declined" aria-label="Delete"><i class="fa fa-trash" aria-hidden="true"></i>
                                         </a>
                                     </td>
                                 </tr>
