@@ -53,6 +53,11 @@ const WorkshopSchema = new mongoose.Schema({
         type: Number,
         required: false
     },
+    eventStatus: {
+        type: String,
+        required: false,
+        trim: true
+    }
 });
 
 const Workshop = mongoose.model("workshops",WorkshopSchema);

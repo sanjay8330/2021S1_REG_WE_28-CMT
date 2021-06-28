@@ -1,35 +1,25 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Header from '../Header_Footer/adminHeader';
+import Header from '../Header_Footer/editorHeader';
 import '../../css/App.css';
 
-export default class ViewResearchPaper extends Component {
+export default class ViewResearchEditor extends Component {
 
     //initializing the states
     constructor(props) {
         super(props);
-        this.navigateToAddResearch = this.navigateToAddResearch.bind(this);
-        this.navigateToNAResearch = this.navigateToNAResearch.bind(this);
         this.state = {
             approvedResearch: []
         }
     }
     //retrieving all research
     componentDidMount() {
-        axios.get('http://localhost:3001/research/readAllApprovedResearch/')
+        axios.get('http://localhost:3001/research/readAllApprovedUnreserved/')
             .then(response => {
                 this.setState({ approvedResearch: response.data });
             }).catch(error => {
                 alert('Error', error.message);
             })
-    }
-
-    navigateToAddResearch(e) {
-        window.location = '/addResearch';
-    }
-
-    navigateToNAResearch(e){
-        window.location = '/getNAResearch';
     }
 
     render() {
@@ -38,16 +28,8 @@ export default class ViewResearchPaper extends Component {
                 <Header /><br /><br /><br /><br />
                 <div className="container1"><br />
 
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-
-                    <button class="btn btn-primary" type="button" onClick={this.navigateToNAResearch}>View Approval Pending Research Paper</button>
-
-                        <button class="btn btn-primary" type="button" onClick={this.navigateToAddResearch}>Add New Research Paper</button>
-                    </div><br />
-
-                    <center><h1>Research Papers Approved BY Reviewer - ADMIN VIEW</h1></center><hr /><br />
-
-                    <center><p><b>**Note: Hi Admin, you can only view the approved research papers which are reserved/unreserved at conference***</b></p></center>
+                    <center><h1>Research Papers Approved By Reviewer - Editor View</h1></center><hr /><br />
+                    <center><p><b>**Note: Hi Editor, you can only view the approved research paper but which are not yet added to the conference here***</b></p></center>
 
                     <table class="table border shadow">
                         <thead class="thead-dark">
@@ -58,7 +40,7 @@ export default class ViewResearchPaper extends Component {
                                 <th scope="col">researchTitle</th>
                                 <th scope="col">researchDescription</th>
                                 <th scope="col">Reviewer Approval Status</th>
-                                <th scope="col">Event Status</th>
+                                <th scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -70,7 +52,9 @@ export default class ViewResearchPaper extends Component {
                                     <td>{item.researchTitle}</td>
                                     <td>{item.researchDescription}</td>
                                     <td>{item.approvalStatus}</td>
-                                    <td>{item.eventStatus}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary">Add to conference</button>
+                                    </td>
                                 </tr>
                             )}
                         </tbody>

@@ -43,7 +43,12 @@ const ResearchSchema = new mongoose.Schema({
     researchAmount: {
         type: Number,
         required: false
-    } 
+    },
+    eventStatus: {
+        type: String,
+        required: false,
+        trim: true
+    }
 });
 
 const Research = mongoose.model("research", ResearchSchema);
