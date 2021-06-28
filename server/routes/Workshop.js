@@ -11,7 +11,6 @@ router.route("/insertWorkshop").post(async (req, res) => {
     const workshopSpeakers = req.body.workshopSpeakers;
     const approvalStatus = req.body.approvalStatus;
     const downloadURL = req.body.downloadURL;
-    const adminApprovalStatus = req.body.adminApprovalStatus;
 
     const workshop = new WorkshopModel({
         workshopConductorName: workshopConductorName,
@@ -21,8 +20,7 @@ router.route("/insertWorkshop").post(async (req, res) => {
         workshopDescription: workshopDescription,
         workshopSpeakers: workshopSpeakers,
         approvalStatus: approvalStatus,
-        downloadURL: downloadURL,
-        adminApprovalStatus: adminApprovalStatus,  
+        downloadURL: downloadURL
     });
 
     try{
@@ -103,8 +101,9 @@ router.route("/approveOrDecline/:id").put(async (req, res) => {
     }
 });
 
+//Changed dueo to admin task
 //Update the Workshop details - used by admin
-router.route("/adminApproveOrDecline/:id").put(async (req, res) => {
+/*router.route("/adminApproveOrDecline/:id").put(async (req, res) => {
     const adminApprovalStatus = req.body.adminApprovalStatus;
     //Research paper or workshop ID
     const id = req.params.id;
@@ -137,7 +136,7 @@ router.route("/addWorkshopDateTime/:id").put(async (req, res) => {
     }catch(err){
         console.log(err);
     }
-});
+});*/
 
 //Delete Workshop by ID - In case its declined
 router.route("/deleteById/:id").get(async (req, res) => {

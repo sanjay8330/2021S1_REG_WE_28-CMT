@@ -37,10 +37,7 @@ export default class UnApprovedResearch extends Component {
                                 <th scope="col">authorContact</th>
                                 <th scope="col">researchTitle</th>
                                 <th scope="col">researchDescription</th>
-                                <th scope="col">research Date</th>
-                                <th scope="col">research Time</th>
                                 <th scope="col">Reviewer Approval Status</th>
-                                <th scope="col">Admin Approval Status</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -51,10 +48,7 @@ export default class UnApprovedResearch extends Component {
                                     <td>{item.authorContact}</td>
                                     <td>{item.researchTitle}</td>
                                     <td>{item.researchDescription}</td>
-                                    <td>{item.researchDate}</td>
-                                    <td>{item.researchTime}</td>
                                     <td>{item.approvalStatus}</td>
-                                    <td>{item.adminApprovalStatus}</td>
                                 </tr>
                             )}
                         </tbody>

@@ -55,10 +55,7 @@ export default class ViewResearchPaper extends Component {
                                 <th scope="col">authorContact</th>
                                 <th scope="col">researchTitle</th>
                                 <th scope="col">researchDescription</th>
-                                <th scope="col">research Date</th>
-                                <th scope="col">research Time</th>
                                 <th scope="col">Reviewer Approval Status</th>
-                                <th scope="col">Admin Approval Status</th>
                                 <th scope="col">Edit</th>
                                 <th scope="col">Delete</th>
                             </tr>
@@ -71,10 +68,7 @@ export default class ViewResearchPaper extends Component {
                                     <td>{item.authorContact}</td>
                                     <td>{item.researchTitle}</td>
                                     <td>{item.researchDescription}</td>
-                                    <td>{item.researchDate}</td>
-                                    <td>{item.researchTime}</td>
                                     <td>{item.approvalStatus}</td>
-                                    <td>{item.adminApprovalStatus}</td>
                                     <td><a class="btn btn-success" href="path/to/settings" aria-label="Approve">
                                         <i class="fa fa-edit" aria-hidden="true"></i>
                                     </a></td>

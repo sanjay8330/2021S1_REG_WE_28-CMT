@@ -49,21 +49,6 @@ const WorkshopSchema = new mongoose.Schema({
         required:true,
         trim: true
     },
-    workshopDate: {
-        type: String,
-        required: false,
-        trim: true,
-    },
-    workshopTime: {
-        type: String,
-        required: false,
-        trim: true,
-    },
-    adminApprovalStatus: {
-        type: String,
-        required: false,
-        trim: true,
-    },
     workshopAmount: {
         type: Number,
         required: false

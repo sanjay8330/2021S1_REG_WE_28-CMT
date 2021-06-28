@@ -38,10 +38,7 @@ export default class UnApprovedWorkshop extends Component {
                                 <th scope="col">Title</th>
                                 <th scope="col">Description</th>
                                 <th scope="col">Speakers</th>
-                                <th scope="col">Workshop Date</th>
-                                <th scope="col">Workshop Time</th>
                                 <th scope="col">Reviewer Approval Status</th>
-                                <th scope="col">Admin Approval Status</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -53,10 +50,7 @@ export default class UnApprovedWorkshop extends Component {
                                     <td>{item.workshopTitle}</td>
                                     <td>{item.workshopDescription}</td>
                                     <td>{item.workshopSpeakers}</td>
-                                    <td>{item.workshopDate}</td>
-                                    <td>{item.workshopTime}</td>
                                     <td>{item.approvalStatus}</td>
-                                    <td>{item.adminApprovalStatus}</td>
                                 </tr>
                             )}
                         </tbody>
