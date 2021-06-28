@@ -36,7 +36,7 @@ input, button {
   }
 
   .text{
-    font-size: 70px;
+    font-size: 85px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: rgb(161, 183, 243);
   }
@@ -241,10 +241,10 @@ input, button {
 
       .card{
         height: 110px;
-        width: 570px;
-        right: 60px;
+        width: 500px;
+        right: 20px;
         color: #0e0d0d;
-        top: -20px;
+        top: -0px;
       }
 
       .card1{
@@ -360,6 +360,91 @@ input, button {
 }
 
 .sidenav1 a:hover {
+  color: #f1f1f1;
+}
+
+.containerR {
+  border: 6px solid #4082f5;
+  background-color: #f1f1f1;
+  border-radius: 60px;
+  padding: 10px;
+  margin: 10px 0;
+  width: 700px;
+}
+
+.containerR::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  line-height: 500px;
+  border-radius: 50%;
+  font-size: 10px;
+  color: #fff;
+  text-align: center;
+  background: #000
+}
+
+.add8 {
+  position: relative;
+  height: 550px;
+  width: 570px;
+  margin: auto;
+  padding: 20px 60px;
+  background: url(../images/formImg.jpg) no-repeat   center center #505050;   
+  background-size: cover;
+  box-shadow: 0px 30px 60px -5px #000;
+}
+
+.sidenavAdmin {
+  height: 14%;
+  width: 321px;
+  position: fixed;
+  z-index: 1;
+  top: 67;
+  left: 0;
+  background-color: rgba(6, 12, 34, 0.98);;
+  overflow-x: hidden;
+  padding-top: 15px;
+}
+
+.sidenavAdmin a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #11c7e7;
+  display: block;
+}
+
+.sidenavAdmin a:hover {
+  color: #f1f1f1;
+}
+
+.sidenavEditor {
+  height: 10%;
+  width: 190px;
+  position: fixed;
+  z-index: 1;
+  top: 67;
+  left: 0;
+  background-color: rgba(6, 12, 34, 0.98);;
+  overflow-x: hidden;
+  padding-top: 15px;
+}
+
+.sidenavEditor a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #11c7e7;
+  display: block;
+}
+
+.sidenavEditor a:hover {
   color: #f1f1f1;
 }
 

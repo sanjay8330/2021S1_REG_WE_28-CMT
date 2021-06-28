@@ -7,19 +7,19 @@ export default class dashboard extends Component {
     return (
         <div class="home">
           <Header /><br /><br /><br /><br /><br /><br />
+          <br /><br /><br /><br /><br /><br /><br />
           <div class="text">
             <span class="glyphicon glyphicon-equalizer">DASHBOARD - EDITOR</span>
           </div>
 
           <div class="sidenav">
-          <a href="#">Manage Workshops</a>
-          <a href="#">Manage Research Papers</a>
-          <a href="#">Add Conferenece</a>
+          <a href="/viewEditorWorkshop">Manage Workshops</a>
+          <a href="/viewEditorResearch">Manage Research Papers</a>
+          <a href="/viewConference">Add Conferenece</a>
           </div>
 
           <br /><br /><br /><br /><br /><br />
-          <br /><br /><br /><br /><br /><br />
-          <br /><br /><br />
+          <br /><br /><br /><br /><br />
         </div>
         )
   }

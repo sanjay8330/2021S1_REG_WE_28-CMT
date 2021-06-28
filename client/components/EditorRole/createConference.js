@@ -43,7 +43,7 @@ export default class AddConference extends Component {
         return (
             <div>
                 <Header /><br /><br /><br /><br /><br />
-                <div className="add4">
+                <div className="add8">
                     <center><h2 class="log" style={{ color: "white" }}>Add Conference Details</h2></center><br />
                     <form onSubmit={this.onSubmit} style={{ height: "100px;" }}>
 

@@ -28,18 +28,18 @@ export default class ViewWorkshopEditor extends Component {
                 <Header /><br /><br /><br /><br /><br />
                 <div className="container1">
 
-                    <center><h1>Workshop Details approved by Reviewer - Editor View</h1></center><hr /><br />
+                    <center><h1>Workshop Details approved by Reviewer - EDITOR VIEW</h1></center><hr /><br />
 
-                    <center><p><b>**Note: Hi Editor, you can only view the approved workshops but which are not yet added to the conference here***</b></p></center>
+                    <center><p><b><mark>**Note: Hi Editor, you can only view the approved workshops but which are not yet added to the conference here***</mark></b></p></center>
 
                     <table class="table border shadow">
                         <thead class="thead-dark">
                             <tr>
-                                <th scope="col">Email</th>
-                                <th scope="col">Title</th>
-                                <th scope="col">Description</th>
-                                <th scope="col">Reviewer Approval Status</th>
-                                <th scope="col">Action</th>
+                                <th scope="col">EMAIL</th>
+                                <th scope="col">TITLE</th>
+                                <th scope="col">DESCRIPTION</th>
+                                <th scope="col">REVIEWER APPROVAL STATUS</th>
+                                <th scope="col">ACTION</th>
                             </tr>
                         </thead>
                         <tbody>

@@ -32,13 +32,13 @@ export default class UnApprovedWorkshop extends Component {
                     <table class="table border shadow" aria-readonly="true">
                         <thead class="thead-dark">
                             <tr>
-                                <th scope="col">Name</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">Phone</th>
-                                <th scope="col">Title</th>
-                                <th scope="col">Description</th>
-                                <th scope="col">Speakers</th>
-                                <th scope="col">Reviewer Approval Status</th>
+                                <th scope="col">NAME</th>
+                                <th scope="col">EMAIL</th>
+                                <th scope="col">PHONE</th>
+                                <th scope="col">TITLE</th>
+                                <th scope="col">DESCRIPTION</th>
+                                <th scope="col">SPEAKERS</th>
+                                <th scope="col">REVIEWER APPROVAL STATUS</th>
                             </tr>
                         </thead>
                         <tbody>
