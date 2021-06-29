@@ -449,6 +449,86 @@ input, button {
   color: #f1f1f1;
 }
 
+.about {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.about .btn {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #ab62cc;
+  color: rgb(243, 236, 236);
+  font-size: 16px;
+  padding: 16px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  height: 55px;
+}
+
+.about .btn:hover {
+  background-color: rgb(62, 4, 80);
+  color: rgb(250, 244, 244);
+}
+
+
+.abt {
+  float: left;
+  width: 33.3%;
+  padding: 8px;
+}
+
+.con {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.con:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.con .header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+}
+
+.con li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+.con .grey {
+  background-color: #eee;
+  font-size: 20px;
+}
+
+.button {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
+}
+
+
 
 
 
