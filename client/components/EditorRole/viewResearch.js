@@ -8,6 +8,7 @@ export default class ViewResearchEditor extends Component {
     //initializing the states
     constructor(props) {
         super(props);
+        this.navigateConferenceResearchPage = this.navigateConferenceResearchPage.bind(this);
         this.state = {
             approvedResearch: []
         }
@@ -20,6 +21,11 @@ export default class ViewResearchEditor extends Component {
             }).catch(error => {
                 alert('Error', error.message);
             })
+    }
+
+    //Navigating to editor adding research paper to conference
+    navigateConferenceResearchPage(e, researchId){
+        window.location = `/conferenceResearch/${researchId}`
     }
 
     render() {
@@ -53,7 +59,7 @@ export default class ViewResearchEditor extends Component {
                                     <td>{item.researchDescription}</td>
                                     <td>{item.approvalStatus}</td>
                                     <td>
-                                        <button type="button" class="btn btn-primary">Add to conference</button>
+                                        <button type="button" class="btn btn-primary" onClick={e => this.navigateConferenceResearchPage(e, item._id)}>Add to conference</button>
                                     </td>
                                 </tr>
                             )}
