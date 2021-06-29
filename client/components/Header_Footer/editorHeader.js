@@ -20,7 +20,7 @@ class Header extends Component {
                                 <li><a class="nav-link scrollto" href="/viewEditorWorkshop">Add Workshop to Conference</a></li>
                                 <li><a class="nav-link scrollto" href="/viewEditorResearch">Add Research Papers to Conference</a></li>
                                 <li><a class="nav-link scrollto" href="/viewConference">Manage Conferences</a></li>
-                                <li><a class="nav-link scrollto" href="/editorDashboard">Logout</a></li>
+                                <li><a class="nav-link scrollto" href="/">Logout</a></li>
                             </ul>
                         </nav>
                     </div>
