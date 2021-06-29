@@ -20,7 +20,7 @@ class Header extends Component {
                                 <li><a class="nav-link scrollto" href="/DisplayWorkshopReviewer">View Workshop</a></li>
                                 <li><a class="nav-link scrollto" href="/DisplayResearchReviewer">View Research Papers</a></li>
                                 <li><a class="nav-link scrollto" href="/summary">Summary</a></li>
-                                <li><a class="nav-link scrollto" href="/reviewerDashboard">Logout</a></li>
+                                <li><a class="nav-link scrollto" href="/">Logout</a></li>
                             </ul>
                         </nav>
                     </div>

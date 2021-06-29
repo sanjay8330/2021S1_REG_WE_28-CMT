@@ -8,6 +8,7 @@ export default class ViewWorkshopEditor extends Component {
     //initializing the states
     constructor(props) {
         super(props);
+        this.navigateConferenceWorkshopPage = this.navigateConferenceWorkshopPage.bind(this);
         this.state = {
             approvedWorkshops: []
         }
@@ -20,6 +21,11 @@ export default class ViewWorkshopEditor extends Component {
             }).catch(error => {
                 alert('Error ', error.message);
             })
+    }
+
+    //Navigating to editor adding workshop to conference
+    navigateConferenceWorkshopPage(e, workshopId){
+        window.location = `/conferenceWorkshop/${workshopId}`
     }
 
     render() {
@@ -50,7 +56,7 @@ export default class ViewWorkshopEditor extends Component {
                                     <td>{item.workshopDescription}</td>
                                     <td>{item.approvalStatus}</td>
                                     <td>
-                                        <button type="button" class="btn btn-primary">Add to conference</button>
+                                        <button type="button" class="btn btn-primary" onClick={e => this.navigateConferenceWorkshopPage(e, item._id)}>Add to conference</button>
                                     </td>
                                 </tr>
                             )}

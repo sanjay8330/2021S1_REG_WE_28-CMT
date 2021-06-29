@@ -64,7 +64,7 @@ export default class ViewResearchEditor extends Component {
                                 </tr>
                             )}
                         </tbody>
-                    </table>
+                    </table> 
 
                 </div><br /><br /><br /><br /><br /><br /><br /><br />
 
