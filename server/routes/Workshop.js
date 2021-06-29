@@ -91,6 +91,19 @@ router.route("/readById/:id").get(async (req, res) => {
     })
 });
 
+//Read Workshop by userEmail - used by the General User
+router.route("/readByEmail/:emailID").get(async (req, res) => {
+    const emailID = req.params.emailID;
+
+    WorkshopModel.find({workshopConductorEmail: emailID}, (error,result) => {
+        if(error){
+            res.send(error);
+        }
+
+        res.send(result)
+    })
+});
+
 //Update the Workshop details - used by reviewer
 router.route("/approveOrDecline/:id").put(async (req, res) => {
     const approvalStatus = req.body.approvalStatus;

@@ -91,6 +91,19 @@ router.route("/readById/:id").get(async (req, res) => {
     })
 });
 
+//Read Research by userEmail - used by the General User
+router.route("/readByEmail/:emailID").get(async (req, res) => {
+    const emailID = req.params.emailID;
+
+    ResearchModel.find({authorEmail: emailID}, (error,result) => {
+        if(error){
+            res.send(error);
+        }
+
+        res.send(result)
+    })
+});
+
 //Delete Research by ID - In case its declined
 router.route("/deleteById/:id").get(async (req, res) => {
     const id = req.params.id;

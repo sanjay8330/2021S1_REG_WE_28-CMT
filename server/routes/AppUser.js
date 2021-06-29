@@ -36,6 +36,18 @@ router.route('/getUserById/:id').get(async (req, res) => {
     }
 });
 
+//Get the user by email address - General User Task
+router.route('/getUserByEmailID/:id').get(async (req, res) => {
+    if(req.params && req.params.id){
+        await UserModel.find({userEmail: req.params.id })
+        .then(data => {
+            res.status(200).send({data: data});
+        }).catch(error => {
+            res.status(500).send({error: error});
+        })
+    }
+});
+
 //Update the user details - ADMIN TASK (SOME LOGICS TO BE IMPLEMENTED)
 router.route('/updateUserById').put(async (req, res) => {
     if(req.body){
