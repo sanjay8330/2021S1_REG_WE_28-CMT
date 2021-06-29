@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Header from '../Header_Footer/reviewerHeader';
 import axios from 'axios';
+import jsPDF from 'jspdf'
+import 'jspdf-autotable'
 
 export default class summary extends Component {
 
@@ -25,12 +27,41 @@ export default class summary extends Component {
             })
     }
 
+    //generate workshop PDF
+    jsPdfGeneratorWorkshop() {
+
+        var doc = new jsPDF('p', 'pt');
+        doc.text(210, 20, 'SAMMARY OF WORKSHOP DETAILS')
+
+        doc.setFont('courier')
+
+        doc.autoTable({ html: 'table' })
+
+        //save PDF
+        doc.save('workshopSummary.pdf')
+    }
+
+    //generate research PDF
+    jsPdfGeneratorResearch() {
+
+        var doc = new jsPDF('p', 'pt');
+        doc.text(210, 20, 'SAMMARY OF RESEARCH PAPER DETAILS')
+
+        doc.setFont('courier')
+
+        doc.autoTable({ html: 'table' })
+
+        //save PDF
+        doc.save('researchSummary.pdf')
+    }
+
+
     render() {
         return (
             <div>
                 <Header /><br /><br /><br /><br /><br />
                 <center>
-                    <h1>Summary</h1><hr/><br/>
+                    <h1>Summary</h1><hr /><br />
                     <div class="containerR" style={{ backgroundColor: "#cee8f0" }}>
                         <div class="table-responsive">
                             <h2 class="sub-header">Summary of Workshop Details</h2><br />
@@ -54,6 +85,9 @@ export default class summary extends Component {
                                     )}
                                 </tbody>
                             </table>
+
+                            <center><button onClick={this.jsPdfGeneratorWorkshop} type="button" class="btn btn-primary">Download Workshop PDF</button></center>
+
                         </div><hr />
                         <h2 class="sub-header">Summary of Research paper Details</h2><br />
                         <div class="table-responsive">
@@ -77,8 +111,10 @@ export default class summary extends Component {
                                     )}
                                 </tbody>
                             </table>
+                            <center><button onClick={this.jsPdfGeneratorResearch} type="button" class="btn btn-primary">Download Research PDF</button></center>
                         </div>
-                    </div><br /><br />
+                    </div>
+                    <br /><br />
                 </center>
 
 

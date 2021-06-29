@@ -79,7 +79,7 @@ export default class researchPaper extends Component {
                         </tbody>
                     </table>
 
-                </div><br /><br /><br /><br /><br /><br /><br /><br />
+                </div><br />
 
             </div>
         )

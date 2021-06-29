@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Header from '../Header_Footer/editorHeader';
+import Header from '../Header_Footer/adminHeader';
 import '../../css/App.css';
 
 export default class ViewConference extends Component {
@@ -8,23 +8,29 @@ export default class ViewConference extends Component {
     //initializing the states
     constructor(props) {
         super(props);
-        this.navigateToAddConference = this.navigateToAddConference.bind(this);
+        this.navigateToConferenceUpdate = this.navigateToConferenceUpdate.bind(this);
+        this.refreshPage = this.refreshPage.bind(this);
         this.state = {
             conferences: []
         }
     }
-    //retrieving all research
-    componentDidMount() {
-        axios.get('http://localhost:3001/conference/readAllConferences')
-            .then(response => {
-                this.setState({ conferences: response.data.data });
-            }).catch(error => {
-                alert('Error', error.message);
-            })
+
+    //Navigate to the conference Update page
+    navigateToConferenceUpdate(e, conferenceId) {
+        window.location = `/UpdateConferenceAdmin/${conferenceId}`;
     }
 
-    navigateToAddConference(e) {
-        window.location = '/addConference';
+    //Refresh the entire page
+    refreshPage(e) {
+        window.location = '/adminViewConference';
+    }
+
+    //retrieving all research
+    componentDidMount() {
+        axios.get('http://localhost:3001/conference/readAllConferences/')
+            .then(response => {
+                this.setState({ conferences: response.data.data });
+            })
     }
 
     render() {
@@ -33,12 +39,7 @@ export default class ViewConference extends Component {
                 <Header /><br /><br /><br /><br />
                 <div className="container1"><br />
 
-                    <div class="sidenavEditor">
-                        <a href="#" onClick={this.navigateToAddConference}>Add New Conference</a>
-                    </div>
-                    <br />
-
-                    <center><h1>Conference Details - EDITOR VIEW</h1></center><hr /><br />
+                    <center><h1>Conference Details - ADMIN VIEW</h1></center><hr /><br />
 
                     <table class="table border shadow">
                         <thead class="thead-dark">
@@ -47,6 +48,8 @@ export default class ViewConference extends Component {
                                 <th scope="col">CONFERENECE BRIEFINGS</th>
                                 <th scope="col">CONFERENECE DATE</th>
                                 <th scope="col">CONFERENECE TIME</th>
+                                <th scope="col">STATUS</th>
+                                <th scope="col">APPROVE</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -56,6 +59,10 @@ export default class ViewConference extends Component {
                                     <td>{item.conferenceBriefing}</td>
                                     <td>{item.conferenceDate}</td>
                                     <td>{item.conferenceTime}</td>
+                                    <td>{item.adminApprovalStatus}</td>
+                                    <td><a class="btn btn-success" onClick={e => this.navigateToConferenceUpdate(e, item._id)} aria-label="Edit">
+                                        <i class="fa fa-edit" aria-hidden="true"></i>
+                                    </a></td>
                                 </tr>
                             )}
                         </tbody>

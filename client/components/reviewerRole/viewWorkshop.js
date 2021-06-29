@@ -14,7 +14,7 @@ export default class workshop extends Component {
             workshops: []
         }
     }
-    
+
     //retrieving all workshops
     componentDidMount() {
         axios.get('http://localhost:3001/workshop/readAllWorkshops/')
@@ -86,9 +86,9 @@ export default class workshop extends Component {
                                 </tr>
                             )}
                         </tbody>
-                    </table>
+                    </table><br />
 
-                </div><br /><br /><br /><br /><br /><br /><br /><br />
+                </div><br />
 
             </div >
         )
