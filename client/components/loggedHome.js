@@ -1,20 +1,24 @@
 import React, { Component } from 'react'
 import Header from '../components/Header_Footer/loggedHeader';
+import Axios from 'axios';
 import '../css/App.css';
 
 export default class LoggedHome extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.navigateToAddResearch = this.navigateToAddResearch.bind(this);
-    this.navigateToAddWorkshop = this.navigateToAddWorkshop.bind(this);
+    this.navigateToViewResearch = this.navigateToViewResearch.bind(this);
+    this.navigateToViewWorkshop = this.navigateToViewWorkshop.bind(this);
+    this.state = {
+      researches: []
+    }
   }
 
-  navigateToAddResearch(e){
-    window.location = '/addResearch';
+  navigateToViewResearch(e) {
+    window.location = `/viewUserResearch/${this.props.match.params.id}`;
   }
 
-  navigateToAddWorkshop(e){
-    window.location = '/addWorkshop';
+  navigateToViewWorkshop(e) {
+    window.location = `/viewUserWorkshop/${this.props.match.params.id}`;
   }
 
   render() {
@@ -26,13 +30,13 @@ export default class LoggedHome extends Component {
         </div>
 
         <div class="sidenav">
-          <a href="#" onClick={this.navigateToAddWorkshop}>Add Workshops</a>
-          <a href="#" onClick={this.navigateToAddResearch}>Add Research papers</a>
+          <a href="#" onClick={this.navigateToViewResearch}>Previous Research papers</a>
+          <a href="#" onClick={this.navigateToViewWorkshop}>Previous Workshops</a>
           <a href="#">Make Payments for Research paper</a>
         </div>
 
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-        <br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br />
       </div>
     )
   }
