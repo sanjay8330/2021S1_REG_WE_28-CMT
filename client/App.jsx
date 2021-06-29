@@ -22,6 +22,7 @@ import conferenceTime from './components/EditorRole/createConference';
 import ViewConference from './components/EditorRole/viewConferences';
 import ViewResearchEditor from './components/EditorRole/viewResearch';
 import ViewWorkshopEditor from './components/EditorRole/viewWorkshop';
+import AddConferenceResearch from './components/EditorRole/addConferenceResearch';
 
 //Dashboard types
 import AdminDashboard from './components/Dashboard/adminDashboard';
@@ -67,6 +68,7 @@ export default class App extends React.Component {
                             <Route path="/viewConference" component={ ViewConference }></Route>
                             <Route path="/viewEditorResearch" component={ ViewResearchEditor }></Route>
                             <Route path="/viewEditorWorkshop" component={ ViewWorkshopEditor }></Route>
+                            <Route path="/conferenceResearch/:id" component={ AddConferenceResearch }></Route>
                             
                             <Route path="/adminDashboard" component={AdminDashboard}></Route>
                             <Route path="/reviewerDashboard" component={reviewerDashboard}></Route>
