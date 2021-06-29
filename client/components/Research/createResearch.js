@@ -53,7 +53,8 @@ class AddResearch extends Component {
         }
         Axios.post('http://localhost:3001/research/insertResearch', research)
             .then(response => {
-                alert('Data Added Successfully');
+                alert('Research Paper Added Successfully');
+                window.location = `/loggedHome/${this.state.authorEmail}`
             }).catch(error => {
                 alert('Error :', error.message);
             })

@@ -74,6 +74,7 @@ export default class UserPlusResearch extends Component {
                 Axios.post('http://localhost:3001/research/insertResearch', research)
                     .then(response => {
                         alert('User & Research Paper Added Successfully');
+                        window.location = `/loggedHome/${this.state.email}`
                     }).catch(error => {
                         alert('Error :', error.message);
                     })
