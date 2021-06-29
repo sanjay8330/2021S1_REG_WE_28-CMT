@@ -30,4 +30,19 @@ router.route('/getConferenceResearches/:id').get(async (req, res) => {
     }
 });
 
+//In case need to pick all the researches in conference use = find({conference: req.params.id})
+//Insert Workshops to the conference - Editor
+router.route('/getConferenceAllResearch/:id').get(async (req, res) => {
+
+    if (req.params && req.params.id) {
+        await ConferenceResearchModel.find({ conference: req.params.id })
+        .populate('researches', 'researchTitle researchDescription')
+        .then(data => {
+            res.status(200).send({data: data});
+        }).catch(error => {
+            res.status(500).send({error: error.message});
+        })
+    }
+});
+
 module.exports = router;

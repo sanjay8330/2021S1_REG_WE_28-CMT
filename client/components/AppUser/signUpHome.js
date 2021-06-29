@@ -26,7 +26,7 @@ export default class SignUpHome extends Component {
                 <div class="d-grid gap-2 col-6 mx-auto">
                     <div class = "row1">
                     <button class="Signbtn" onClick={this.navigateToUserWorkshopAdd}>
-                        <img class="Signimg" />
+                        <img class="Signimg" /> 
                         <center><br /><p class="Signtxt">Sign Up to add Workshop</p></center>
                     </button>
 
