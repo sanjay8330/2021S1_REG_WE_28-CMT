@@ -26,6 +26,7 @@ import AddConferenceResearch from './components/EditorRole/addConferenceResearch
 import UserResearch from './components/AppUser/viewUserResearch';
 import UserWorkshop from './components/AppUser/viewUserWorkshop';
 import about from './components/about';
+import AddConferenceWorkshop from './components/EditorRole/addConferenceWorkshop';
 
 //Dashboard types
 import AdminDashboard from './components/Dashboard/adminDashboard';
@@ -75,6 +76,7 @@ export default class App extends React.Component {
                             <Route path="/viewUserResearch/:id" component={ UserResearch }></Route>
                             <Route path="/viewUserWorkshop/:id" component={ UserWorkshop }></Route>
                             <Route path="/about" component={ about }></Route>
+                            <Route path="/conferenceWorkshop/:id" component={ AddConferenceWorkshop }></Route>
                             
                             <Route path="/adminDashboard" component={AdminDashboard}></Route>
                             <Route path="/reviewerDashboard" component={reviewerDashboard}></Route>
