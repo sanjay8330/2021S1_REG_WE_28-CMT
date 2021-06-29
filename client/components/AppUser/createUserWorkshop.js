@@ -71,9 +71,9 @@ export default class UserPlusWorkshop extends Component {
         Axios.post('http://localhost:3001/user/addUser', user)
             .then(response => {
                 let workshop = {
-                    "workshopConductorName": this.state.conductorName,
-                    "workshopConductorEmail": this.state.conductorEmail,
-                    "workshopConductorPhone": this.state.conductorPhone,
+                    "workshopConductorName": this.state.name,
+                    "workshopConductorEmail": this.state.email,
+                    "workshopConductorPhone": this.state.contact,
                     "workshopTitle": this.state.workshopTitle,
                     "workshopDescription": this.state.workshopDescription,
                     "workshopSpeakers": this.state.workshopSpeakers,
@@ -84,6 +84,7 @@ export default class UserPlusWorkshop extends Component {
                 Axios.post('http://localhost:3001/workshop/insertWorkshop', workshop)
                     .then(response => {
                         alert('User & Workshop Details Added Successfully');
+                        window.location = `/loggedHome/${this.state.email}`
                     }).catch(error => {
                         alert('Error ', error.message);
                     })
@@ -160,40 +161,6 @@ export default class UserPlusWorkshop extends Component {
                         <hr style={{ color: "#10ebd5" }} />
 
                         <center><h2 class="reg1" style={{ color: "white" }}>Workshop Details</h2></center><br />
-
-                        <span style={{ color: "white" }}>Workshop Conductor Name</span>
-                        <input
-                            type="text"
-                            className="form-control"
-                            id="conductorName"
-                            name="conductorName"
-                            value={this.state.conductorName}
-                            onChange={this.onChange}
-                            placeholder="Enter conductor Name"
-                        /><br />
-
-                        <span style={{ color: "white" }}>Workshop Conductor Email</span>
-                        <input
-                            type="email"
-                            className="form-control"
-                            id="conductorEmail"
-                            name="conductorEmail"
-                            value={this.state.conductorEmail}
-                            onChange={this.onChange}
-                            placeholder="Enter conductor Email"
-                        /><br />
-
-                        <span style={{ color: "white" }}>Workshop Conductor Phone</span>
-                        <input
-                            type="tel"
-                            pattern="[0-9]{10}"
-                            className="form-control"
-                            id="conductorPhone"
-                            name="conductorPhone"
-                            value={this.state.conductorPhone}
-                            onChange={this.onChange}
-                            placeholder="Enter conductor Phone"
-                        /><br />
 
                         <span style={{ color: "white" }}>Workshop Title</span>
                         <input

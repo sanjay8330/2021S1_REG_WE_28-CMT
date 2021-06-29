@@ -36,7 +36,7 @@ class UserLogin extends Component {
                 this.state.users.length > 0 && this.state.users.map((item, key) => {
                     if (item.userPassword === this.state.password) {
                         if (item.userCategory === 'General User') {
-                            window.location = '/loggedHome';
+                            window.location = `/loggedHome/${item.userEmail}`;
                         }
                         if (item.userCategory === 'Reviewer') {
                             window.location = '/reviewerDashboard';

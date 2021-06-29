@@ -62,9 +62,9 @@ export default class UserPlusResearch extends Component {
         Axios.post('http://localhost:3001/user/addUser', user)
             .then(response => {
                 let research = {
-                    "authorName": this.state.authorName,
-                    "authorEmail": this.state.authorEmail,
-                    "authorContact": this.state.authorPhone,
+                    "authorName": this.state.name,
+                    "authorEmail": this.state.email,
+                    "authorContact": this.state.contact,
                     "researchTitle": this.state.title,
                     "researchDescription": this.state.description,
                     "approvalStatus": this.state.approvalStatus,
@@ -74,6 +74,7 @@ export default class UserPlusResearch extends Component {
                 Axios.post('http://localhost:3001/research/insertResearch', research)
                     .then(response => {
                         alert('User & Research Paper Added Successfully');
+                        window.location = `/loggedHome/${this.state.email}`
                     }).catch(error => {
                         alert('Error :', error.message);
                     })
@@ -148,43 +149,6 @@ export default class UserPlusResearch extends Component {
 
                         <hr style = {{color: "#10ebd5"}}/>
                         <center><h2 class="reg1" style={{ color: "white" }}>Research Paper Details</h2></center><br />
-
-                        <span style={{ color: "white" }}>Research Paper Author Name</span>
-                        <input
-                            type="text"
-                            className="form-control"
-                            id="authorName"
-                            name="authorName"
-                            value={this.state.authorName}
-                            onChange={this.onChange}
-                            required
-                            placeholder="Enter author name"
-                        /><br />
-
-                        <span style={{ color: "white" }}>Research Paper Author Email</span>
-                        <input
-                            type="email"
-                            className="form-control"
-                            id="authorEmail"
-                            name="authorEmail"
-                            value={this.state.authorEmail}
-                            onChange={this.onChange}
-                            required
-                            placeholder="Enter author Email"
-                        /><br />
-
-                        <span style={{ color: "white" }}>Research Paper Author Phone</span>
-                        <input
-                            type="tel"
-                            pattern="[0-9]{10}"
-                            className="form-control"
-                            id="authorPhone"
-                            name="authorPhone"
-                            value={this.state.authorPhone}
-                            onChange={this.onChange}
-                            required
-                            placeholder="Enter author Phone"
-                        /><br />
 
                         <span style={{ color: "white" }}>Research Paper Title</span>
                         <input

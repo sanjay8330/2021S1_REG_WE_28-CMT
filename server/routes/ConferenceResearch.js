@@ -15,6 +15,7 @@ router.route('/insertConferenceResearches').post(async (req, res) => {
     }
 });
 
+//In case need to pick all the researches in conference use = find({conference: req.params.id})
 //Insert Workshops to the conference - Editor
 router.route('/getConferenceResearches/:id').get(async (req, res) => {
 

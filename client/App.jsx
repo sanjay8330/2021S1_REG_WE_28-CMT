@@ -23,6 +23,8 @@ import ViewConference from './components/EditorRole/viewConferences';
 import ViewResearchEditor from './components/EditorRole/viewResearch';
 import ViewWorkshopEditor from './components/EditorRole/viewWorkshop';
 import AddConferenceResearch from './components/EditorRole/addConferenceResearch';
+import UserResearch from './components/AppUser/viewUserResearch';
+import UserWorkshop from './components/AppUser/viewUserWorkshop';
 
 //Dashboard types
 import AdminDashboard from './components/Dashboard/adminDashboard';
@@ -61,7 +63,7 @@ export default class App extends React.Component {
                             <Route path="/adminWorkshops" component={ ViewWorkshop }></Route>
                             <Route path="/adminResearches" component={ ViewResearchPaper }></Route>
                             <Route path="/addResearch" component={AddResearch}></Route>
-                            <Route path="/loggedHome" component={loggedHome}></Route>
+                            <Route path="/loggedHome/:id" component={loggedHome}></Route>
                             <Route path="/getNAResearch" component={ UnApprovedResearch }></Route>
                             <Route path="/getNAWorkshop" component={ UnApprovedWorkshop }></Route>
                             <Route path="/addConference" component={ conferenceTime }></Route>
@@ -69,6 +71,8 @@ export default class App extends React.Component {
                             <Route path="/viewEditorResearch" component={ ViewResearchEditor }></Route>
                             <Route path="/viewEditorWorkshop" component={ ViewWorkshopEditor }></Route>
                             <Route path="/conferenceResearch/:id" component={ AddConferenceResearch }></Route>
+                            <Route path="/viewUserResearch/:id" component={ UserResearch }></Route>
+                            <Route path="/viewUserWorkshop/:id" component={ UserWorkshop }></Route>
                             
                             <Route path="/adminDashboard" component={AdminDashboard}></Route>
                             <Route path="/reviewerDashboard" component={reviewerDashboard}></Route>
