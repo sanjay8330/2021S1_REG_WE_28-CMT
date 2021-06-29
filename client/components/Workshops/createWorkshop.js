@@ -65,6 +65,7 @@ class AddWorkshop extends Component {
         Axios.post('http://localhost:3001/workshop/insertWorkshop', workshop)
             .then(response => {
                 alert('Workshop Details Added Successfully');
+                window.location = `/loggedHome/${this.state.conductorEmail}`
             }).catch(error => {
                 alert('Error ', error.message);
             })

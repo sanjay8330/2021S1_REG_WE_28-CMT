@@ -84,6 +84,7 @@ export default class UserPlusWorkshop extends Component {
                 Axios.post('http://localhost:3001/workshop/insertWorkshop', workshop)
                     .then(response => {
                         alert('User & Workshop Details Added Successfully');
+                        window.location = `/loggedHome/${this.state.email}`
                     }).catch(error => {
                         alert('Error ', error.message);
                     })

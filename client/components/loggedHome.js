@@ -29,13 +29,27 @@ export default class LoggedHome extends Component {
           <center><h1>HOME PAGE</h1></center><br />
         </div>
 
-        <div class="sidenav">
-          <a href="#" onClick={this.navigateToViewResearch}>Previous Research papers</a>
-          <a href="#" onClick={this.navigateToViewWorkshop}>Previous Workshops</a>
-          <a href="#">Make Payments for Research paper</a>
-        </div>
+        <center>
+          <div class="d-grid gap-2 col-12 mx-auto">
+            <div class="row1">
+              <button class="Signbtn" onClick={this.navigateToViewResearch}>
+                <img class="Signimg" />
+                <center><br /><p class="Signtxt">View Previous Research Papers</p></center>
+              </button>
 
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+              <button class="Signbtn" onClick={this.navigateToViewWorkshop}>
+                <img class="Signimg" />
+                <center><br /><p class="Signtxt">View Previous Workshops</p></center>
+              </button>
+
+              <button class="Signbtn">
+                <img class="Signimg" />
+                <center><br /><p class="Signtxt">Make Payments</p></center>
+              </button>
+            </div>
+
+          </div></center>
+
         <br /><br /><br /><br /><br /><br /><br /><br />
       </div>
     )
