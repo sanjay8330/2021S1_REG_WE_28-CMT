@@ -65,7 +65,8 @@ export default class AddConference extends Component {
                             rows="3"
                             name="description"
                             value={this.state.description}
-                            onChange={this.onChange}>
+                            onChange={this.onChange}
+                            required>
                         </textarea><br />
 
                         <span style={{ color: "white" }}>Conference Date</span>

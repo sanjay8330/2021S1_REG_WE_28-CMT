@@ -100,6 +100,7 @@ export default class UserPlusResearch extends Component {
                             value={this.state.name}
                             onChange={this.onChange}
                             placeholder="Enter username"
+                            required
                         /><br />
 
                         <span style={{ color: "white" }}>Email</span>
@@ -111,6 +112,7 @@ export default class UserPlusResearch extends Component {
                             value={this.state.email}
                             onChange={this.onChange}
                             placeholder="Enter email address"
+                            required
                         /><br />
 
                         <span style={{ color: "white" }}>Password</span>
@@ -122,6 +124,7 @@ export default class UserPlusResearch extends Component {
                             value={this.state.password}
                             onChange={this.onChange}
                             placeholder="Enter password"
+                            required
                         /><br />
 
                         <span style={{ color: "white" }}>Confirm Password</span>
@@ -133,6 +136,7 @@ export default class UserPlusResearch extends Component {
                             value={this.state.confirmPassword}
                             onChange={this.onChange}
                             placeholder="Enter username"
+                            required
                         /><br />
 
                         <span style={{ color: "white" }}>Contact Number</span>
@@ -145,6 +149,7 @@ export default class UserPlusResearch extends Component {
                             value={this.state.contact}
                             onChange={this.onChange}
                             placeholder="Enter contact number"
+                            required
                         /><br />
 
                         <hr style = {{color: "#10ebd5"}}/>

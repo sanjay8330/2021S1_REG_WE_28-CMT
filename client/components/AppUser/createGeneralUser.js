@@ -60,6 +60,7 @@ class AddGeneralUser extends Component {
                             value={this.state.name}
                             onChange={this.onChange}
                             placeholder="Enter username"
+                            required
                         /><br/>
 
                         <span style={{ color: "white" }}>Email</span>
@@ -71,6 +72,7 @@ class AddGeneralUser extends Component {
                             value={this.state.email}
                             onChange={this.onChange}
                             placeholder="Enter email address"
+                            required
                         /><br/>
 
                         <span style={{ color: "white" }}>Password</span>
@@ -82,6 +84,7 @@ class AddGeneralUser extends Component {
                             value={this.state.password}
                             onChange={this.onChange}
                             placeholder="Enter password"
+                            required
                         /><br/>
 
                         <span style={{ color: "white" }}>Confirm Password</span>
@@ -93,6 +96,7 @@ class AddGeneralUser extends Component {
                             value={this.state.confirmPassword}
                             onChange={this.onChange}
                             placeholder="Enter username"
+                            required
                         /><br/>
 
                         <span style={{ color: "white" }}>Contact Number</span>
@@ -105,6 +109,7 @@ class AddGeneralUser extends Component {
                             value={this.state.contact}
                             onChange={this.onChange}
                             placeholder="Enter contact number"
+                            required
                         />
 
 
