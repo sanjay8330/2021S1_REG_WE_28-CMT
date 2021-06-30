@@ -14,7 +14,7 @@ beforeAll(async () => {
 
 });
 
-//Test the Workshop API
+//Test the Workshop API - SANJAY
 test('should insert a new workshop', async () => {
     await request(app).post('/workshop/insertWorkshop').send({
 
