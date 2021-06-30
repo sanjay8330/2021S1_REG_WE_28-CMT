@@ -14,7 +14,7 @@ beforeAll(async () => {
 
 });
 
-//Test the Conference API - KAVINDI
+//Test the Conference API - KAVINDI (IT19150826)
 test('should insert a new conference', async () => {
 
     await request(app).post('/conference/insertConference').send({

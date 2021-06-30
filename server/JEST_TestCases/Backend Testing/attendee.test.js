@@ -14,7 +14,7 @@ beforeAll(async () => {
 
 });
 
-//Test the Attendee API - Keshawa
+//Test the Attendee API - Keshawa (IT19150758)
 test('should insert a new attendee', async () => {
 
     await request(app).post('/attendee/insertAttendee').send({
