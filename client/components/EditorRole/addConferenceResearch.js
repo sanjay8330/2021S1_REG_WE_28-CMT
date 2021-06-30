@@ -84,7 +84,7 @@ export default class AddConferenceResearch extends Component {
                     <center><h2 class="log" style={{ color: "white" }}>Add Research Paper To Conference</h2></center><br />
                     <form onSubmit={this.onSubmit} style={{ height: "100px;" }}>
 
-                        <label htmlFor="conference" style={{ color: "white" }} className="form-label">Select Conference</label>
+                        <label htmlFor="conference" className="form-label" style={{ color: "white" }}>Select Conference</label>
                         <Select
                             options={this.state.conferenceOption}
                             onChange={this.onSelected}
