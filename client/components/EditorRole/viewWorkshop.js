@@ -36,7 +36,7 @@ export default class ViewWorkshopEditor extends Component {
 
                     <center><h1>Workshop Details approved by Reviewer - EDITOR VIEW</h1></center><hr /><br />
 
-                    <center><p><b><mark>**Note: Hi Editor, you can only view the approved workshops but which are not yet added to the conference here***</mark></b></p></center>
+                    <center><p><b><mark>**Note: Hello Editor! you can only view the approved workshops, which are not yet added to the conference here***</mark></b></p></center>
 
                     <table class="table border shadow">
                         <thead class="thead-dark">
