@@ -89,6 +89,7 @@ class AddWorkshop extends Component {
                             name="conductorName"
                             value={this.state.conductorName}
                             onChange={this.onChange}
+                            required
                         /><br />
 
                         <span style={{ color: "white" }}>Workshop Conductor Email</span>
@@ -99,6 +100,7 @@ class AddWorkshop extends Component {
                             name="conductorEmail"
                             value={this.state.conductorEmail}
                             onChange={this.onChange}
+                            required
                         /><br />
 
                         <span style={{ color: "white" }}>Workshop Conductor Phone</span>
@@ -110,6 +112,7 @@ class AddWorkshop extends Component {
                             name="conductorPhone"
                             value={this.state.conductorPhone}
                             onChange={this.onChange}
+                            required
                         /><br />
 
                         <span style={{ color: "white" }}>Workshop Title</span>
@@ -120,6 +123,7 @@ class AddWorkshop extends Component {
                             name="workshopTitle"
                             value={this.state.workshopTitle}
                             onChange={this.onChange}
+                            required
                         /><br />
 
                         <span style={{ color: "white" }}>Workshop Description</span>
@@ -129,7 +133,8 @@ class AddWorkshop extends Component {
                             rows="3"
                             name="workshopDescription"
                             value={this.state.workshopDescription}
-                            onChange={this.onChange}>
+                            onChange={this.onChange}
+                            required>
                         </textarea><br />
 
                         <span style={{ color: "white" }}>Workshop Speakers</span>
@@ -139,7 +144,8 @@ class AddWorkshop extends Component {
                             rows="3"
                             name="workshopSpeakers"
                             value={this.state.workshopSpeakers}
-                            onChange={this.onChange}>
+                            onChange={this.onChange}
+                            required>
                         </textarea><br />
 
                         <span style={{ color: "white" }}>Upload Workshop Flyer</span>

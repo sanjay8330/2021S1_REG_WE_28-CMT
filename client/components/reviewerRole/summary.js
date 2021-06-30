@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import Header from '../Header_Footer/reviewerHeader';
 import axios from 'axios';
-import jsPDF from 'jspdf'
-import 'jspdf-autotable'
+
+import 'jspdf-autotable';
+import jsPDF from 'jspdf';
 
 export default class summary extends Component {
 

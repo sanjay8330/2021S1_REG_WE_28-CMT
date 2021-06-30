@@ -112,6 +112,7 @@ export default class UserPlusWorkshop extends Component {
                             value={this.state.name}
                             onChange={this.onChange}
                             placeholder="Enter username"
+                            required
                         /><br />
 
                         <span style={{ color: "white" }}>Email</span>
@@ -123,6 +124,7 @@ export default class UserPlusWorkshop extends Component {
                             value={this.state.email}
                             onChange={this.onChange}
                             placeholder="Enter email address"
+                            required
                         /><br />
 
                         <span style={{ color: "white" }}>Password</span>
@@ -134,6 +136,7 @@ export default class UserPlusWorkshop extends Component {
                             value={this.state.password}
                             onChange={this.onChange}
                             placeholder="Enter password"
+                            required
                         /><br />
 
                         <span style={{ color: "white" }}>Confirm Password</span>
@@ -145,6 +148,7 @@ export default class UserPlusWorkshop extends Component {
                             value={this.state.confirmPassword}
                             onChange={this.onChange}
                             placeholder="Enter username"
+                            required
                         /><br />
 
                         <span style={{ color: "white" }}>Contact Number</span>
@@ -156,6 +160,7 @@ export default class UserPlusWorkshop extends Component {
                             name="contact"
                             value={this.state.contact}
                             onChange={this.onChange}
+                            required
                             placeholder="Enter contact number"
                         /><br />
                         <hr style={{ color: "#10ebd5" }} />
@@ -171,6 +176,7 @@ export default class UserPlusWorkshop extends Component {
                             value={this.state.workshopTitle}
                             onChange={this.onChange}
                             placeholder="Enter workshop Title"
+                            required
                         /><br />
 
                         <span style={{ color: "white" }}>Workshop Description</span>
@@ -181,7 +187,8 @@ export default class UserPlusWorkshop extends Component {
                             name="workshopDescription"
                             value={this.state.workshopDescription}
                             onChange={this.onChange}
-                            placeholder="Enter workshop Description">
+                            placeholder="Enter workshop Description"
+                            required>
                         </textarea><br />
 
                         <span style={{ color: "white" }}>Workshop Speakers</span>
@@ -192,7 +199,8 @@ export default class UserPlusWorkshop extends Component {
                             name="workshopSpeakers"
                             value={this.state.workshopSpeakers}
                             onChange={this.onChange}
-                            placeholder="Enter workshop Speakers">
+                            placeholder="Enter workshop Speakers"
+                            required>
                         </textarea><br />
 
                         <span style={{ color: "white" }}>Upload Workshop Flyer</span>
