@@ -30,6 +30,7 @@ import AddConferenceWorkshop from './components/EditorRole/addConferenceWorkshop
 import adminViewConference from './components/AdminRole/viewConference';
 import UpdateConference from './components/AdminRole/updateConference';
 import conferenceHome from './components/conferenceHome';
+import CheckConference from './components/Conferences/checkConferenceEvents';
 
 //Dashboard types
 import AdminDashboard from './components/Dashboard/adminDashboard';
@@ -83,6 +84,7 @@ export default class App extends React.Component {
                             <Route path="/adminViewConference" component={ adminViewConference }></Route>
                             <Route path="/UpdateConferenceAdmin/:id" component={UpdateConference}></Route>
                             <Route path="/conferenceHome" component={conferenceHome}></Route>
+                            <Route path="/checkEvents" component={ CheckConference }></Route>
                             
                             <Route path="/adminDashboard" component={AdminDashboard}></Route>
                             <Route path="/reviewerDashboard" component={reviewerDashboard}></Route>
