@@ -39,6 +39,7 @@ class Header extends Component {
                                 <li><a class="nav-link scrollto" href="/adminViewConference">Conference</a></li>
                                 <li><a class="nav-link scrollto" href="/#">Research Paper Author Payments</a></li>
                                 <li><a class="nav-link scrollto" href="/#">Attendee Payments</a></li>
+                                <li><a class="nav-link scrollto" href="/checkEvents">Conference Events</a></li>
                                 <li><a class="nav-link scrollto" href="#" onClick={this.navigateToUserAdd}>Users</a></li>
                                 <li><a class="nav-link scrollto" href="/adminDashboard">Logout</a></li>
                             </ul>
