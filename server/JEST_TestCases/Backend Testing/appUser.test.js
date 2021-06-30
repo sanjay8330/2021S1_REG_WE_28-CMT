@@ -14,7 +14,7 @@ beforeAll(async () => {
     
 });
 
-//Test the User API - SANJAY
+//Test the User API - SANJAY (IT19158228) 
 test('should insert a new user', async () => {
     await request(app).post('/user/addUser').send({
         userName: "Kushira",
