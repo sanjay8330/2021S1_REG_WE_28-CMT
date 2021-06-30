@@ -15,6 +15,7 @@ export default class summary extends Component {
             research: []
         }
     }
+
     //retrieving all workshops
     componentDidMount() {
         axios.get('http://localhost:3001/workshop/readAllWorkshops/')

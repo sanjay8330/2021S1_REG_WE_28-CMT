@@ -9,6 +9,8 @@ const initialStates = {
     "researchAmount": '',
 }
 class UpdateResearch extends Component {
+
+    //initializing the states
     constructor(props) {
         super(props);
         this.onChange = this.onChange.bind(this);
@@ -16,6 +18,7 @@ class UpdateResearch extends Component {
         this.state = initialStates;
     }
 
+    //retrieving summary of all workshops and research papers
     componentDidMount(e) {
         Axios.get(`http://localhost:3001/research/readById/${this.props.match.params.id}`)
             .then(response => {

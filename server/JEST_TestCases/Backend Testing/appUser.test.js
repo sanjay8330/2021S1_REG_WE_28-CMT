@@ -9,13 +9,13 @@ jest.setTimeout(100000);
 let userId = '';
 
 beforeAll(async () => {
-    //delete already exist Workshops on CMT Test database
+    //delete already exist users on CMT Test database
     await User.deleteMany(); 
     
 });
 
-//Test the Workshop API - SANJAY
-test('should insert a new workshop', async () => {
+//Test the User API - SANJAY
+test('should insert a new user', async () => {
     await request(app).post('/user/addUser').send({
         userName: "Kushira",
         userCategory: "Editor",
